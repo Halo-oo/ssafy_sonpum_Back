@@ -16,7 +16,7 @@ public class BoardReportDto {
 	@ApiModelProperty(value = "조회수")
 	private int hit;
 	@ApiModelProperty(value = "작성일")
-	private String regtime;
+	private String regitime;
 	
 	public int getArticleNo() {
 		return articleNo;
@@ -58,18 +58,18 @@ public class BoardReportDto {
 		this.hit = hit;
 	}
 	
-	public String getRegtime() {
-		return regtime;
+	public String getRegitime() {
+		return regitime;
 	}
 	
-	public void setRegtime(String regtime) {
-		this.regtime = regtime;
+	public void setRegitime(String regitime) {
+		this.regitime = regitime;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "BoardNoticeDto [articleNo=" + articleNo + ", userId=" + userId + ", subject=" + subject + ", content="
-				+ content + ", hit=" + hit + ", regtime=" + regtime + "]";
+		return "BoardReportDto [articleNo=" + articleNo + ", userId=" + userId + ", subject=" + subject + ", content="
+				+ content + ", hit=" + hit + ", regitime=" + regitime + "]";
 	}
 
 }
