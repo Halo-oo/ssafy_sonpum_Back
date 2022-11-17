@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ssafy.util.PageNavigation;
 import com.ssafy.vue.model.BoardNoticeDto;
 import com.ssafy.vue.model.BoardParameterDto;
+import com.ssafy.vue.model.BoardReportDto;
 import com.ssafy.vue.model.mapper.BoardMapper;
 
 @Service
@@ -18,7 +19,8 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private SqlSession sqlSession;
 
-	/* 공지사항 게시글 작성 */
+	/* 공지사항 */
+	// 게시글 작성 
 	@Override
 	public boolean noticeWriteArticle(BoardNoticeDto boardNoticeDto) throws Exception {
 		if(boardNoticeDto.getSubject() == null || boardNoticeDto.getContent() == null) {
@@ -27,7 +29,7 @@ public class BoardServiceImpl implements BoardService {
 		return sqlSession.getMapper(BoardMapper.class).noticeWriteArticle(boardNoticeDto) == 1;
 	}
 
-	/* 공지사항 게시글 목록 */
+	// 게시글 목록 
 	@Override
 	public List<BoardNoticeDto> noticeListArticle(BoardParameterDto boardParameterDto) throws Exception {
 		//int start = boardParameterDto.getPg() == 0 ? 0 : (boardParameterDto.getPg() - 1) * boardParameterDto.getSpp();
@@ -53,29 +55,74 @@ public class BoardServiceImpl implements BoardService {
 //		return pageNavigation;
 //	}
 
-	/* 공지사항 게시글 상세보기 */
+	// 게시글 상세보기
 	@Override
 	public BoardNoticeDto noticeGetArticle(int articleno) throws Exception {
 		return sqlSession.getMapper(BoardMapper.class).noticeGetArticle(articleno);
 	}
 	
-	/* 공지사항 조회수 */
+	// 조회수
 	@Override
 	public void noticeUpdateHit(int articleno) throws Exception {
 		sqlSession.getMapper(BoardMapper.class).noticeUpdateHit(articleno);
 	}
 	
-	/* 공지사항 수정 */
+	// 수정
 	@Override
 	@Transactional
 	public boolean noticeModifyArticle(BoardNoticeDto boardNoticeDto) throws Exception {
 		return sqlSession.getMapper(BoardMapper.class).noticeModifyArticle(boardNoticeDto) == 1;
 	}
 	
-	/* 공지사항 삭제 */
+	// 삭제
 	@Override
 	@Transactional
 	public boolean noticeDeleteArticle(int articleno) throws Exception {
 		return sqlSession.getMapper(BoardMapper.class).noticeDeleteArticle(articleno) == 1;
 	}
+
+	
+	/* 전세사기 수법 게시판 */
+	// 게시글 작성 
+	@Override
+	public boolean reportWriteArticle(BoardReportDto boardReportDto) throws Exception {
+		if(boardReportDto.getSubject() == null || boardReportDto.getContent() == null) {
+			throw new Exception();
+		}
+		return sqlSession.getMapper(BoardMapper.class).reportWriteArticle(boardReportDto) == 1;
+	}
+
+	// 게시글 목록
+	@Override
+	public List<BoardReportDto> reportListArticle(BoardParameterDto boardParameterDto) throws Exception {
+		//int start = boardParameterDto.getPg() == 0 ? 0 : (boardParameterDto.getPg() - 1) * boardParameterDto.getSpp();
+		//boardParameterDto.setStart(start);
+		
+		return sqlSession.getMapper(BoardMapper.class).reportListArticle(boardParameterDto);
+	}
+
+	// 게시글 상세보기
+	@Override
+	public BoardReportDto reportGetArticle(int articleno) throws Exception {
+		return sqlSession.getMapper(BoardMapper.class).reportGetArticle(articleno);
+	}
+
+	// 조회수
+	@Override
+	public void reportUpdateHit(int articleno) throws Exception {
+		sqlSession.getMapper(BoardMapper.class).reportUpdateHit(articleno);
+	}
+
+	// 수정
+	@Override
+	public boolean reportModifyArticle(BoardReportDto boardReportDto) throws Exception {
+		return sqlSession.getMapper(BoardMapper.class).reportModifyArticle(boardReportDto) == 1;
+	}
+
+	// 삭제 
+	@Override
+	public boolean reportDeleteArticle(int articleno) throws Exception {
+		return sqlSession.getMapper(BoardMapper.class).reportDeleteArticle(articleno) == 1;
+	}
+
 }
