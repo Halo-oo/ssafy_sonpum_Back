@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.ssafy.vue.model.mapper.BoardMapper">
+
+	<!-- #공지사항 - 게시글 작성 -->
+	<insert id="noticeWriteArticle" parameterType="boardNoticeDto">
+		insert into board_notice (userid, subject, content, hit, regitime)
+		values (#{userId}, #{subject}, #{content}, 0, now());
+	</insert>
+	
+	<!-- #공지사항 - 게시글 목록 -->
+	<select id="noticeListArticle" parameterType="map" resultType="boardNoticeDto">
+		select articleno, userid, subject, content, hit,
+				case when date_format(regitime, '%Y%m%d') = date_format(now(), '%Y%m%d')
+				then date_format(regitime, '%H:%i:%s')
+				else date_format(regitime, '%y.%m.%d')
+				end regitime
+		from board_notice
+		<if test="word != null and word != ''">
+			<if test="key == 'subject'">
+				where subject like concat('%', #{word}, '%')
+			</if>
+			<if test="key != 'subject'">
+				<!-- where ${key} = #{word} -->
+				where content like concat('%', #{word}, '%')
+			</if>
+		</if>
+		order by articleno desc
+		<!-- limit #{start}, #{spp} -->
+	</select>
+	
+	<!-- #공지사항 - 게시글 목록 총 개수 -->
+	<select id="noticeGetTotalCount" parameterType="map" resultType="int">
+		select count(articleno)
+		from board_notice
+		<if test="word != null and word != ''">
+			<if test="key == 'subject'">
+				where subject like concat('%', #{word}, '%')
+			</if>
+			<if test="key != 'subject'">
+				where ${key} = #{word}
+			</if>
+		</if>
+	</select>
+	
+	<!-- #공지사항 - 게시글 상세보기 -->
+	<select id="noticeGetArticle" parameterType="int" resultType="boardNoticeDto">
+		select articleno, userid, subject, content, hit, regitime
+		from board_notice
+		where articleno = #{articleNo}
+	</select>
+	
+	<!-- #공지사항 - 조회수 -->
+	<update id="noticeUpdateHit" parameterType="int">
+		update board_notice
+		set hit = hit + 1
+		where articleno = #{articleNo}
+	</update>
+	
+	<!-- #공지사항 - 수정 -->
+	<update id="noticeModifyArticle" parameterType="boardNoticeDto">
+		update board_notice
+		set subject = #{subject}, content = #{content}
+		where articleno = #{articleNo}
+	</update>
+	
+	<!-- #공지사항 - 삭제 -->
+	<delete id="noticeDeleteArticle" parameterType="int">
+		delete from board_notice
+		where articleno = #{articleNo}
+	</delete>
+
+</mapper>
+
