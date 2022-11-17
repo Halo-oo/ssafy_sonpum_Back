@@ -126,13 +126,7 @@ CREATE TABLE IF NOT EXISTS `sonpum`.`house_deal` (
   `area` VARCHAR(45) NULL,
   `floor` VARCHAR(45) NULL,
   `cancelDealType` VARCHAR(1) NULL,
-  PRIMARY KEY (`houseDealId`),
-  INDEX `fk_house_deal_address1_idx` (`addressId` ASC) VISIBLE,
-  CONSTRAINT `fk_house_deal_address1`
-    FOREIGN KEY (`addressId`)
-    REFERENCES `sonpum`.`address` (`addressId`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`houseDealId`))
 ENGINE = InnoDB;
 
 
@@ -160,7 +154,7 @@ ENGINE = InnoDB;
 -- Table `sonpum`.`board_report`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sonpum`.`board_report` (
-  `articleNo` INT NOT NULL,
+  `articleNo` INT NOT NULL AUTO_INCREMENT,
   `userId` VARCHAR(45) NOT NULL,
   `subject` VARCHAR(100) NULL,
   `content` TEXT NULL,
