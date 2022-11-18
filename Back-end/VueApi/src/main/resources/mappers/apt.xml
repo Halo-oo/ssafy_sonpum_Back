@@ -4,12 +4,14 @@
 
 <mapper namespace="com.ssafy.vue.model.mapper.HouseMapMapper">
 
+	<!-- 시도정보 전체 호출 -->
 	<select id="getSido" resultType="sidoGugunCodeDto">
 		select left(sidoCode,2) sidoCode, sidoName
 		from sidocode
 		order by sidoCode
 	</select>
 	
+	<!-- 선택한 시도에 포함된 구군 정보 호출 -->
 	<select id="getGugunInSido" parameterType="string" resultType="sidoGugunCodeDto">
 		select left(gugunCode,5) gugunCode, gugunName
 		from guguncode
@@ -17,15 +19,25 @@
 		order by gugunCode
 	</select>
 	
-	<select id="getDongInGugun" parameterType="string" resultType="houseInfoDto">
+	<!-- 선택한 구군에 포함된 동 정보 호출 -->
+	<select id="getDongInGugun" parameterType="string" resultType="houseDealDongDto">
 		select distinct dongName, dongCode
-		from houseinfo
+		from dongcode
 		where left(dongCode, 5) = #{gugun}
-		order by dongName
+		order by dongName;
 	</select>
 	
-	<select id="getAptInDong" parameterType="string" resultType="houseInfoDto">
-		select h.aptCode, h.aptName, h.buildyear, h.dongCode, h.dongName, h.jibun, h.lat, h.lng, si.sidoname, gu.gugunname,
+	<!-- 선택한 동에 포함된 아파트 정보 호출 -->
+	<select id="getAptInDong" parameterType="string" resultType="houseDealInfoDto">
+	select deal.addressId, address.apartName, address.dongCode, address.buildYear, deal.dealAmount, deal.dealYear, deal.dealMonth, deal.dealDay, deal.area, deal.floor
+	from house_deal deal, address
+	left join sidocode si 
+	on left(address.dongcode, 2) = left(si.sidocode, 2)
+	left join guguncode gu
+	on left(address.dongcode, 5) = left(gu.guguncode, 5)
+	where dongCode = #{dong}
+	limit 0, 100;
+		<!-- select h.aptCode, h.aptName, h.buildyear, h.dongCode, h.dongName, h.jibun, h.lat, h.lng, si.sidoname, gu.gugunname,
 				(select dealAmount from housedeal where aptCode = h.aptCode and no = (select max(no) from housedeal where aptCode = h.aptCode)) recentPrice
 		from houseinfo h
 		left join sidocode si
@@ -33,7 +45,7 @@
 		left join guguncode gu
 		on left(h.dongcode,5) = left(gu.guguncode,5)
 		where dongCode = #{dong} 
-		order by aptName
+		order by aptName -->
 	</select>
 	
 </mapper>
