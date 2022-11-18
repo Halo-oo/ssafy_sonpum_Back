@@ -2,13 +2,13 @@ use sonpum;
 
 -- 사용자 test data 넣기 
 insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phoneNumber, reportCount)
-values ('ssafy', 'ssafy', '1234', 'ssafy@ssafy.com', now(), 'USER', 0, '01011112222', 0);
+values ('ssafy', 'ssafy', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'ssafy@ssafy.com', now(), 'USER', 0, '01011112222', 0);
+-- 1234 암호화 > 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
+insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phoneNumber, reportCount)
+values ('corp', 'corp', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'corp@ssafy.com', now(), 'CORP', 0, '01033332222', 1);
 
 insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phoneNumber, reportCount)
-values ('corp', 'corp', '1234', 'corp@ssafy.com', now(), 'CORP', 0, '01033332222', 1);
-
-insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phoneNumber, reportCount)
-values ('admin', 'admin', '1234', 'admin@ssafy.com', now(), 'ADMIN', 0, '01044442222', 0);
+values ('admin', 'admin', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'admin@ssafy.com', now(), 'ADMIN', 0, '01044442222', 0);
 select * from user;
 
 -- 공지사항 게시글 300개 자동넣기
