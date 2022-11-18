@@ -27,7 +27,8 @@ CREATE TABLE IF NOT EXISTS `sonpum`.`user` (
   `delFlag` INT NOT NULL DEFAULT 0,
   `phoneNumber` VARCHAR(45) NULL,
   `reportCount` INT NULL DEFAULT 0,
-  `profileImage` VARCHAR(45) NULL,
+  `profileImage` VARCHAR(100) NULL,
+  `token` VARCHAR(5000) NULL,
   PRIMARY KEY (`userId`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
 ENGINE = InnoDB;
@@ -154,7 +155,7 @@ ENGINE = InnoDB;
 -- Table `sonpum`.`board_report`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sonpum`.`board_report` (
-  `articleNo` INT NOT NULL AUTO_INCREMENT,
+  `articleNo` INT NOT NULL,
   `userId` VARCHAR(45) NOT NULL,
   `subject` VARCHAR(100) NULL,
   `content` TEXT NULL,

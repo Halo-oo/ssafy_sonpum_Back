@@ -38,7 +38,7 @@
 				where subject like concat('%', #{word}, '%')
 			</if>
 			<if test="key != 'subject'">
-				where ${key} = #{word}
+				<!-- where ${key} = #{word} -->
 				where content like concat('%', #{word}, '%')
 			</if>
 		</if>
@@ -120,7 +120,7 @@
 				where subject like concat('%', #{word}, '%')
 			</if>
 			<if test="key != 'subject'">
-				where ${key} = #{word}
+				<!-- where ${key} = #{word} -->
 				where content like concat('%', #{word}, '%')
 			</if>
 		</if>

@@ -1,73 +1,44 @@
-[2m2022-11-17 12:03:47.859[0;39m [32m INFO[0;39m [35m10152[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 12:03:47.935[0;39m [32m INFO[0;39m [35m10152[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 764 ms
-[2m2022-11-17 12:03:48.442[0;39m [32m INFO[0;39m [35m10152[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 12:04:23.790[0;39m [32m INFO[0;39m [35m10152[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 12:04:23.791[0;39m [32m INFO[0;39m [35m10152[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 0 ms
-[2m2022-11-17 12:04:23.801[0;39m [33m WARN[0;39m [35m10152[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.PageNotFound            [0;39m [2m:[0;39m No mapping for GET /vue/null/swagger-resources/configuration/ui
-[2m2022-11-17 12:10:22.215[0;39m [32m INFO[0;39m [35m10152[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m listArticle - 호출
-[2m2022-11-17 12:10:42.947[0;39m [32m INFO[0;39m [35m10152[0;39m [2m---[0;39m [2m[n(16)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 12:10:43.030[0;39m [33m WARN[0;39m [35m10152[0;39m [2m---[0;39m [2m[n(16)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+[2m2022-11-18 00:38:54.241[0;39m [32m INFO[0;39m [35m21708[0;39m [2m---[0;39m [2m[n(74)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-18 00:38:55.123[0;39m [33m WARN[0;39m [35m21708[0;39m [2m---[0;39m [2m[n(74)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  sun.misc.Unsafe.park(Native Method)
  java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
  java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 12:19:42.000[0;39m [32m INFO[0;39m [35m1276[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 12:19:42.069[0;39m [32m INFO[0;39m [35m1276[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 743 ms
-[2m2022-11-17 12:19:42.570[0;39m [32m INFO[0;39m [35m1276[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 12:21:37.260[0;39m [32m INFO[0;39m [35m1276[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 12:21:37.262[0;39m [32m INFO[0;39m [35m1276[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 12:21:43.527[0;39m [32m INFO[0;39m [35m1276[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출
-[2m2022-11-17 12:21:43.745[0;39m [31mERROR[0;39m [35m1276[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'regtime' in 'field list'
-### The error may exist in file [D:\SSAFY\vue_springboot\VueApi\target\classes\mappers\board.xml]
-### The error may involve com.ssafy.vue.model.mapper.BoardMapper.noticeListArticle-Inline
-### The error occurred while setting parameters
-### SQL: select articleno, userid, subject, content, hit,     case when date_format(regtime, '%Y%m%d') = date_format(now(), '%Y%m%d')     then date_format(regtime, '%H:%i:%s')     else date_format(regtime, '%y.%m.%d')     end regtime   from board_notice       order by articleno desc
-### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'regtime' in 'field list'
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'regtime' in 'field list'] with root cause
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-18 00:39:12.743[0;39m [32m INFO[0;39m [35m30180[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-18 00:39:13.294[0;39m [32m INFO[0;39m [35m30180[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1946 ms
+[2m2022-11-18 00:39:14.412[0;39m [32m INFO[0;39m [35m30180[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-18 00:39:20.539[0;39m [32m INFO[0;39m [35m30180[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-18 00:39:20.541[0;39m [32m INFO[0;39m [35m30180[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-18 00:41:43.013[0;39m [32m INFO[0;39m [35m30180[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-18 00:41:43.581[0;39m [31mERROR[0;39m [35m30180[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 실패 : {}
 
-java.sql.SQLSyntaxErrorException: Unknown column 'regtime' in 'field list'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy78.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'token' at row 1
+### The error may exist in file [D:\ssafy\Spring\VueApi\target\classes\mappers\user.xml]
+### The error may involve com.ssafy.vue.model.mapper.UserMapper.saveRefreshToken-Inline
+### The error occurred while setting parameters
+### SQL: update user   set token = ?   where userid = ?
+### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'token' at row 1
+; Data truncation: Data too long for column 'token' at row 1; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'token' at row 1
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:104)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy78.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:288)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy114.noticeListArticle(Unknown Source)
-	at com.ssafy.vue.model.service.BoardServiceImpl.noticeListArticle(BoardServiceImpl.java:36)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$FastClassBySpringCGLIB$$fc74f1dc.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$EnhancerBySpringCGLIB$$2c629e5b.noticeListArticle(<generated>)
-	at com.ssafy.vue.controller.BoardController.noticeListArticle(BoardController.java:59)
+	at com.sun.proxy.$Proxy114.saveRefreshToken(Unknown Source)
+	at com.ssafy.vue.model.service.UserServiceImpl.saveRefreshToken(UserServiceImpl.java:47)
+	at com.ssafy.vue.controller.UserController.login(UserController.java:59)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,8 +52,8 @@ java.sql.SQLSyntaxErrorException: Unknown column 'regtime' in 'field list'
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
@@ -109,792 +80,380 @@ java.sql.SQLSyntaxErrorException: Unknown column 'regtime' in 'field list'
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-
-[2m2022-11-17 12:23:06.721[0;39m [32m INFO[0;39m [35m1276[0;39m [2m---[0;39m [2m[n(13)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 12:23:06.803[0;39m [33m WARN[0;39m [35m1276[0;39m [2m---[0;39m [2m[n(13)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 12:23:15.486[0;39m [32m INFO[0;39m [35m1448[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 12:23:15.552[0;39m [32m INFO[0;39m [35m1448[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 724 ms
-[2m2022-11-17 12:23:16.041[0;39m [32m INFO[0;39m [35m1448[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 12:23:20.373[0;39m [32m INFO[0;39m [35m1448[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 12:23:20.374[0;39m [32m INFO[0;39m [35m1448[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 12:23:23.783[0;39m [32m INFO[0;39m [35m1448[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출
-[2m2022-11-17 12:24:49.570[0;39m [32m INFO[0;39m [35m1448[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 12:24:49.655[0;39m [33m WARN[0;39m [35m1448[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 12:24:58.802[0;39m [32m INFO[0;39m [35m6076[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 12:24:58.873[0;39m [32m INFO[0;39m [35m6076[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 745 ms
-[2m2022-11-17 12:24:59.362[0;39m [32m INFO[0;39m [35m6076[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 12:25:05.549[0;39m [32m INFO[0;39m [35m6076[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 12:25:05.549[0;39m [32m INFO[0;39m [35m6076[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 0 ms
-[2m2022-11-17 12:25:51.537[0;39m [32m INFO[0;39m [35m6076[0;39m [2m---[0;39m [2m[on(9)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 12:26:00.502[0;39m [32m INFO[0;39m [35m4008[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 12:26:00.569[0;39m [32m INFO[0;39m [35m4008[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 734 ms
-[2m2022-11-17 12:26:01.064[0;39m [32m INFO[0;39m [35m4008[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 12:26:04.310[0;39m [32m INFO[0;39m [35m4008[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 12:26:04.311[0;39m [32m INFO[0;39m [35m4008[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 12:26:09.271[0;39m [32m INFO[0;39m [35m4008[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출
-[2m2022-11-17 12:32:10.279[0;39m [32m INFO[0;39m [35m4008[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출
-[2m2022-11-17 12:37:45.876[0;39m [32m INFO[0;39m [35m4008[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출
-[2m2022-11-17 12:37:55.727[0;39m [32m INFO[0;39m [35m4008[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출
-[2m2022-11-17 12:38:14.409[0;39m [32m INFO[0;39m [35m4008[0;39m [2m---[0;39m [2m[n(20)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 12:38:14.491[0;39m [33m WARN[0;39m [35m4008[0;39m [2m---[0;39m [2m[n(20)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 12:38:23.463[0;39m [32m INFO[0;39m [35m10068[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 12:38:23.534[0;39m [32m INFO[0;39m [35m10068[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 749 ms
-[2m2022-11-17 12:38:24.030[0;39m [32m INFO[0;39m [35m10068[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 12:38:33.676[0;39m [32m INFO[0;39m [35m10068[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 12:38:33.677[0;39m [32m INFO[0;39m [35m10068[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 12:38:40.837[0;39m [32m INFO[0;39m [35m10068[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: com.ssafy.vue.model.BoardParameterDto@6a7dd2ec
-[2m2022-11-17 12:38:49.741[0;39m [32m INFO[0;39m [35m10068[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: com.ssafy.vue.model.BoardParameterDto@4db9eccd
-[2m2022-11-17 12:39:14.551[0;39m [32m INFO[0;39m [35m10068[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: com.ssafy.vue.model.BoardParameterDto@65c31b99
-[2m2022-11-17 12:39:32.108[0;39m [32m INFO[0;39m [35m10068[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: com.ssafy.vue.model.BoardParameterDto@6cf8d149
-[2m2022-11-17 12:39:56.586[0;39m [32m INFO[0;39m [35m10068[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 12:39:56.671[0;39m [33m WARN[0;39m [35m10068[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 12:40:04.634[0;39m [32m INFO[0;39m [35m260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 12:40:04.706[0;39m [32m INFO[0;39m [35m260[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 767 ms
-[2m2022-11-17 12:40:05.219[0;39m [32m INFO[0;39m [35m260[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 12:40:18.214[0;39m [32m INFO[0;39m [35m260[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 12:40:18.215[0;39m [32m INFO[0;39m [35m260[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 12:40:21.366[0;39m [32m INFO[0;39m [35m260[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: com.ssafy.vue.model.BoardParameterDto@1a099697
-[2m2022-11-17 12:40:28.742[0;39m [32m INFO[0;39m [35m260[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: com.ssafy.vue.model.BoardParameterDto@7b700072
-[2m2022-11-17 12:40:51.676[0;39m [32m INFO[0;39m [35m260[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: com.ssafy.vue.model.BoardParameterDto@6fc9a5a4
-[2m2022-11-17 12:41:48.237[0;39m [32m INFO[0;39m [35m260[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: com.ssafy.vue.model.BoardParameterDto@215277c0
-[2m2022-11-17 12:41:55.369[0;39m [32m INFO[0;39m [35m260[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 12:41:55.469[0;39m [33m WARN[0;39m [35m260[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 12:42:03.991[0;39m [32m INFO[0;39m [35m32[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 12:42:04.063[0;39m [32m INFO[0;39m [35m32[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 750 ms
-[2m2022-11-17 12:42:04.569[0;39m [32m INFO[0;39m [35m32[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 12:42:07.452[0;39m [32m INFO[0;39m [35m32[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 12:42:07.453[0;39m [32m INFO[0;39m [35m32[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 12:42:11.750[0;39m [32m INFO[0;39m [35m32[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
-[2m2022-11-17 12:42:29.006[0;39m [32m INFO[0;39m [35m32[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=content, word=요를]
-[2m2022-11-17 12:45:24.273[0;39m [32m INFO[0;39m [35m32[0;39m [2m---[0;39m [2m[n(13)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 12:45:24.354[0;39m [33m WARN[0;39m [35m32[0;39m [2m---[0;39m [2m[n(13)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 12:45:34.198[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 12:45:34.272[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 762 ms
-[2m2022-11-17 12:45:34.781[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 12:48:32.518[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 12:48:32.519[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 12:48:42.228[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=content, word=요를]
-[2m2022-11-17 12:50:31.372[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeWriteArticle 공지사항 게시글 작성 호출
-[2m2022-11-17 12:51:31.592[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeModifyArticle 공지사항 게시판 글 수정 호출, 수정할 내용: BoardNoticeDto [articleNo=302, userId=admin, subject=수정수정, content=게시글 수정 test, hit=0, regtime=string]
-[2m2022-11-17 12:51:52.195[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeGetArticle 공지사항 게시글 상세보기 호출 : 302
-[2m2022-11-17 12:52:00.734[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeDeleteArticle 공지사항 게시글 삭제 호출
-[2m2022-11-17 12:52:11.631[0;39m [32m INFO[0;39m [35m7040[0;39m [2m---[0;39m [2m[n(16)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 12:52:11.724[0;39m [33m WARN[0;39m [35m7040[0;39m [2m---[0;39m [2m[n(16)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 14:15:02.520[0;39m [32m INFO[0;39m [35m9204[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 14:15:02.587[0;39m [32m INFO[0;39m [35m9204[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 695 ms
-[2m2022-11-17 14:15:03.045[0;39m [32m INFO[0;39m [35m9204[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 14:15:40.648[0;39m [32m INFO[0;39m [35m9204[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 14:15:40.649[0;39m [32m INFO[0;39m [35m9204[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 14:35:11.634[0;39m [32m INFO[0;39m [35m9204[0;39m [2m---[0;39m [2m[n(29)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 15:49:26.290[0;39m [32m INFO[0;39m [35m10424[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 15:49:26.359[0;39m [32m INFO[0;39m [35m10424[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 728 ms
-[2m2022-11-17 15:49:26.830[0;39m [32m INFO[0;39m [35m10424[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 15:49:29.565[0;39m [32m INFO[0;39m [35m10424[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 15:49:29.565[0;39m [32m INFO[0;39m [35m10424[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 0 ms
-[2m2022-11-17 15:50:22.292[0;39m [32m INFO[0;39m [35m10424[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
-[2m2022-11-17 15:50:31.781[0;39m [32m INFO[0;39m [35m10424[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=subject, word=초코]
-[2m2022-11-17 15:50:31.825[0;39m [31mERROR[0;39m [35m10424[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '초코', '%')
-			 
-			 
-		 
-	 
-		order by articlen' at line 10
-### The error may exist in file [D:\SSAFY\vue_springboot\VueApi\target\classes\mappers\board.xml]
-### The error may involve com.ssafy.vue.model.mapper.BoardMapper.reportListArticle-Inline
-### The error occurred while setting parameters
-### SQL: select articleno, userid, subject, content, hit,     case when date_format(regitime, '%Y%m%d') = date_format(now(), '%Y%m%d')     then date_format(regitime, '%H:%i:%s')     else date_format(regitime, '%y.%m.%d')     end regitime   from board_report                  and subject like concat('%', ?, '%')                    order by articleno desc
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '초코', '%')
-			 
-			 
-		 
-	 
-		order by articlen' at line 10
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '초코', '%')
-			 
-			 
-		 
-	 
-		order by articlen' at line 10] with root cause
-
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '초코', '%')
-			 
-			 
-		 
-	 
-		order by articlen' at line 10
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'token' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
 	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
 	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:194)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy78.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy114.reportListArticle(Unknown Source)
-	at com.ssafy.vue.model.service.BoardServiceImpl.reportListArticle(BoardServiceImpl.java:101)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$FastClassBySpringCGLIB$$fc74f1dc.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$EnhancerBySpringCGLIB$$de78c6d2.reportListArticle(<generated>)
-	at com.ssafy.vue.controller.ReportBoardController.reportListArticle(ReportBoardController.java:59)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
+	... 50 common frames omitted
 
-[2m2022-11-17 15:51:08.086[0;39m [32m INFO[0;39m [35m10424[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=subject, word=300]
-[2m2022-11-17 15:51:08.088[0;39m [31mERROR[0;39m [35m10424[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '300', '%')
-			 
-			 
-		 
-	 
-		
-		order by articlen' at line 10
-### The error may exist in file [D:\SSAFY\vue_springboot\VueApi\target\classes\mappers\board.xml]
-### The error may involve com.ssafy.vue.model.mapper.BoardMapper.noticeListArticle-Inline
-### The error occurred while setting parameters
-### SQL: select articleno, userid, subject, content, hit,     case when date_format(regitime, '%Y%m%d') = date_format(now(), '%Y%m%d')     then date_format(regitime, '%H:%i:%s')     else date_format(regitime, '%y.%m.%d')     end regitime   from board_notice                  and subject like concat('%', ?, '%')                       order by articleno desc
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '300', '%')
-			 
-			 
-		 
-	 
-		
-		order by articlen' at line 10
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '300', '%')
-			 
-			 
-		 
-	 
-		
-		order by articlen' at line 10] with root cause
-
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '300', '%')
-			 
-			 
-		 
-	 
-		
-		order by articlen' at line 10
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy78.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy114.noticeListArticle(Unknown Source)
-	at com.ssafy.vue.model.service.BoardServiceImpl.noticeListArticle(BoardServiceImpl.java:38)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$FastClassBySpringCGLIB$$fc74f1dc.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$EnhancerBySpringCGLIB$$de78c6d2.noticeListArticle(<generated>)
-	at com.ssafy.vue.controller.BoardController.noticeListArticle(BoardController.java:59)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-
-[2m2022-11-17 15:51:32.359[0;39m [32m INFO[0;39m [35m10424[0;39m [2m---[0;39m [2m[n(10)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 15:51:32.441[0;39m [33m WARN[0;39m [35m10424[0;39m [2m---[0;39m [2m[n(10)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+[2m2022-11-18 00:45:32.810[0;39m [32m INFO[0;39m [35m30180[0;39m [2m---[0;39m [2m[n(14)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-18 00:45:33.691[0;39m [33m WARN[0;39m [35m30180[0;39m [2m---[0;39m [2m[n(14)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  sun.misc.Unsafe.park(Native Method)
  java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
  java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 15:51:40.399[0;39m [32m INFO[0;39m [35m10252[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 15:51:40.465[0;39m [32m INFO[0;39m [35m10252[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 694 ms
-[2m2022-11-17 15:51:40.936[0;39m [32m INFO[0;39m [35m10252[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 15:51:49.500[0;39m [32m INFO[0;39m [35m10252[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 15:51:49.501[0;39m [32m INFO[0;39m [35m10252[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 15:51:59.549[0;39m [32m INFO[0;39m [35m10252[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=subject, word=300]
-[2m2022-11-17 15:51:59.767[0;39m [31mERROR[0;39m [35m10252[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '300', '%')
-			 
-			 
-		 
-	 
-		
-		order by articlen' at line 10
-### The error may exist in file [D:\SSAFY\vue_springboot\VueApi\target\classes\mappers\board.xml]
-### The error may involve com.ssafy.vue.model.mapper.BoardMapper.noticeListArticle-Inline
-### The error occurred while setting parameters
-### SQL: select articleno, userid, subject, content, hit,     case when date_format(regitime, '%Y%m%d') = date_format(now(), '%Y%m%d')     then date_format(regitime, '%H:%i:%s')     else date_format(regitime, '%y.%m.%d')     end regitime   from board_notice                  and subject like concat('%', ?, '%')                       order by articleno desc
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '300', '%')
-			 
-			 
-		 
-	 
-		
-		order by articlen' at line 10
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '300', '%')
-			 
-			 
-		 
-	 
-		
-		order by articlen' at line 10] with root cause
-
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '300', '%')
-			 
-			 
-		 
-	 
-		
-		order by articlen' at line 10
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy78.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy114.noticeListArticle(Unknown Source)
-	at com.ssafy.vue.model.service.BoardServiceImpl.noticeListArticle(BoardServiceImpl.java:38)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$FastClassBySpringCGLIB$$fc74f1dc.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$EnhancerBySpringCGLIB$$d06bc845.noticeListArticle(<generated>)
-	at com.ssafy.vue.controller.BoardController.noticeListArticle(BoardController.java:59)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-
-[2m2022-11-17 15:52:05.470[0;39m [32m INFO[0;39m [35m10252[0;39m [2m---[0;39m [2m[on(7)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 15:52:05.588[0;39m [33m WARN[0;39m [35m10252[0;39m [2m---[0;39m [2m[on(7)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-18 00:45:49.328[0;39m [32m INFO[0;39m [35m25328[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-18 00:45:49.458[0;39m [32m INFO[0;39m [35m25328[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1398 ms
+[2m2022-11-18 00:45:50.413[0;39m [32m INFO[0;39m [35m25328[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-18 00:45:54.943[0;39m [32m INFO[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-18 00:45:54.945[0;39m [32m INFO[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-18 00:46:10.699[0;39m [32m INFO[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-18 00:46:11.162[0;39m [32mDEBUG[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4Njk5OTcxMTMwLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg2OTk5ODEsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.x7TKOqfxR_1c4iUZBSgWWSg0KoJKts4-09zZkKoGCQQ
+[2m2022-11-18 00:46:11.163[0;39m [32mDEBUG[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4Njk5OTcxMTU1LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MDAwMDEsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.WcjVgiGczi99ESg1nUxYZcurxSxUtEdQc8RSloSfNls
+[2m2022-11-18 00:46:29.754[0;39m [33m WARN[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'userId' for method parameter type String is not present]
+[2m2022-11-18 00:49:57.708[0;39m [33m WARN[0;39m [35m25328[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'userId' for method parameter type String is not present]
+[2m2022-11-18 00:52:07.199[0;39m [32m INFO[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - refreshToken 사용자 token 받아오기(Access Token 재발급)
+[2m2022-11-18 00:52:07.200[0;39m [32mDEBUG[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # token : null, userDto : UserDto [userId=ssafy, userName=string, userPwd=string, email=string, joindate=string, role=string, delFlag=0, phoneNumber=string, reportCount=0, profileImage=string]
+[2m2022-11-18 00:52:07.205[0;39m [31mERROR[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 00:52:07.205[0;39m [32mDEBUG[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 리프레쉬토큰도 사용불가!
+[2m2022-11-18 00:52:35.951[0;39m [33m WARN[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'userId' for method parameter type String is not present]
+[2m2022-11-18 00:54:20.711[0;39m [33m WARN[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'userId' for method parameter type String is not present]
+[2m2022-11-18 00:54:24.943[0;39m [33m WARN[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'userId' for method parameter type String is not present]
+[2m2022-11-18 00:56:31.782[0;39m [33m WARN[0;39m [35m25328[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'userId' for method parameter type String is not present]
+[2m2022-11-18 00:56:52.473[0;39m [32m INFO[0;39m [35m25328[0;39m [2m---[0;39m [2m[n(18)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-18 00:56:53.373[0;39m [33m WARN[0;39m [35m25328[0;39m [2m---[0;39m [2m[n(18)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  sun.misc.Unsafe.park(Native Method)
  java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
  java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 15:53:33.372[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 15:53:33.441[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 722 ms
-[2m2022-11-17 15:53:33.920[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 15:53:38.498[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 15:53:38.499[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 15:53:52.492[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=suject, word=300]
-[2m2022-11-17 15:53:52.701[0;39m [31mERROR[0;39m [35m11656[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where content like concat('%', '300', '%')
-			 
-		 
-		order by articleno desc' at line 12
-### The error may exist in file [D:\SSAFY\vue_springboot\VueApi\target\classes\mappers\board.xml]
-### The error may involve com.ssafy.vue.model.mapper.BoardMapper.noticeListArticle-Inline
-### The error occurred while setting parameters
-### SQL: select articleno, userid, subject, content, hit,     case when date_format(regitime, '%Y%m%d') = date_format(now(), '%Y%m%d')     then date_format(regitime, '%H:%i:%s')     else date_format(regitime, '%y.%m.%d')     end regitime   from board_notice                      where suject = ?     where content like concat('%', ?, '%')            order by articleno desc
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where content like concat('%', '300', '%')
-			 
-		 
-		order by articleno desc' at line 12
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where content like concat('%', '300', '%')
-			 
-		 
-		order by articleno desc' at line 12] with root cause
-
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where content like concat('%', '300', '%')
-			 
-		 
-		order by articleno desc' at line 12
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy78.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy114.noticeListArticle(Unknown Source)
-	at com.ssafy.vue.model.service.BoardServiceImpl.noticeListArticle(BoardServiceImpl.java:38)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$FastClassBySpringCGLIB$$fc74f1dc.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$EnhancerBySpringCGLIB$$8e0f1b69.noticeListArticle(<generated>)
-	at com.ssafy.vue.controller.BoardController.noticeListArticle(BoardController.java:59)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-
-[2m2022-11-17 15:54:00.854[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.ssafy.vue.controller.BoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=subject, word=300]
-[2m2022-11-17 15:54:18.415[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=subject, word=초코]
-[2m2022-11-17 15:57:39.696[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=subject, word=초코]
-[2m2022-11-17 15:57:47.158[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
-[2m2022-11-17 15:58:07.584[0;39m [32m INFO[0;39m [35m11656[0;39m [2m---[0;39m [2m[n(14)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 15:58:07.669[0;39m [33m WARN[0;39m [35m11656[0;39m [2m---[0;39m [2m[n(14)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-18 00:57:05.985[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-18 00:57:06.114[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1421 ms
+[2m2022-11-18 00:57:07.093[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-18 00:57:11.028[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-18 00:57:11.029[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-18 00:57:19.612[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-18 00:57:19.623[0;39m [31mERROR[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 00:57:19.623[0;39m [31mERROR[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 불가능 토큰!
+[2m2022-11-18 00:57:35.726[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-18 00:57:36.190[0;39m [32mDEBUG[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4NzAwNjU2MTU5LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MDA2NjYsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.6sNquzko12uMg9rJKwSv-o2MEQgyV-AbmyJJZJtjEYQ
+[2m2022-11-18 00:57:36.190[0;39m [32mDEBUG[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4NzAwNjU2MTc3LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MDA2ODYsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.ae6vR5LushJzJ7ps_UHCTw2zpBMBiFSHWC43XPbrvpg
+[2m2022-11-18 00:57:46.401[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-18 00:57:46.401[0;39m [31mERROR[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 00:57:46.401[0;39m [31mERROR[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 불가능 토큰!
+[2m2022-11-18 00:58:06.463[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - refreshToken 사용자 token 재발급(Access Token 재발급)
+[2m2022-11-18 00:58:06.463[0;39m [32mDEBUG[0;39m [35m25740[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # token : null, userDto : UserDto [userId=ssafy, userName=string, userPwd=1234, email=string, joindate=string, role=string, delFlag=0, phoneNumber=string, reportCount=0, profileImage=string]
+[2m2022-11-18 00:58:06.464[0;39m [31mERROR[0;39m [35m25740[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 00:58:06.464[0;39m [32mDEBUG[0;39m [35m25740[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 리프레쉬토큰도 사용불가!
+[2m2022-11-18 00:59:26.665[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-18 00:59:26.675[0;39m [32mDEBUG[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4NzAwNzY2NjY5LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MDA3NzYsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.A_309JJ6zG0yhSofGKBw303ngRU6DeUx8Z0VM-KN86A
+[2m2022-11-18 00:59:26.676[0;39m [32mDEBUG[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4NzAwNzY2NjY5LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MDA3OTYsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.eJmL9bP8O_Nm0p2rg0FCIElOdc_PtHtWnaXQvi7Ia_g
+[2m2022-11-18 00:59:52.477[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-18 00:59:52.478[0;39m [31mERROR[0;39m [35m25740[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 00:59:52.478[0;39m [31mERROR[0;39m [35m25740[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 불가능 토큰!
+[2m2022-11-18 01:01:23.841[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - removeToken 로그아웃(token 삭제)
+[2m2022-11-18 01:03:59.628[0;39m [32m INFO[0;39m [35m25740[0;39m [2m---[0;39m [2m[n(14)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-18 01:04:00.541[0;39m [33m WARN[0;39m [35m25740[0;39m [2m---[0;39m [2m[n(14)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  sun.misc.Unsafe.park(Native Method)
  java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
  java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 15:58:16.679[0;39m [32m INFO[0;39m [35m9308[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 15:58:16.746[0;39m [32m INFO[0;39m [35m9308[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 694 ms
-[2m2022-11-17 15:58:17.215[0;39m [32m INFO[0;39m [35m9308[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 15:58:28.017[0;39m [32m INFO[0;39m [35m9308[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 15:58:28.018[0;39m [32m INFO[0;39m [35m9308[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
-[2m2022-11-17 15:58:34.853[0;39m [32m INFO[0;39m [35m9308[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
-[2m2022-11-17 15:58:42.532[0;39m [32m INFO[0;39m [35m9308[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=subject, word=초코]
-[2m2022-11-17 15:58:42.575[0;39m [31mERROR[0;39m [35m9308[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
-### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '초코', '%')
-			 
-			 
-		 
-	 
-		
-		order by artic' at line 10
-### The error may exist in file [D:\SSAFY\vue_springboot\VueApi\target\classes\mappers\board.xml]
-### The error may involve com.ssafy.vue.model.mapper.BoardMapper.reportListArticle-Inline
-### The error occurred while setting parameters
-### SQL: select articleno, userid, subject, content, hit,     case when date_format(regitime, '%Y%m%d') = date_format(now(), '%Y%m%d')     then date_format(regitime, '%H:%i:%s')     else date_format(regitime, '%y.%m.%d')     end regitime   from board_report                  and subject like concat('%', ?, '%')                       order by articleno desc
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '초코', '%')
-			 
-			 
-		 
-	 
-		
-		order by artic' at line 10
-; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '초코', '%')
-			 
-			 
-		 
-	 
-		
-		order by artic' at line 10] with root cause
-
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and subject like concat('%', '초코', '%')
-			 
-			 
-		 
-	 
-		
-		order by artic' at line 10
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	at com.sun.proxy.$Proxy78.selectList(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
-	at com.sun.proxy.$Proxy114.reportListArticle(Unknown Source)
-	at com.ssafy.vue.model.service.BoardServiceImpl.reportListArticle(BoardServiceImpl.java:101)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$FastClassBySpringCGLIB$$fc74f1dc.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
-	at com.ssafy.vue.model.service.BoardServiceImpl$$EnhancerBySpringCGLIB$$f8b7b106.reportListArticle(<generated>)
-	at com.ssafy.vue.controller.ReportBoardController.reportListArticle(ReportBoardController.java:59)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-
-[2m2022-11-17 15:59:50.168[0;39m [32m INFO[0;39m [35m9308[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 15:59:50.258[0;39m [33m WARN[0;39m [35m9308[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-18 01:04:12.886[0;39m [32m INFO[0;39m [35m28920[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-18 01:04:13.056[0;39m [32m INFO[0;39m [35m28920[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1484 ms
+[2m2022-11-18 01:04:14.541[0;39m [32m INFO[0;39m [35m28920[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-18 01:04:26.763[0;39m [32m INFO[0;39m [35m28920[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-18 01:04:26.764[0;39m [32m INFO[0;39m [35m28920[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-18 01:04:49.119[0;39m [32m INFO[0;39m [35m28920[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-18 01:04:49.562[0;39m [32mDEBUG[0;39m [35m28920[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4NzAxMDg5NTM0LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MDEwOTksInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.m1ibM9-oWRTmDXeHWZ-YipNf3O0I6Z7nIPvqMbxzTC8
+[2m2022-11-18 01:04:49.563[0;39m [32mDEBUG[0;39m [35m28920[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4NzAxMDg5NTU2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MDExMTksInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.RT_DzXIXIDQY6JSetiNiMtPmpQ_0ozKd4pCZBtiOgdQ
+[2m2022-11-18 01:05:10.721[0;39m [32m INFO[0;39m [35m28920[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-18 01:05:10.726[0;39m [31mERROR[0;39m [35m28920[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 01:05:10.726[0;39m [31mERROR[0;39m [35m28920[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 불가능 토큰!
+[2m2022-11-18 01:10:13.747[0;39m [32m INFO[0;39m [35m28920[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-18 01:10:13.748[0;39m [31mERROR[0;39m [35m28920[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 01:10:13.748[0;39m [31mERROR[0;39m [35m28920[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 불가능 토큰!
+[2m2022-11-18 01:10:28.512[0;39m [32m INFO[0;39m [35m28920[0;39m [2m---[0;39m [2m[n(14)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-18 01:10:29.364[0;39m [33m WARN[0;39m [35m28920[0;39m [2m---[0;39m [2m[n(14)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  sun.misc.Unsafe.park(Native Method)
  java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
  java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-[2m2022-11-17 15:59:58.218[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
-[2m2022-11-17 15:59:58.286[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 694 ms
-[2m2022-11-17 15:59:58.761[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
-[2m2022-11-17 16:00:12.675[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
-[2m2022-11-17 16:00:12.676[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 0 ms
-[2m2022-11-17 16:00:21.628[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
-[2m2022-11-17 16:00:45.667[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportWriteArticle 전세사기 수법 게시글 작성 호출
-[2m2022-11-17 16:01:21.559[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportModifyArticle 공지사항 게시판 글 수정 호출, 수정할 내용: BoardReportDto [articleNo=3, userId=ssafy, subject=test, content=게시글 수정 test, hit=0, regitime=string]
-[2m2022-11-17 16:01:22.375[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportModifyArticle 공지사항 게시판 글 수정 호출, 수정할 내용: BoardReportDto [articleNo=3, userId=ssafy, subject=test, content=게시글 수정 test, hit=0, regitime=string]
-[2m2022-11-17 16:01:23.940[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportModifyArticle 공지사항 게시판 글 수정 호출, 수정할 내용: BoardReportDto [articleNo=3, userId=ssafy, subject=test, content=게시글 수정 test, hit=0, regitime=string]
-[2m2022-11-17 16:01:35.430[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportGetArticle 전세사기 수법 게시글 상세보기 호출 : 3
-[2m2022-11-17 16:01:43.709[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportDeleteArticle 전세사기 수법 게시글 삭제 호출
-[2m2022-11-17 16:01:44.991[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportDeleteArticle 전세사기 수법 게시글 삭제 호출
-[2m2022-11-17 16:01:52.903[0;39m [32m INFO[0;39m [35m12164[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
-[2m2022-11-17 16:01:52.986[0;39m [33m WARN[0;39m [35m12164[0;39m [2m---[0;39m [2m[n(11)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-18 01:10:44.389[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-18 01:10:44.517[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1432 ms
+[2m2022-11-18 01:10:45.435[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-18 01:10:50.242[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-18 01:10:50.245[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 2 ms
+[2m2022-11-18 01:10:59.064[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - removeToken 로그아웃(token 삭제)
+[2m2022-11-18 01:11:16.697[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-18 01:11:16.758[0;39m [32mDEBUG[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4NzAxNDc2NzI4LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MDE0ODYsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.ubgCz0akUfzYY10a0_Hp15YhhP10wYuvMFInlOV8v9A
+[2m2022-11-18 01:11:16.759[0;39m [32mDEBUG[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4NzAxNDc2NzUxLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MDE1MDYsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.RGf4ADLXVM8cq8CsPthJiEItQKxNVr7Nrq08FXPndGw
+[2m2022-11-18 01:11:24.538[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-18 01:11:24.539[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: null
+[2m2022-11-18 01:11:24.543[0;39m [31mERROR[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 01:11:24.543[0;39m [31mERROR[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 불가능 토큰!
+[2m2022-11-18 01:15:23.316[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-18 01:15:23.317[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: null
+[2m2022-11-18 01:15:23.317[0;39m [31mERROR[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 01:15:23.317[0;39m [31mERROR[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 불가능 토큰!
+[2m2022-11-18 01:19:52.087[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-18 01:19:52.088[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: null
+[2m2022-11-18 01:19:52.088[0;39m [31mERROR[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 01:19:52.088[0;39m [31mERROR[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 불가능 토큰!
+[2m2022-11-18 01:20:11.311[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-18 01:20:11.312[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: null
+[2m2022-11-18 01:20:11.312[0;39m [31mERROR[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 01:20:11.312[0;39m [31mERROR[0;39m [35m14120[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 불가능 토큰!
+[2m2022-11-18 01:20:38.935[0;39m [32m INFO[0;39m [35m14120[0;39m [2m---[0;39m [2m[n(18)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-18 01:20:39.815[0;39m [33m WARN[0;39m [35m14120[0;39m [2m---[0;39m [2m[n(18)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  sun.misc.Unsafe.park(Native Method)
  java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
  java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
  java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-18 09:48:26.783[0;39m [32m INFO[0;39m [35m15484[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-18 09:48:27.040[0;39m [32m INFO[0;39m [35m15484[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1715 ms
+[2m2022-11-18 09:48:27.739[0;39m [33m WARN[0;39m [35m15484[0;39m [2m---[0;39m [2m[           main][0;39m [36mConfigServletWebServerApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/HAMSTER/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/HAMSTER/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.ssafy.vue.controller.UserController#getInfo(String, HttpServletRequest)
+to {GET [/user/info/{userid}]}: There is already 'memberController' bean method
+com.ssafy.vue.controller.MemberController#getInfo(String, HttpServletRequest) mapped.
+[2m2022-11-18 09:48:27.761[0;39m [32m INFO[0;39m [35m15484[0;39m [2m---[0;39m [2m[           main][0;39m [36mConditionEvaluationReportLoggingListener[0;39m [2m:[0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2m2022-11-18 09:48:27.799[0;39m [31mERROR[0;39m [35m15484[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/HAMSTER/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/HAMSTER/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.ssafy.vue.controller.UserController#getInfo(String, HttpServletRequest)
+to {GET [/user/info/{userid}]}: There is already 'memberController' bean method
+com.ssafy.vue.controller.MemberController#getInfo(String, HttpServletRequest) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.ssafy.vue.VueApiApplication.main(VueApiApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/HAMSTER/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.ssafy.vue.controller.UserController#getInfo(String, HttpServletRequest)
+to {GET [/user/info/{userid}]}: There is already 'memberController' bean method
+com.ssafy.vue.controller.MemberController#getInfo(String, HttpServletRequest) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.ssafy.vue.controller.UserController#getInfo(String, HttpServletRequest)
+to {GET [/user/info/{userid}]}: There is already 'memberController' bean method
+com.ssafy.vue.controller.MemberController#getInfo(String, HttpServletRequest) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 36 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.ssafy.vue.controller.UserController#getInfo(String, HttpServletRequest)
+to {GET [/user/info/{userid}]}: There is already 'memberController' bean method
+com.ssafy.vue.controller.MemberController#getInfo(String, HttpServletRequest) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 50 common frames omitted
+
+[2m2022-11-18 09:51:07.924[0;39m [32m INFO[0;39m [35m25924[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-18 09:51:08.065[0;39m [32m INFO[0;39m [35m25924[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1492 ms
+[2m2022-11-18 09:51:08.738[0;39m [33m WARN[0;39m [35m25924[0;39m [2m---[0;39m [2m[           main][0;39m [36mConfigServletWebServerApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/HAMSTER/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/HAMSTER/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.ssafy.vue.controller.UserController#getInfo(String, HttpServletRequest)
+to {GET [/user/info/{userid}]}: There is already 'memberController' bean method
+com.ssafy.vue.controller.MemberController#getInfo(String, HttpServletRequest) mapped.
+[2m2022-11-18 09:51:08.754[0;39m [32m INFO[0;39m [35m25924[0;39m [2m---[0;39m [2m[           main][0;39m [36mConditionEvaluationReportLoggingListener[0;39m [2m:[0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2m2022-11-18 09:51:08.780[0;39m [31mERROR[0;39m [35m25924[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/C:/Users/HAMSTER/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/HAMSTER/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.ssafy.vue.controller.UserController#getInfo(String, HttpServletRequest)
+to {GET [/user/info/{userid}]}: There is already 'memberController' bean method
+com.ssafy.vue.controller.MemberController#getInfo(String, HttpServletRequest) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.ssafy.vue.VueApiApplication.main(VueApiApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/C:/Users/HAMSTER/.m2/repository/io/springfox/springfox-spring-web/2.8.0/springfox-spring-web-2.8.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.ssafy.vue.controller.UserController#getInfo(String, HttpServletRequest)
+to {GET [/user/info/{userid}]}: There is already 'memberController' bean method
+com.ssafy.vue.controller.MemberController#getInfo(String, HttpServletRequest) mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.ssafy.vue.controller.UserController#getInfo(String, HttpServletRequest)
+to {GET [/user/info/{userid}]}: There is already 'memberController' bean method
+com.ssafy.vue.controller.MemberController#getInfo(String, HttpServletRequest) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1609)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1462)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 36 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+com.ssafy.vue.controller.UserController#getInfo(String, HttpServletRequest)
+to {GET [/user/info/{userid}]}: There is already 'memberController' bean method
+com.ssafy.vue.controller.MemberController#getInfo(String, HttpServletRequest) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 50 common frames omitted
+
+[2m2022-11-18 09:57:10.902[0;39m [32m INFO[0;39m [35m19592[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-18 09:57:11.036[0;39m [32m INFO[0;39m [35m19592[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1473 ms
+[2m2022-11-18 09:57:11.978[0;39m [32m INFO[0;39m [35m19592[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-18 09:57:18.964[0;39m [32m INFO[0;39m [35m19592[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-18 09:57:18.967[0;39m [32m INFO[0;39m [35m19592[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 3 ms
+[2m2022-11-18 09:57:30.459[0;39m [32m INFO[0;39m [35m19592[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-18 09:57:30.921[0;39m [32mDEBUG[0;39m [35m19592[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4NzMzMDUwODkzLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MzMwNjAsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.MnXLplUlQdXjo6KtRyAulT5ZPL4Js6MJek7WOj6l4cU
+[2m2022-11-18 09:57:30.923[0;39m [32mDEBUG[0;39m [35m19592[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4NzMzMDUwOTEzLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg3MzMwODAsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.kebWxUwGiV-h2nhjcuG9vZhIpb9RL45-m4Ri4CNU9ok
+[2m2022-11-18 09:57:45.903[0;39m [32m INFO[0;39m [35m19592[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - removeToken 로그아웃(token 삭제)
+[2m2022-11-18 09:58:00.499[0;39m [32m INFO[0;39m [35m19592[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-18 09:58:00.500[0;39m [32m INFO[0;39m [35m19592[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: null
+[2m2022-11-18 09:58:00.505[0;39m [31mERROR[0;39m [35m19592[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.model.service.JwtServiceImpl    [0;39m [2m:[0;39m JWT String argument cannot be null or empty.
+[2m2022-11-18 09:58:00.505[0;39m [31mERROR[0;39m [35m19592[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 불가능 토큰!
+[2m2022-11-18 09:58:58.098[0;39m [32m INFO[0;39m [35m19592[0;39m [2m---[0;39m [2m[n(10)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-18 09:58:59.045[0;39m [33m WARN[0;39m [35m19592[0;39m [2m---[0;39m [2m[n(10)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
