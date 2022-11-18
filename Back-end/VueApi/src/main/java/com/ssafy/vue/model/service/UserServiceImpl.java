@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ssafy.vue.model.UserDto;
+import com.ssafy.vue.model.UserTokenDto;
 import com.ssafy.vue.model.mapper.UserMapper;
 
 @Service
@@ -39,22 +40,14 @@ public class UserServiceImpl implements UserService {
 
 	// 사용자 token 저장
 	@Override
-	public void saveRefreshToken(String userid, String refreshToken) throws Exception {
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("userid", userid);
-		map.put("token", refreshToken);
-		
-		sqlSession.getMapper(UserMapper.class).saveRefreshToken(map);
+	public void saveRefreshToken(UserTokenDto userTokenDto) throws Exception {
+		sqlSession.getMapper(UserMapper.class).saveRefreshToken(userTokenDto);
 	}
 
 	// 사용자 token 삭제
 	@Override
-	public void deleRefreshToken(String userid) throws Exception {
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("userid", userid);
-		map.put("token", null);
-		
-		sqlSession.getMapper(UserMapper.class).deleteRefreshToken(map);
+	public void deleRefreshToken(UserTokenDto userTokenDto) throws Exception {
+		sqlSession.getMapper(UserMapper.class).deleteRefreshToken(userTokenDto);
 	}
 
 }

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ssafy.vue.model.UserDto;
+import com.ssafy.vue.model.UserTokenDto;
 import com.ssafy.vue.model.service.JwtServiceImpl;
 import com.ssafy.vue.model.service.UserService;
 
@@ -56,7 +57,10 @@ public class UserController {
 				String accessToken = jwtService.createAccessToken("userId", loginUser.getUserId());			// key, data
 				String refreshToken = jwtService.createRefreshToken("userId", loginUser.getUserId());		// key, data
 				
-				userService.saveRefreshToken(userDto.getUserId(), refreshToken);
+				UserTokenDto userTokenDto = new UserTokenDto(); 
+				userTokenDto.setUserId(userDto.getUserId());
+				userTokenDto.setToken(refreshToken);
+				userService.saveRefreshToken(userTokenDto);
 				logger.debug("# 로그인 accessToken 정보 : {}", accessToken);
 				logger.debug("# 로그인 refreshToken 정보 : {}", refreshToken);
 				
@@ -151,7 +155,9 @@ public class UserController {
 		HttpStatus status = HttpStatus.ACCEPTED;
 		
 		try {
-			userService.deleRefreshToken(userid);
+			UserTokenDto userTokenDto = new UserTokenDto(); 
+			userTokenDto.setUserId(userid);
+			userService.deleRefreshToken(userTokenDto);
 			resultMap.put("# message", SUCCESS);
 			status = HttpStatus.ACCEPTED;
 			

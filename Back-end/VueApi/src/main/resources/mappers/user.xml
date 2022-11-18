@@ -33,17 +33,17 @@
 	</select>
 	
 	<!-- 사용자 token 저장 -->
-	<update id="saveRefreshToken" parameterType="map">
+	<update id="saveRefreshToken" parameterType="userTokenDto">
 		update user
 		set token = #{token}
-		where userid = #{userid}
+		where userid = #{userId}
 	</update>
 	
 	<!-- 사용자 token 삭제 -->
-	<update id="deleteRefreshToken" parameterType="map">
+	<update id="deleteRefreshToken" parameterType="userTokenDto">
 		update user
 		set token = #{token, jdbcType=VARCHAR}
-		where userid = #{userid}
+		where userid = #{userId}
 	</update>
 	
 </mapper>

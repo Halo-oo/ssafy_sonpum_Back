@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.ssafy.vue.model.UserDto;
+import com.ssafy.vue.model.UserTokenDto;
 
 @Mapper
 public interface UserMapper {
@@ -17,8 +18,8 @@ public interface UserMapper {
 	// 사용자 token 받아오기
 	public Object getRefreshToken(String userid) throws SQLException;
 	// 사용자 token 저장
-	public void saveRefreshToken(Map<String, String> map) throws SQLException;
+	public void saveRefreshToken(UserTokenDto userTokenDto) throws SQLException;
 	// 사용자 token 삭제
-	public void deleteRefreshToken(Map<String, String> map) throws SQLException;
+	public void deleteRefreshToken(UserTokenDto userTokenDto) throws SQLException;
 	
 }
