@@ -77,12 +77,20 @@ public class HouseMapController {
 	public ResponseEntity<List<HouseDealInfoDto>> apt(@ApiParam(value = "아파트 목록 검색을 위한 부가정보", required = true) HouseParameterDto houseParameterDto) throws Exception {
 		logger.info("#Back# HouseMapController - apt 선택한 동에 포함된 아파트 정보 호출, 선택한 동 및 검색조건: {}", houseParameterDto);
 		
-		// 매매금액을 검색할 경우 사전 처리 필요
+		// 매매금액 or 거래날짜를 검색할 경우 사전 처리 필요
 		if (houseParameterDto.getKey()!=null && houseParameterDto.getKey().equals("amount")) {
 			if (houseParameterDto.getWord()!=null && houseParameterDto.getWord()!="") {
 				String cost = houseParameterDto.getWord(); 
 				logger.info("# 매매금액 검색 사전작업 결과: " + cost.substring(0, cost.length()-3));
 				houseParameterDto.setWord(cost.substring(0, cost.length()-3));
+			}
+		}
+		else if (houseParameterDto.getKey()!=null && houseParameterDto.getKey().equals("dealDate")) {
+			if (houseParameterDto.getWord()!=null && houseParameterDto.getWord()!="") {
+				String date = houseParameterDto.getWord(); 
+				houseParameterDto.setDealYear(date.substring(0, 4));
+				houseParameterDto.setDealMonth(date.substring(4, date.length()));
+				logger.info("# 거래날짜 검색 사전작업 결과: {}", houseParameterDto);
 			}
 		}
 		
