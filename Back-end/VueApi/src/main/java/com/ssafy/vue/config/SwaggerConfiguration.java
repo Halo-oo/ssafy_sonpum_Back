@@ -59,8 +59,12 @@ public class SwaggerConfiguration {
 
 	@Bean
 	public Docket commonApi() {
-		return getDocket("아파트", Predicates.or(PathSelectors.regex("/map.*")));
-
+		return getDocket("아파트 거래정보(시세)", Predicates.or(PathSelectors.regex("/map.*")));
+	}
+	
+	@Bean
+	public Docket commonApi2() {
+		return getDocket("아파트 매물", Predicates.or(PathSelectors.regex("/houseProduct.*")));
 	}
 
 	@Bean
