@@ -5,10 +5,13 @@ import java.util.List;
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
 import com.ssafy.vue.model.HouseParameterDto;
+import com.ssafy.vue.model.HouseProductDto;
+import com.ssafy.vue.model.HouseProductParameterDto;
 import com.ssafy.vue.model.SidoGugunCodeDto;
 
 public interface HouseMapService {
 
+	/* 아파트 거래정보(시세) */
 	// 시도정보 호출
 	List<SidoGugunCodeDto> getSido() throws Exception;
 	// 선택한 시도에 포함된 구군 정보 호출
@@ -17,5 +20,19 @@ public interface HouseMapService {
 	List<HouseDealDongDto> getDongInGugun(String gugun) throws Exception;
 	// 선택한 동에 포함된 아파트 정보 호출(+ 검색)
 	List<HouseDealInfoDto> getAptInDong(HouseParameterDto houseParameterDto) throws Exception;
+	
+	/* 매물  */
+	// 매물 등록
+	boolean registerHouseProduct(HouseProductDto houseProductDto) throws Exception;
+	// 매물 목록
+	List<HouseProductDto> listHouseProduct(HouseProductParameterDto houseProductParameterDto) throws Exception;
+	// 매물 수정 
+	boolean updateHouseProduct(HouseProductDto houseProductDto) throws Exception;
+	// 매물 판매완료로 변경 
+	boolean soldOutHouseProduct(int houseProductid) throws Exception;
+	// 매물 삭제 
+	boolean deleteHouseProduct(int houseProductid) throws Exception;
+	// 매물 신고
+	boolean reportHouseProduct(String userid) throws Exception;
 	
 }

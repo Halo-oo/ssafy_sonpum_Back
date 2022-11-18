@@ -8,11 +8,14 @@ import org.apache.ibatis.annotations.Mapper;
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
 import com.ssafy.vue.model.HouseParameterDto;
+import com.ssafy.vue.model.HouseProductDto;
+import com.ssafy.vue.model.HouseProductParameterDto;
 import com.ssafy.vue.model.SidoGugunCodeDto;
 
 @Mapper
 public interface HouseMapMapper {
 
+	/* 아파트 거래정보(시세) */
 	// 시도정보 호출
 	List<SidoGugunCodeDto> getSido() throws SQLException;
 	// 선택한 시도에 포함된 구군 정보 호출
@@ -21,5 +24,20 @@ public interface HouseMapMapper {
 	List<HouseDealDongDto> getDongInGugun(String gugun) throws SQLException;
 	// 선택한 동에 포함된 아파트 정보 호출(+ 검색)
 	List<HouseDealInfoDto> getAptInDong(HouseParameterDto houseParameterDto) throws SQLException;
+	
+	
+	/* 매물  */
+	// 매물 등록
+	int registerHouseProduct(HouseProductDto houseProductDto) throws SQLException;
+	// 매물 목록
+	List<HouseProductDto> listHouseProduct(HouseProductParameterDto houseProductParameterDto) throws SQLException;
+	// 매물 수정 
+	int updateHouseProduct(HouseProductDto houseProductDto) throws SQLException;
+	// 매물 판매완료로 변경 
+	int soldOutHouseProduct(int houseProductid) throws SQLException;
+	// 매물 삭제 
+	int deleteHouseProduct(int houseProductid) throws SQLException;
+	// 매물 신고
+	int reportHouseProduct(String userid) throws SQLException;
 	
 }

@@ -171,8 +171,8 @@ public class UserController {
 			logger.info("# 사용 가능한 토큰!");
 			try {
 				// 로그인 사용자 정보.
-				UserDto memberDto = userService.userInfo(userid);
-				resultMap.put("userInfo", memberDto);
+				UserDto userDto = userService.userInfo(userid);
+				resultMap.put("userInfo", userDto);
 				resultMap.put("message", SUCCESS);
 				status = HttpStatus.ACCEPTED;
 				

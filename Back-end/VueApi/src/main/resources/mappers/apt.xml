@@ -65,6 +65,68 @@
 	
 	<!-- #매물 게시판 -->
 	<!-- 매물 등록 -->
+	<insert id="registerHouseProduct" parameterType="houseProductDto">
+		insert into house_product (userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content)
+		values (#{userId}, #{addressId}, #{floor}, #{buildYear}, #{dealAmount}, #{area}, #{dealType}, 0, #{content}); 
+	</insert>
 	
+	<!-- 매물 목록(+ 검색) -->
+	<select id="listHouseProduct" parameterType="houseProductParameterDto" resultType="houseProductDto">
+		select houseProductId, userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content
+		from house_product
+		where addressId = #{addressId}
+			<if test="word != null and word != ''">
+			<if test="key == 'amount'">
+				and <![CDATA[convert(dealAmount, signed) <= #{word}]]>
+			</if>
+			<if test="key == 'area'">
+				and <![CDATA[convert(area, signed) >= #{word}]]>
+			</if>
+			<if test="key == 'floor'">
+				and <![CDATA[convert(floor, signed) >= #{word}]]>
+			</if>
+			<if test="key == 'buildYear'">
+				and <![CDATA[buildYear >= #{word}]]>
+			</if>
+			<if test="key == 'userId'">
+				and userId = #{userId}
+			</if>
+			<if test="key == 'dealType'">
+				and dealType = #{dealType}
+			</if>
+		</if>
+		order by houseProductId desc
+	</select>
+	
+	<!-- 매물 상세보기 -->
+	
+	<!-- 매물 수정 -->
+	<update id="updateHouseProduct" parameterType="houseProductDto">
+		update house_product
+		set addressId = #{addressId}, floor = #{floor}, buildYear = #{buildYear}, dealAmount = #{dealAmount}, area = #{area}, dealType = #{dealType}, content = #{content}
+		where houseProductId = #{houseProductId}
+	</update>
+	
+	<!-- 매물 판매완료로 변경 -->
+	<update id="soldOutHouseProduct" parameterType="int">
+		update house_product
+		set stateFlag = 1
+		where houseProductId = #{houseProductid}
+	</update>
+	
+	<!-- 매물 삭제 -->
+	<delete id="deleteHouseProduct" parameterType="int">
+		delete from house_product
+		where houseProductId = #{houseProductid}
+	</delete>
+	
+	<!-- 매물 주변 부가정보 -->
+	
+	<!-- 매물 신고 (매물을 올린 기업회원 신고) -->
+	<update id="reportHouseProduct" parameterType="String">
+		update user
+		set reportCount = reportCount + 1
+		where userId = #{userid}
+	</update>
 	
 </mapper>
