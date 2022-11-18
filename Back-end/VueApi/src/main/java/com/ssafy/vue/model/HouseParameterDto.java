@@ -12,6 +12,10 @@ public class HouseParameterDto {
 	private String key;
 	@ApiModelProperty(value = "검색어")
 	private String word;
+	@ApiModelProperty(value = "거래 년도")
+	private String dealYear;
+	@ApiModelProperty(value = "거래 월")
+	private String dealMonth;
 	
 	public String getDongCode() {
 		return dongCode;
@@ -36,10 +40,27 @@ public class HouseParameterDto {
 	public void setWord(String word) {
 		this.word = word;
 	}
+	
+	public String getDealYear() {
+		return dealYear;
+	}
+	
+	public void setDealYear(String dealYear) {
+		this.dealYear = dealYear;
+	}
+	
+	public String getDealMonth() {
+		return dealMonth;
+	}
+	
+	public void setDealMonth(String dealMonth) {
+		this.dealMonth = dealMonth;
+	}
 
 	@Override
 	public String toString() {
-		return "HouseParameterDto [dongCode=" + dongCode + ", key=" + key + ", word=" + word + "]";
+		return "HouseParameterDto [dongCode=" + dongCode + ", key=" + key + ", word=" + word + ", dealYear=" + dealYear
+				+ ", dealMonth=" + dealMonth + "]";
 	}
 	
 }
