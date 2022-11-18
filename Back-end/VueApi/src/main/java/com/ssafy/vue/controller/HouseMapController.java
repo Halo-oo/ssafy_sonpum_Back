@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
+import com.ssafy.vue.model.HouseParameterDto;
 import com.ssafy.vue.model.SidoGugunCodeDto;
 import com.ssafy.vue.model.service.HouseMapService;
 
@@ -69,22 +70,32 @@ public class HouseMapController {
 		return new ResponseEntity<List<HouseDealDongDto>>(haHouseMapService.getDongInGugun(gugun), HttpStatus.OK);
 	}
 	
-	// 선택한 동에 포함된 아파트 정보 호출
-	@ApiOperation(value = "아파트 정보", notes = "선택한 동에 포함된 아파트 정보를 반환한다.", response = List.class)
+	// 선택한 동에 포함된 아파트 정보 호출(+ 검색)
+	// 검색조건: amount(매매금액) 이하, area(면적) 이상, floor(층) 이상, buildYear(건설년도) 이상, apartName(아파트 이름), dealDate(거래날짜, ex. 2022315)
+	@ApiOperation(value = "아파트 거래내역 목록(검색 포함)", notes = "선택한 동에 포함된 아파트 정보를 반환한다.", response = List.class)
 	@GetMapping("/apt")
-	public ResponseEntity<List<HouseDealInfoDto>> apt(@RequestParam("dong") String dong) throws Exception {
-		logger.info("#Back# HouseMapController - apt 선택한 동에 포함된 아파트 정보 호출, 선택한 동: {}", dong);
+	public ResponseEntity<List<HouseDealInfoDto>> apt(@ApiParam(value = "아파트 목록 검색을 위한 부가정보", required = true) HouseParameterDto houseParameterDto) throws Exception {
+		logger.info("#Back# HouseMapController - apt 선택한 동에 포함된 아파트 정보 호출, 선택한 동 및 검색조건: {}", houseParameterDto);
 		
-		return new ResponseEntity<List<HouseDealInfoDto>>(haHouseMapService.getAptInDong(dong), HttpStatus.OK);
+		// 매매금액을 검색할 경우 사전 처리 필요
+		if (houseParameterDto.getKey()!=null && houseParameterDto.getKey().equals("amount")) {
+			if (houseParameterDto.getWord()!=null && houseParameterDto.getWord()!="") {
+				String cost = houseParameterDto.getWord(); 
+				logger.info("# 매매금액 검색 사전작업 결과: " + cost.substring(0, cost.length()-3));
+				houseParameterDto.setWord(cost.substring(0, cost.length()-3));
+			}
+		}
+		
+		return new ResponseEntity<List<HouseDealInfoDto>>(haHouseMapService.getAptInDong(houseParameterDto), HttpStatus.OK);
 	}
 	
-	// 아파트 목록
-	@ApiOperation(value = "아파트 목록", notes = "지역코드와 매매계약월을 기준으로 아파트 목록을 반환한다.", response = List.class)
+	// 아파트 거래내역 목록  API
+	@ApiOperation(value = "아파트 거래내역 목록 - API", notes = "지역코드와 매매계약월을 기준으로 아파트 목록을 반환한다.", response = List.class)
 	@GetMapping(value = "/aptlist/{lawd_cd}/{deal_ymd}", produces = "application/json;charset=utf-8")
 	public ResponseEntity<String> aptList(@PathVariable("lawd_cd") String lawdCd, @PathVariable("deal_ymd") String dealYmd) throws IOException {
 		logger.info("#Back# HouseMapController - aptList 아파트 목록 호출, 선택한 지역코드: {}, 매매계약월: {}", lawdCd, dealYmd);
 		
-		String serviceKey = "DXpNtnXX+q2YJL5KZrSLtCmTQuoq0mx6Eg9DXFQqW3BX4XL3cgbfCtAUYXqwn76ELU/k+H6SLI5ACJoizLw6/Q==";
+		String serviceKey = "9Xo0vlglWcOBGUDxH8PPbuKnlBwbWU6aO7%2Bk3FV4baF9GXok1yxIEF%2BIwr2%2B%2F%2F4oVLT8bekKU%2Bk9ztkJO0wsBw%3D%3D";
 		
 		StringBuilder urlBuilder = new StringBuilder("http://openapi.molit.go.kr/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTradeDev"); 
 		urlBuilder.append("?" + URLEncoder.encode("serviceKey", "UTF-8")
