@@ -6,7 +6,8 @@ values ('ssafy', 'ssafy', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f
 -- 1234 암호화 > 03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4
 insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phoneNumber, reportCount)
 values ('corp', 'corp', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'corp@ssafy.com', now(), 'CORP', 0, '01033332222', 1);
-
+insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phoneNumber, reportCount)
+values ('realrent', 'realrent', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'realrent@ssafy.com', now(), 'CORP', 0, '01033332222', 1);
 insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phoneNumber, reportCount)
 values ('admin', 'admin', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'admin@ssafy.com', now(), 'ADMIN', 0, '01044442222', 0);
 select * from user;
@@ -25,3 +26,14 @@ BEGIN
 delimiter ;
 call insertData();
 select * from board_notice;
+
+-- 매물 test용 데이터 넣기 
+insert into house_product (userId, addressId, floor, buildYear, dealAmount, area, dealType, content)
+values ('corp', 11110000000001, '16', '2022', '82,000', '30.36', 'MONTH', '월세 내놓습니다- :)'); 
+insert into house_product (userId, addressId, floor, buildYear, dealAmount, area, dealType, content)
+values ('corp', 11110000000001, '10', '2022', '50,000', '15.36', 'YEAR', '전세 내놓습니다- :)'); 
+insert into house_product (userId, addressId, floor, buildYear, dealAmount, area, dealType, content)
+values ('corp', 11110000000017, '34', '2022', '1000,000', '90.36', 'YEAR', '전세 내놓습니다- :)'); 
+insert into house_product (userId, addressId, floor, buildYear, dealAmount, area, dealType, content)
+values ('realrent', 11110000000017, '25', '2022', '7,000', '100.36', 'SALE', '매매 내놓습니다- :)'); 
+select * from house_product;
