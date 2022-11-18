@@ -1,8 +1,5 @@
 package com.ssafy.vue.model.service;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +13,22 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private SqlSession sqlSession;
+	
+	// ID 중복체크 
+	@Override
+	public boolean idCheck(String userid) throws Exception {
+		if (userid == null || userid.isEmpty()) {
+			throw new Exception(); 
+		}
+		
+		return sqlSession.getMapper(UserMapper.class).idCheck(userid) == 1;
+	}
+
+	// 회원가입 
+	@Override
+	public boolean register(UserDto userDto) throws Exception {
+		return sqlSession.getMapper(UserMapper.class).register(userDto) == 1;
+	}
 
 	// 로그인
 	@Override

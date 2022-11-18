@@ -1,5 +1,6 @@
 package com.ssafy.vue.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ssafy.util.Encrypt;
+import com.ssafy.util.ParameterCheck;
 import com.ssafy.vue.model.UserDto;
 import com.ssafy.vue.model.UserTokenDto;
 import com.ssafy.vue.model.service.JwtServiceImpl;
@@ -34,12 +37,76 @@ public class UserController {
 	public static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	private static final String SUCCESS = "success";
 	private static final String FAIL = "fail";
+	
+	// for. 데이터 유효성 검사 
+	private ParameterCheck parameterCheck = new ParameterCheck();
 
 	@Autowired
 	private JwtServiceImpl jwtService;
 
 	@Autowired
 	private UserService userService;
+	
+	// ID 중복체크 
+	@ApiOperation(value = "ID 중복체크", notes = "동일한 ID가 있는 지 체크", response = Map.class)
+	@PostMapping("/idCheck/{userid}")
+	public ResponseEntity<String> idCheck(@PathVariable("userid") @ApiParam(value = "중복 체크를 진행할 회원의 아이디.", required = true) String userid) throws Exception {
+		logger.info("#Back# UserController - idCheck ID 중복체크 {}", userid);
+			
+		if (userService.idCheck(userid)) {
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		}
+		
+		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+	}
+	
+	// 회원가입
+	@ApiOperation(value = "회원가입", notes = "회원 가입", response = Map.class)
+	@PostMapping("/register")
+	public ResponseEntity<String> register(@RequestBody @ApiParam(value = "회원가입 시 필요한 회원정보", required = true) UserDto userDto) throws Exception {
+		logger.info("#Back# UserController - register 회원가입");
+		
+		/* (Back) 회원가입 데이터 유효성 check _ ValChecker참조 */
+		// ID
+		String checkResult = parameterCheck.checkEmpty(userDto.getUserId());
+		if (checkResult == "false" ) {
+			logger.info("# 회원가입 - ID 체크 Fail-");
+			return new ResponseEntity<String>("ID를 입력하세요.", HttpStatus.NO_CONTENT);
+		}
+		// PWD
+		checkResult = parameterCheck.checkPassword(userDto.getUserPwd());
+		if (checkResult == "false" ) {
+			logger.info("# 회원가입 - 패스워드 규칙 체크 Fail-");
+			return new ResponseEntity<String>("패스워드 규칙을 지켜주세요", HttpStatus.NO_CONTENT);
+		}
+		// 이름 
+		checkResult = parameterCheck.checkNAME(userDto.getUserName());
+		if (checkResult == "false" ) {
+			logger.info("# 회원가입 - 이름 규칙 체크 Fail-");
+			return new ResponseEntity<String>("이름을 다시 작성해주세요", HttpStatus.NO_CONTENT);
+		}
+		// 이메일 
+		checkResult = parameterCheck.checkEmail(userDto.getEmail());
+		if (checkResult == "false" ) {
+			logger.info("# 회원가입 - 이메일 규칙 체크 Fail-");
+			return new ResponseEntity<String>("이메일 형식을 지켜주세요", HttpStatus.NO_CONTENT);
+		}
+		
+		// 비밀번호 암호화
+		try {
+			Encrypt encrypt = new Encrypt(); 
+			String enc_password = encrypt.hashingWithSHA256(userDto.getUserPwd());	// 암호화 진행
+			userDto.setUserPwd(enc_password);											// 암호화 된 패스워드 저장
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}		
+		
+		if (userService.register(userDto)) {
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		}
+		
+		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+	}
 
 	// 로그인
 	@ApiOperation(value = "로그인", notes = "Access-token과 로그인 결과 메세지를 반환한다.", response = Map.class)
@@ -51,6 +118,14 @@ public class UserController {
 		HttpStatus status = null;
 		
 		try {
+			// 비밀번호 암호화 
+			try {
+				Encrypt encrypt = new Encrypt(); 
+				String enc_password = encrypt.hashingWithSHA256(userDto.getUserPwd());	// 암호화 진행
+				userDto.setUserPwd(enc_password);										// userDto 내 암호화한 비밀번호 저장
+			} catch (UnsupportedEncodingException e) {
+				e.printStackTrace();
+			}
 			UserDto loginUser = userService.login(userDto);
 			
 			if (loginUser != null) {

@@ -1,9 +1,16 @@
 package com.ssafy.vue.model.service;
 
+import java.sql.SQLException;
+
 import com.ssafy.vue.model.UserDto;
 import com.ssafy.vue.model.UserTokenDto;
 
 public interface UserService {
+	
+	// ID 중복체크 
+	boolean idCheck(String userid) throws Exception; 
+	// 회원가입 
+	boolean register(UserDto userDto) throws Exception; 
 
 	// 로그인
 	public UserDto login(UserDto userDto) throws Exception;

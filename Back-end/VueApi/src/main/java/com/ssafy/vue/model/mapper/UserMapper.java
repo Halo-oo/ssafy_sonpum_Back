@@ -10,7 +10,12 @@ import com.ssafy.vue.model.UserTokenDto;
 
 @Mapper
 public interface UserMapper {
-
+	
+	// ID 중복체크 
+	int idCheck(String userid) throws SQLException; 
+	// 회원가입 
+	int register(UserDto userDto) throws SQLException; 
+	
 	// 로그인
 	public UserDto login(UserDto userDto) throws SQLException;
 	// 사용자 정보 상세조회
