@@ -4,12 +4,18 @@
 
 <mapper namespace="com.ssafy.vue.model.mapper.UserMapper">
 
-	<!-- 회원가입 -->
-	<select id="register" parameterType="userDto" resultType="userDto">
-		select userid, username, email, phonenumber
+	<!-- ID 중복체크 -->
+	<select id="idCheck" parameterType="String" resultType="int">
+		select count(userid)
 		from user
-		where userid = #{userId} and userpwd = #{userPwd}
+		where userid = #{userid};
 	</select>
+
+	<!-- 회원가입 -->
+	<insert id="register" parameterType="userDto">
+		insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phoneNumber, reportCount)
+		values (#{userId}, #{userName}, #{userPwd}, #{email}, now(), #{role}, 0, #{phoneNumber}, 0);
+	</insert>
 
 	<!-- 로그인 -->
 	<select id="login" parameterType="userDto" resultType="userDto">
@@ -18,7 +24,7 @@
 		where userid = #{userId} and userpwd = #{userPwd}
 	</select>
 	
-	<!-- 사용자 정보 상세조회 -->
+	<!-- 사용자 인증, 사용자 정보 상세조회 -->
 	<select id="userInfo" parameterType="string" resultType="userDto">
 		select userid, userName, email, phonenumber, profileimage
 		from user
@@ -32,14 +38,14 @@
 		where userid = #{userid}
 	</select>
 	
-	<!-- 사용자 token 저장 -->
+	<!-- 사용자 token 업데이트 -->
 	<update id="saveRefreshToken" parameterType="userTokenDto">
 		update user
 		set token = #{token}
 		where userid = #{userId}
 	</update>
 	
-	<!-- 사용자 token 삭제 -->
+	<!-- 로그아웃, 사용자 token 삭제 -->
 	<update id="deleteRefreshToken" parameterType="userTokenDto">
 		update user
 		set token = #{token, jdbcType=VARCHAR}
