@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
+import com.ssafy.vue.model.HouseParameterDto;
 import com.ssafy.vue.model.SidoGugunCodeDto;
 
 @Mapper
@@ -18,7 +19,7 @@ public interface HouseMapMapper {
 	List<SidoGugunCodeDto> getGugunInSido(String sido) throws SQLException;
 	// 선택한 구군에 포함된 동 정보 호출
 	List<HouseDealDongDto> getDongInGugun(String gugun) throws SQLException;
-	// 선택한 동에 포함된 아파트 정보 호출
-	List<HouseDealInfoDto> getAptInDong(String dong) throws SQLException;
+	// 선택한 동에 포함된 아파트 정보 호출(+ 검색)
+	List<HouseDealInfoDto> getAptInDong(HouseParameterDto houseParameterDto) throws SQLException;
 	
 }

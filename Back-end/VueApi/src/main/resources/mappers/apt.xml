@@ -27,25 +27,49 @@
 		order by dongName;
 	</select>
 	
-	<!-- 선택한 동에 포함된 아파트 정보 호출 -->
-	<select id="getAptInDong" parameterType="string" resultType="houseDealInfoDto">
-	select deal.addressId, address.apartName, address.dongCode, address.buildYear, deal.dealAmount, deal.dealYear, deal.dealMonth, deal.dealDay, deal.area, deal.floor
-	from house_deal deal, address
-	left join sidocode si 
-	on left(address.dongcode, 2) = left(si.sidocode, 2)
-	left join guguncode gu
-	on left(address.dongcode, 5) = left(gu.guguncode, 5)
-	where dongCode = #{dong}
-	limit 0, 100;
-		<!-- select h.aptCode, h.aptName, h.buildyear, h.dongCode, h.dongName, h.jibun, h.lat, h.lng, si.sidoname, gu.gugunname,
-				(select dealAmount from housedeal where aptCode = h.aptCode and no = (select max(no) from housedeal where aptCode = h.aptCode)) recentPrice
-		from houseinfo h
-		left join sidocode si
-		on left(h.dongcode,2) = left(si.sidocode,2)
+	<!-- 선택한 동에 포함된 아파트 정보 호출 (+ 검색) -->
+	<!-- <select id="getAptInDong" parameterType="string" resultType="houseDealInfoDto">
+		select deal.addressId, address.apartName, address.dongCode, address.buildYear, deal.dealAmount, deal.dealYear, deal.dealMonth, deal.dealDay, deal.area, deal.floor
+		from house_deal deal, address
+		left join sidocode si 
+		on left(address.dongcode, 2) = left(si.sidocode, 2)
 		left join guguncode gu
-		on left(h.dongcode,5) = left(gu.guguncode,5)
-		where dongCode = #{dong} 
-		order by aptName -->
+		on left(address.dongcode, 5) = left(gu.guguncode, 5)
+		where dongCode = #{dong}
+		order by deal.dealYear desc
+		limit 0, 100
+	</select> -->
+	<select id="getAptInDong" parameterType="houseParameterDto" resultType="houseDealInfoDto">
+		select deal.addressId, address.apartName, address.dongCode, address.buildYear, deal.dealAmount, deal.dealYear, deal.dealMonth, deal.dealDay, deal.area, deal.floor
+		from house_deal deal, address
+		left join sidocode si 
+		on left(address.dongcode, 2) = left(si.sidocode, 2)
+		left join guguncode gu
+		on left(address.dongcode, 5) = left(gu.guguncode, 5)
+		where dongCode = #{dongCode}
+			<if test="word != null and word != ''">
+				<if test="key == 'amount'">
+					and <![CDATA[convert(deal.dealAmount, signed) <= #{word}]]>
+				</if>
+				<if test="key == 'area'">
+					and <![CDATA[convert(deal.area, signed) >= #{word}]]>
+				</if>
+				<if test="key == 'floor'">
+					and <![CDATA[convert(deal.floor, signed) >= #{word}]]>
+				</if>
+				<if test="key == 'buildYear'">
+					and <![CDATA[address.buildYear >= #{word}]]>
+				</if>
+				<if test="key == 'apartName'">
+					and address.apartName like concat('%', #{word}, '%')
+				</if>
+				<if test="key == 'dealDate'">
+					and concat(deal.dealYear, deal.dealMonth, deal.dealDay) = #{word}
+				</if>
+			</if>
+		order by deal.dealYear desc
+		limit 0, 100
 	</select>
+	
 	
 </mapper>

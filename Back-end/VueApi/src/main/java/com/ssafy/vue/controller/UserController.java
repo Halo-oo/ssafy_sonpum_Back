@@ -219,6 +219,17 @@ public class UserController {
 		
 		return new ResponseEntity<Map<String, Object>>(resultMap, status);
 	}
+//	@GetMapping("/token")
+//    public ResponseEntity<Void> checkToken(@RequestHeader("Authorization") final String header) {
+//        boolean flag = jwtService.checkToken(header);
+//        
+//        if(flag) {
+//            return new ResponseEntity<Void>(HttpStatus.OK);
+//        }
+//        else {
+//            return new ResponseEntity<Void>(HttpStatus.UNAUTHORIZED);
+//        }
+//    }
 
 	// 로그아웃(token 삭제)
 	@ApiOperation(value = "로그아웃", notes = "회원 정보를 담은 Token을 제거한다.", response = Map.class)

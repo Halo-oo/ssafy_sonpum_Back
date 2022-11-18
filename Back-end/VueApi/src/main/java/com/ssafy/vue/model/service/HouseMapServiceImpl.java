@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
+import com.ssafy.vue.model.HouseParameterDto;
 import com.ssafy.vue.model.SidoGugunCodeDto;
 import com.ssafy.vue.model.mapper.HouseMapMapper;
 
@@ -35,10 +36,10 @@ public class HouseMapServiceImpl implements HouseMapService {
 		return sqlSession.getMapper(HouseMapMapper.class).getDongInGugun(gugun);
 	}
 
-	// 선택한 동에 포함된 아파트 정보 호출
+	// 선택한 동에 포함된 아파트 정보 호출(+ 검색)
 	@Override
-	public List<HouseDealInfoDto> getAptInDong(String dong) throws Exception {
-		return sqlSession.getMapper(HouseMapMapper.class).getAptInDong(dong);
+	public List<HouseDealInfoDto> getAptInDong(HouseParameterDto houseParameterDto) throws Exception {
+		return sqlSession.getMapper(HouseMapMapper.class).getAptInDong(houseParameterDto);
 	}
 
 }
