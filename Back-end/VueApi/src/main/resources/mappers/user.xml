@@ -88,7 +88,7 @@
 		from house_product_bookmark bookmark
 		left join  house_product product 
 			on #{userid} = product.userId 
-		    and bookmark.houseProductId = product.houseProductId;
+		    and bookmark.houseProductId = product.houseProductId
 	</select>
 	
 	<!-- 아파트(매물) 리뷰 목록 -->
@@ -96,7 +96,7 @@
 		select houseProductReviewId, houseProductId, userId, rating, content, image, regtime
 		from house_product_review
 		where writerUserId = #{writerUserid}
-		order by regtime desc; 
+		order by regtime desc
 	</select>
 	
 	
