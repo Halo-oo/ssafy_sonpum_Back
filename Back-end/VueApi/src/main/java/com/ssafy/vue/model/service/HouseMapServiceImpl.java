@@ -1,5 +1,6 @@
 package com.ssafy.vue.model.service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -9,8 +10,10 @@ import org.springframework.stereotype.Service;
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
 import com.ssafy.vue.model.HouseParameterDto;
+import com.ssafy.vue.model.HouseProductBookmarkDto;
 import com.ssafy.vue.model.HouseProductDto;
 import com.ssafy.vue.model.HouseProductParameterDto;
+import com.ssafy.vue.model.HouseProductReviewDto;
 import com.ssafy.vue.model.SidoGugunCodeDto;
 import com.ssafy.vue.model.mapper.HouseMapMapper;
 
@@ -54,6 +57,11 @@ public class HouseMapServiceImpl implements HouseMapService {
 	public List<HouseProductDto> listHouseProduct(HouseProductParameterDto houseProductParameterDto) throws Exception {
 		return sqlSession.getMapper(HouseMapMapper.class).listHouseProduct(houseProductParameterDto);
 	}
+	// 매물 상세보기 
+	@Override
+	public HouseProductDto getHouseProduct(int houseProductid) throws Exception {
+		return sqlSession.getMapper(HouseMapMapper.class).getHouseProduct(houseProductid);
+	}
 	// 매물 수정
 	@Override
 	public boolean updateHouseProduct(HouseProductDto houseProductDto) throws Exception {
@@ -74,6 +82,15 @@ public class HouseMapServiceImpl implements HouseMapService {
 	public boolean reportHouseProduct(String userid) throws Exception {
 		return sqlSession.getMapper(HouseMapMapper.class).reportHouseProduct(userid) == 1;
 	}
-	
+	// 매물 북마크 등록 
+	@Override
+	public boolean bookmarkProduct(HouseProductBookmarkDto houseProductBookmarkDto) throws SQLException {
+		return sqlSession.getMapper(HouseMapMapper.class).bookmarkProduct(houseProductBookmarkDto) == 1;
+	}
+	// 매물 리뷰 등록
+	@Override
+	public boolean reviewProduct(HouseProductReviewDto houseProductReviewDto) throws SQLException {
+		return sqlSession.getMapper(HouseMapMapper.class).reviewProduct(houseProductReviewDto) == 1;
+	}
 
 }
