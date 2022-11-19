@@ -41,11 +41,21 @@ public interface HouseMapMapper {
 	int soldOutHouseProduct(int houseProductid) throws SQLException;
 	// 매물 삭제 
 	int deleteHouseProduct(int houseProductid) throws SQLException;
+	// ! 매물 삭제 시 해당 매물과 연관된 리뷰, 북마크 모두 삭제
+	int deleteRelationHouseProduct(int houseProductid) throws SQLException; 
 	// 매물 신고
 	int reportHouseProduct(String userid) throws SQLException;
 	// 매물 북마크 등록
 	int bookmarkProduct(HouseProductBookmarkDto houseProductBookmarkDto) throws SQLException;
+	// 매물 북마크 해제(삭제)
+	int deleteBookmarkProduct(int houseProductBookmarkid) throws SQLException; 
 	// 매물 리뷰 등록
 	int reviewProduct(HouseProductReviewDto houseProductReviewDto) throws SQLException;
+	// 매물 리뷰 목록 
+	List<HouseProductReviewDto> reviewProductList(int houseProductid) throws SQLException;  
+	// 매물 리뷰 수정
+	int editReviewProduct(HouseProductReviewDto houseProductReviewDto) throws SQLException;
+	// 매물 리뷰 삭제
+	int deleteReviewProduct(int houseProductReviewid) throws SQLException; 
 	
 }
