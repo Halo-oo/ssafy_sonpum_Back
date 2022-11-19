@@ -49,11 +49,19 @@ public class UserController {
 	
 	// ID 중복체크 
 	@ApiOperation(value = "ID 중복체크", notes = "동일한 ID가 있는 지 체크", response = Map.class)
-	@PostMapping("/idCheck/{userid}")
+	@GetMapping("/idCheck/{userid}")
 	public ResponseEntity<String> idCheck(@PathVariable("userid") @ApiParam(value = "중복 체크를 진행할 회원의 아이디.", required = true) String userid) throws Exception {
 		logger.info("#Back# UserController - idCheck ID 중복체크 {}", userid);
 			
+//		if (userService.idCheck(userid)) {
+//			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+//		}
+//		
+//		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
 		if (userService.idCheck(userid)) {
+			return new ResponseEntity<String>(FAIL, HttpStatus.OK);
+		}
+		else if (!userService.idCheck(userid)) {
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
 		}
 		
@@ -91,7 +99,6 @@ public class UserController {
 			logger.info("# 회원가입 - 이메일 규칙 체크 Fail-");
 			return new ResponseEntity<String>("이메일 형식을 지켜주세요", HttpStatus.NO_CONTENT);
 		}
-		
 		// 비밀번호 암호화
 		try {
 			Encrypt encrypt = new Encrypt(); 
@@ -99,7 +106,10 @@ public class UserController {
 			userDto.setUserPwd(enc_password);											// 암호화 된 패스워드 저장
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
-		}		
+			logger.error("# 비밀번호 변경 - 패스워드 암호화 Fail-");
+			return new ResponseEntity<String>("죄송합니다. 잠시후 다시 시도해주세요", HttpStatus.NO_CONTENT);
+		}	
+		
 		
 		if (userService.register(userDto)) {
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
@@ -111,7 +121,7 @@ public class UserController {
 	// 로그인
 	@ApiOperation(value = "로그인", notes = "Access-token과 로그인 결과 메세지를 반환한다.", response = Map.class)
 	@PostMapping("/login")
-	public ResponseEntity<Map<String, Object>> login(@RequestBody @ApiParam(value = "로그인 시 필요한 회원정보(아이디, 비밀번호).", required = true) UserDto userDto) {
+	public Map<String, Object> login(@RequestBody @ApiParam(value = "로그인 시 필요한 회원정보(아이디, 비밀번호).", required = true) UserDto userDto) {
 		logger.info("#Back# UserController - login 로그인");
 		
 		Map<String, Object> resultMap = new HashMap<>();
@@ -154,10 +164,10 @@ public class UserController {
 			status = HttpStatus.INTERNAL_SERVER_ERROR;
 		}
 		
-		return new ResponseEntity<Map<String, Object>>(resultMap, status);
+		return resultMap;
 	}
 
-	// 사용자 정보 상세조회, 회원 인증(회원 token 받아오기)
+	// 회원 인증(회원 token 받아오기)
 	@ApiOperation(value = "회원 인증", notes = "회원 정보를 담은 Token을 반환한다.", response = Map.class)
 	@GetMapping("/info/{userid}")
 	public ResponseEntity<Map<String, Object>> getInfo(@PathVariable("userid") @ApiParam(value = "인증할 회원의 아이디.", required = true) String userid, HttpServletRequest request) {
@@ -190,6 +200,17 @@ public class UserController {
 		
 		return new ResponseEntity<Map<String, Object>>(resultMap, status);
 	}
+//	@GetMapping("/token")
+//  public ResponseEntity<Void> checkToken(@RequestHeader("Authorization") final String header) {
+//      boolean flag = jwtService.checkToken(header);
+//      
+//      if(flag) {
+//          return new ResponseEntity<Void>(HttpStatus.OK);
+//      }
+//      else {
+//          return new ResponseEntity<Void>(HttpStatus.UNAUTHORIZED);
+//      }
+//  }
 	
 	// 사용자 token 재발급
 	@ApiOperation(value = "Access Token 재발급", notes = "만료된 access token을 재발급받는다.", response = Map.class)
@@ -219,17 +240,6 @@ public class UserController {
 		
 		return new ResponseEntity<Map<String, Object>>(resultMap, status);
 	}
-//	@GetMapping("/token")
-//    public ResponseEntity<Void> checkToken(@RequestHeader("Authorization") final String header) {
-//        boolean flag = jwtService.checkToken(header);
-//        
-//        if(flag) {
-//            return new ResponseEntity<Void>(HttpStatus.OK);
-//        }
-//        else {
-//            return new ResponseEntity<Void>(HttpStatus.UNAUTHORIZED);
-//        }
-//    }
 
 	// 로그아웃(token 삭제)
 	@ApiOperation(value = "로그아웃", notes = "회원 정보를 담은 Token을 제거한다.", response = Map.class)
@@ -255,5 +265,4 @@ public class UserController {
 		
 		return new ResponseEntity<Map<String, Object>>(resultMap, status);
 	}
-
 }

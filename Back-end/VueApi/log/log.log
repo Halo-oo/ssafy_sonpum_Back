@@ -194,3 +194,126 @@ java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child 
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  java.lang.Thread.run(Thread.java:750)
+[2m2022-11-19 14:37:14.315[0;39m [32m INFO[0;39m [35m17368[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-19 14:37:14.526[0;39m [32m INFO[0;39m [35m17368[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1701 ms
+[2m2022-11-19 14:37:15.753[0;39m [32m INFO[0;39m [35m17368[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-19 14:37:17.389[0;39m [32m INFO[0;39m [35m17368[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-19 14:37:17.392[0;39m [32m INFO[0;39m [35m17368[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 2 ms
+[2m2022-11-19 14:37:30.773[0;39m [32m INFO[0;39m [35m17368[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - idCheck ID 중복체크 ssafy
+[2m2022-11-19 14:38:10.043[0;39m [33m WARN[0;39m [35m17368[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+[2m2022-11-19 14:38:26.155[0;39m [32m INFO[0;39m [35m17368[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - idCheck ID 중복체크 ssafy1
+[2m2022-11-19 14:40:50.580[0;39m [32m INFO[0;39m [35m17368[0;39m [2m---[0;39m [2m[n(13)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-19 14:40:51.491[0;39m [33m WARN[0;39m [35m17368[0;39m [2m---[0;39m [2m[n(13)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-19 14:41:04.079[0;39m [32m INFO[0;39m [35m22688[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-19 14:41:04.211[0;39m [32m INFO[0;39m [35m22688[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1418 ms
+[2m2022-11-19 14:41:05.214[0;39m [32m INFO[0;39m [35m22688[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-19 14:41:11.141[0;39m [32m INFO[0;39m [35m22688[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-19 14:41:11.144[0;39m [32m INFO[0;39m [35m22688[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 3 ms
+[2m2022-11-19 14:41:18.345[0;39m [32m INFO[0;39m [35m22688[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - idCheck ID 중복체크 ssafy1
+[2m2022-11-19 14:41:49.545[0;39m [32m INFO[0;39m [35m22688[0;39m [2m---[0;39m [2m[on(9)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-19 14:41:50.421[0;39m [33m WARN[0;39m [35m22688[0;39m [2m---[0;39m [2m[on(9)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-19 14:42:22.044[0;39m [32m INFO[0;39m [35m19956[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-19 14:42:22.171[0;39m [32m INFO[0;39m [35m19956[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1358 ms
+[2m2022-11-19 14:42:23.144[0;39m [32m INFO[0;39m [35m19956[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-19 14:42:23.935[0;39m [32m INFO[0;39m [35m19956[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-19 14:42:23.937[0;39m [32m INFO[0;39m [35m19956[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 2 ms
+[2m2022-11-19 14:42:32.663[0;39m [32m INFO[0;39m [35m19956[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - idCheck ID 중복체크 ssafy
+[2m2022-11-19 14:42:38.900[0;39m [32m INFO[0;39m [35m19956[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - idCheck ID 중복체크 ssafy1
+[2m2022-11-19 14:43:01.083[0;39m [32m INFO[0;39m [35m19956[0;39m [2m---[0;39m [2m[on(9)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-19 14:43:02.043[0;39m [33m WARN[0;39m [35m19956[0;39m [2m---[0;39m [2m[on(9)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-19 14:43:21.516[0;39m [32m INFO[0;39m [35m23676[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-19 14:43:21.650[0;39m [32m INFO[0;39m [35m23676[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1388 ms
+[2m2022-11-19 14:43:22.712[0;39m [32m INFO[0;39m [35m23676[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-19 14:43:30.078[0;39m [32m INFO[0;39m [35m23676[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-19 14:43:30.080[0;39m [32m INFO[0;39m [35m23676[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-19 14:43:38.677[0;39m [32m INFO[0;39m [35m23676[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - idCheck ID 중복체크 ssafy
+[2m2022-11-19 14:43:43.810[0;39m [32m INFO[0;39m [35m23676[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - idCheck ID 중복체크 ssafy1
+[2m2022-11-19 14:46:49.352[0;39m [32m INFO[0;39m [35m23676[0;39m [2m---[0;39m [2m[n(12)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-19 14:46:50.223[0;39m [33m WARN[0;39m [35m23676[0;39m [2m---[0;39m [2m[n(12)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-19 16:44:26.309[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-19 16:44:26.439[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1415 ms
+[2m2022-11-19 16:44:27.422[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-19 16:44:47.823[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-19 16:44:47.824[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-19 16:49:42.388[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# UserMyPageController - getUserInfo 회원정보 조회 호출 : ssafy
+[2m2022-11-19 16:49:54.943[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - bookmarkHouseProductList 북마크(관심) 매물 목록 조회 호출
+[2m2022-11-19 16:51:15.075[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# UserMyPageController - withdrawal 회원탈퇴 호출 : test
+[2m2022-11-19 16:51:40.746[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-19 16:51:58.395[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - reviewHouseProductList 아파트(매물) 리뷰 목록 조회 호출
+[2m2022-11-19 16:52:10.858[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - reviewHouseProductList 아파트(매물) 리뷰 목록 조회 호출
+[2m2022-11-19 16:53:36.958[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# UserMyPageController - updateUserInfo 회원정보 수정 호출, 수정할 내용: UserDto [userId=test, userName=test01, userPwd=1234, email=test12@ssafy.com, joindate=string, role=string, delFlag=0, phoneNumber=01033334444, reportCount=0, profileImage=string]
+[2m2022-11-19 16:53:36.958[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m # 회원정보 수정 - 이름 규칙 체크 Fail-
+[2m2022-11-19 16:53:48.028[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# UserMyPageController - updateUserInfo 회원정보 수정 호출, 수정할 내용: UserDto [userId=test, userName=testdd, userPwd=1234, email=test12@ssafy.com, joindate=string, role=string, delFlag=0, phoneNumber=01033334444, reportCount=0, profileImage=string]
+[2m2022-11-19 16:54:27.803[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# UserMyPageController - chageUserPwd 비밀번호 변경 호출
+[2m2022-11-19 16:54:27.804[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m # 비밀번호 변경 - 패스워드 규칙 체크 Fail-
+[2m2022-11-19 16:54:37.048[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# UserMyPageController - chageUserPwd 비밀번호 변경 호출
+[2m2022-11-19 16:55:02.358[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# UserMyPageController - chageUserPwd 비밀번호 변경 호출
+[2m2022-11-19 16:55:24.825[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-19 16:55:24.866[0;39m [32mDEBUG[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4ODQ0NTI0ODM0LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg4NDQ1MzQsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InRlc3QifQ.Fe24EI377L4F4XqbKrUBpGWHbCskzoiLg0cgcI1zKn8
+[2m2022-11-19 16:55:24.867[0;39m [32mDEBUG[0;39m [35m24900[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4ODQ0NTI0ODYwLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg4NDQ1NTQsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJ0ZXN0In0.tiCIYN902VXys10NsyRzErVNsQ0EeQgMseNwolEqWQs
+[2m2022-11-19 16:59:00.735[0;39m [32m INFO[0;39m [35m24900[0;39m [2m---[0;39m [2m[n(24)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-19 16:59:01.611[0;39m [33m WARN[0;39m [35m24900[0;39m [2m---[0;39m [2m[n(24)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-19 16:59:12.777[0;39m [32m INFO[0;39m [35m18236[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-19 16:59:12.905[0;39m [32m INFO[0;39m [35m18236[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1432 ms
+[2m2022-11-19 16:59:13.937[0;39m [32m INFO[0;39m [35m18236[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-19 16:59:16.432[0;39m [32m INFO[0;39m [35m18236[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-19 16:59:16.433[0;39m [32m INFO[0;39m [35m18236[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-19 16:59:30.076[0;39m [32m INFO[0;39m [35m18236[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-19 16:59:30.568[0;39m [32mDEBUG[0;39m [35m18236[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4ODQ0NzcwNTMxLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg4NDQ3ODAsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.8VK79N5iYDUxU4fSxwNGtbly7QT3Hys0zzxauJZMFDY
+[2m2022-11-19 16:59:30.569[0;39m [32mDEBUG[0;39m [35m18236[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY4ODQ0NzcwNTU4LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njg4NDQ4MDAsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.zHbCZ-E_AuF1zAlurQ4rvz_iMRecnsVLDhHaZrqCVhA
+[2m2022-11-19 17:39:40.587[0;39m [32m INFO[0;39m [35m18236[0;39m [2m---[0;39m [2m[n(47)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-19 17:39:41.613[0;39m [33m WARN[0;39m [35m18236[0;39m [2m---[0;39m [2m[n(47)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
