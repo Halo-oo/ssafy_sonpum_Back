@@ -29,8 +29,7 @@ CREATE TABLE IF NOT EXISTS `sonpum`.`user` (
   `reportCount` INT NULL DEFAULT 0,
   `profileImage` VARCHAR(100) NULL,
   `token` VARCHAR(5000) NULL,
-  PRIMARY KEY (`userId`),
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
+  PRIMARY KEY (`userId`))
 ENGINE = InnoDB;
 
 
@@ -199,13 +198,15 @@ CREATE TABLE IF NOT EXISTS `sonpum`.`house_product_review` (
   `houseProductReviewId` INT NOT NULL AUTO_INCREMENT,
   `houseProductId` INT NOT NULL,
   `userId` VARCHAR(45) NOT NULL,
+  `writerUserId` VARCHAR(45) NOT NULL,
   `rating` INT NOT NULL DEFAULT 0,
   `content` TEXT NULL,
-  `image` VARCHAR(1000) NULL,
+  `image` VARCHAR(1000) NULL DEFAULT NULL,
   `regtime` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`houseProductReviewId`),
   INDEX `fk_house_product_review_house_product1_idx` (`houseProductId` ASC) VISIBLE,
   INDEX `fk_house_product_review_user1_idx` (`userId` ASC) VISIBLE,
+  INDEX `fk_house_product_review_writer1_idx` (`writerUserId` ASC) VISIBLE,
   CONSTRAINT `fk_house_product_review_house_product1`
     FOREIGN KEY (`houseProductId`)
     REFERENCES `sonpum`.`house_product` (`houseProductId`)
@@ -213,6 +214,11 @@ CREATE TABLE IF NOT EXISTS `sonpum`.`house_product_review` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_house_product_review_user1`
     FOREIGN KEY (`userId`)
+    REFERENCES `sonpum`.`user` (`userId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_house_product_review_writer1`
+    FOREIGN KEY (`writerUserId`)
     REFERENCES `sonpum`.`user` (`userId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
