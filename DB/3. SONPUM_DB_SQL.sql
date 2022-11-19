@@ -29,8 +29,7 @@ CREATE TABLE IF NOT EXISTS `sonpum`.`user` (
   `reportCount` INT NULL DEFAULT 0,
   `profileImage` VARCHAR(100) NULL,
   `token` VARCHAR(5000) NULL,
-  PRIMARY KEY (`userId`),
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
+  PRIMARY KEY (`userId`))
 ENGINE = InnoDB;
 
 
