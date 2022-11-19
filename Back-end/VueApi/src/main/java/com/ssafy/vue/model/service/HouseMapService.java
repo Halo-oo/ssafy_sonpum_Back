@@ -37,11 +37,21 @@ public interface HouseMapService {
 	boolean soldOutHouseProduct(int houseProductid) throws Exception;
 	// 매물 삭제 
 	boolean deleteHouseProduct(int houseProductid) throws Exception;
+	// ! 매물 삭제 시 해당 매물과 연관된 리뷰, 북마크 모두 삭제
+	boolean deleteRelationHouseProduct(int houseProductid) throws Exception; 
 	// 매물 신고
 	boolean reportHouseProduct(String userid) throws Exception;
 	// 매물 북마크 등록
-	boolean bookmarkProduct(HouseProductBookmarkDto houseProductBookmarkDto) throws SQLException;
+	boolean bookmarkProduct(HouseProductBookmarkDto houseProductBookmarkDto) throws Exception;
+	// 매물 북마크 해제(삭제)
+	boolean deleteBookmarkProduct(int houseProductBookmarkid) throws Exception; 
 	// 매물 리뷰 등록
-	boolean reviewProduct(HouseProductReviewDto houseProductReviewDto) throws SQLException;
+	boolean reviewProduct(HouseProductReviewDto houseProductReviewDto) throws Exception;
+	// 매물 리뷰 목록 
+	List<HouseProductReviewDto> reviewProductList(int houseProductid) throws Exception; 
+	// 매물 리뷰 수정
+	boolean editReviewProduct(HouseProductReviewDto houseProductReviewDto) throws Exception;
+	// 매물 리뷰 삭제
+	boolean deleteReviewProduct(int houseProductReviewid) throws Exception; 
 	
 }

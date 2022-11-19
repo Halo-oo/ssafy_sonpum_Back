@@ -77,6 +77,11 @@ public class HouseMapServiceImpl implements HouseMapService {
 	public boolean deleteHouseProduct(int houseProductid) throws Exception {
 		return sqlSession.getMapper(HouseMapMapper.class).deleteHouseProduct(houseProductid) == 1;
 	}
+	// ! 매물 삭제 시 해당 매물과 연관된 리뷰, 북마크 모두 삭제
+	@Override
+	public boolean deleteRelationHouseProduct(int houseProductid) throws Exception {
+		return sqlSession.getMapper(HouseMapMapper.class).deleteRelationHouseProduct(houseProductid) >= 1;
+	}
 	// 매물 신고
 	@Override
 	public boolean reportHouseProduct(String userid) throws Exception {
@@ -87,10 +92,30 @@ public class HouseMapServiceImpl implements HouseMapService {
 	public boolean bookmarkProduct(HouseProductBookmarkDto houseProductBookmarkDto) throws SQLException {
 		return sqlSession.getMapper(HouseMapMapper.class).bookmarkProduct(houseProductBookmarkDto) == 1;
 	}
+	// 매물 북마크 해제(삭제)
+	@Override
+	public boolean deleteBookmarkProduct(int houseProductBookmarkid) throws Exception {
+		return sqlSession.getMapper(HouseMapMapper.class).deleteBookmarkProduct(houseProductBookmarkid) == 1;
+	}
 	// 매물 리뷰 등록
 	@Override
 	public boolean reviewProduct(HouseProductReviewDto houseProductReviewDto) throws SQLException {
 		return sqlSession.getMapper(HouseMapMapper.class).reviewProduct(houseProductReviewDto) == 1;
+	}
+	// 매물 리뷰 목록 
+	@Override
+	public List<HouseProductReviewDto> reviewProductList(int houseProductid) throws Exception {
+		return sqlSession.getMapper(HouseMapMapper.class).reviewProductList(houseProductid);
+	}
+	// 매물 리뷰 수정
+	@Override
+	public boolean editReviewProduct(HouseProductReviewDto houseProductReviewDto) throws Exception {
+		return sqlSession.getMapper(HouseMapMapper.class).editReviewProduct(houseProductReviewDto) == 1;
+	}
+	// 매물 리뷰 삭제
+	@Override
+	public boolean deleteReviewProduct(int houseProductReviewid) throws Exception {
+		return sqlSession.getMapper(HouseMapMapper.class).deleteReviewProduct(houseProductReviewid) == 1;
 	}
 
 }

@@ -93,7 +93,7 @@ public class HouseProductController {
 	
 	// 매물 판매완료로 변경 
 	@ApiOperation(value = "매물 판매완료", notes = "매물을 판매완료로 변경한다. 그리고 DB수정 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
-	@PutMapping("/{houseProductid}")
+	@PutMapping("/sold/{houseProductid}")
 	public ResponseEntity<String> soldOutHouseProduct(@PathVariable("houseProductid") @ApiParam(value = "판매완료된 매물 번호", required = true) int houseProductid) throws Exception {
 		logger.info("#Back# HouseProductController - soldOutHouseProduct 매물 판매완료 변경 호출");
 		
@@ -104,10 +104,17 @@ public class HouseProductController {
 	}
 	
 	// 매물 삭제 
-	@ApiOperation(value = "매물 삭제", notes = "매물번호에 해당되는 정보를 삭제한다. 그리고 DB삭제 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
+	// + 매물 삭제 시 해당 매물과 연관된 리뷰, 북마크 모두 삭제
+	@ApiOperation(value = "매물 삭제", notes = "매물번호에 해당되는 정보를 삭제한다.(연관되어 있는 북마크, 리뷰 또한 삭제) 그리고 DB삭제 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
 	@DeleteMapping("/{houseProductid}")
 	public ResponseEntity<String> deleteHouseProduct(@PathVariable("houseProductid") @ApiParam(value = "삭제할 매물 번호", required = true) int houseProductid) throws Exception {
 		logger.info("#Back# HouseProductController - deleteHouseProduct 매물 삭제 호출");
+		
+		// 해당 매물과 연관된 리뷰, 북마크 모두 삭제
+		if (!haHouseMapService.deleteRelationHouseProduct(houseProductid)) {
+			logger.info("# 리뷰, 북마크 삭제 실패-");
+			return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+		}
 		
 		if (haHouseMapService.deleteHouseProduct(houseProductid)) {
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
@@ -154,13 +161,60 @@ public class HouseProductController {
 		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
 	}
 	
+	// 매물 북마크 해제 
+	@ApiOperation(value = "매물 북마크 해제", notes = "해당 매물을 북마크에서 해제한다.", response = List.class)
+	@DeleteMapping("/bookmark/{houseProductBookmarkid}")
+	public ResponseEntity<String> deleteBookmarkProduct(@PathVariable("houseProductBookmarkid") @ApiParam(value = "북마크를 해제할 매물 번호", required = true) int houseProductBookmarkid) throws Exception {
+		logger.info("#Back# HouseProductController - deleteBookmarkProduct 매물 북마크 해제 호출");
+		
+		if (haHouseMapService.deleteBookmarkProduct(houseProductBookmarkid)) {
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		}
+		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+	}
+	
 	// 매물 리뷰 등록
+	// 필요 Dto 데이터: houseProductId, writerUserId, rating, buildYear, content, image
 	@ApiOperation(value = "매물 리뷰 등록", notes = "해당 매물의 리뷰를 등록한다.", response = List.class)
 	@PostMapping("/review")
-	public ResponseEntity<String> reviewProduct(@RequestBody @ApiParam(value = "매물 리뷰", required = true) HouseProductReviewDto houseProductReviewDto) throws Exception {
+	public ResponseEntity<String> reviewProduct(@RequestBody @ApiParam(value = "매물 리뷰 등록", required = true) HouseProductReviewDto houseProductReviewDto) throws Exception {
 		logger.info("#Back# HouseProductController - reviewProduct 매물 리뷰 등록 호출");
 		
 		if (haHouseMapService.reviewProduct(houseProductReviewDto)) {
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		}
+		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+	}
+	
+	// 매물 리뷰 목록 
+	@ApiOperation(value = "매물 리뷰 목록", notes = "매물 번호에 해당하는 매물 리뷰 반환", response = List.class)
+	@GetMapping("/review/{houseProductid}")
+	public ResponseEntity<List<HouseProductReviewDto>> reviewProductList(@PathVariable("houseProductid") @ApiParam(value = "리뷰를 가져올 매물 번호", required = true) int houseProductid) throws Exception {
+		logger.info("#Back# HouseProductController - reviewProductList 매물 리뷰 목록 호출");
+		
+		return new ResponseEntity<List<HouseProductReviewDto>>(haHouseMapService.reviewProductList(houseProductid), HttpStatus.OK);
+	}
+	
+	// 매물 리뷰 수정 
+	// 필요 Dto 데이터: houseProductReviewId, rating, content, image
+	@ApiOperation(value = "매물 리뷰 수정", notes = "해당 매물의 리뷰를 수정한다.", response = List.class)
+	@PostMapping("/reviewEdit")
+	public ResponseEntity<String> editReviewProduct(@RequestBody @ApiParam(value = "매물 리뷰 수정", required = true) HouseProductReviewDto houseProductReviewDto) throws Exception {
+		logger.info("#Back# HouseProductController - editReviewProduct 매물 리뷰 수정 호출");
+		
+		if (haHouseMapService.editReviewProduct(houseProductReviewDto)) {
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		}
+		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+	}
+	
+	// 매물 리뷰 삭제 
+	@ApiOperation(value = "매물 리뷰 삭제", notes = "리뷰번호에 해당되는 리뷰를 삭제한다. 그리고 DB삭제 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
+	@DeleteMapping("/review/{houseProductReviewid}")
+	public ResponseEntity<String> deleteReviewProduct(@PathVariable("houseProductReviewid") @ApiParam(value = "삭제할 리뷰 번호", required = true) int houseProductReviewid) throws Exception {
+		logger.info("#Back# HouseProductController - deleteReviewProduct 매물 리뷰 삭제 호출");
+		
+		if (haHouseMapService.deleteReviewProduct(houseProductReviewid)) {
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
 		}
 		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);

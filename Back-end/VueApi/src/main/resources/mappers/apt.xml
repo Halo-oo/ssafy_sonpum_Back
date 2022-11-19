@@ -146,6 +146,14 @@
 		delete from house_product
 		where houseProductId = #{houseProductid}
 	</delete>
+	<!-- ! 매물 삭제 시 해당 매물과 연관된 리뷰, 북마크 모두 삭제 -->
+	<delete id="deleteRelationHouseProduct" parameterType="int">
+		delete bookmark, review
+		from house_product_bookmark bookmark 
+			left join house_product_review review
+			on bookmark.houseProductId = review.houseProductId
+		where review.houseProductId = #{houseProductid};
+	</delete>
 	
 	<!-- 매물 주변 부가정보 -->
 	
@@ -161,6 +169,12 @@
 		insert house_product_bookmark(userId, houseProductId)
 		values(#{userId}, #{houseProductId});	
 	</insert>
+	
+	<!-- 매물 북마크 해제(삭제) -->
+	<delete id="deleteBookmarkProduct" parameterType="int">
+		delete from house_product_bookmark
+		where houseProductBookmarkId = #{houseProductBookmarkid}
+	</delete>
 		
 	<!-- 매물 리뷰 등록 -->
 	<insert id="reviewProduct" parameterType="houseProductReviewDto">
@@ -169,5 +183,26 @@
 		insert into house_product_review(houseProductId, userId, writerUserId, rating, content, regtime, image)
 		values (#{houseProductId}, (select userId from house_product where houseProductId = #{houseProductId}), #{writerUserId}, #{rating}, #{content}, now(), #{image});
 	</insert>
+	
+	<!-- 매물 리뷰 목록 -->
+	<select id="reviewProductList" parameterType="int" resultType="houseProductReviewDto">
+		select houseProductReviewId, houseProductId, userId, writerUserId, rating, content, image, regtime
+		from house_product_review
+		where houseProductId = #{houseProductid}; 
+	</select>
+	
+	<!-- 매물 리뷰 수정 -->
+	<update id="editReviewProduct" parameterType="houseProductReviewDto">
+		update house_product_review
+		set rating = #{rating}, content = #{content}, image = #{image}
+		where houseProductReviewId = #{houseProductReviewId}
+	</update>
+	
+	<!-- 매물 리뷰 삭제 -->
+	<delete id="deleteReviewProduct" parameterType="int">
+		delete from house_product_review
+		where houseProductReviewId = #{houseProductReviewid}
+	</delete>
+	
 	
 </mapper>
