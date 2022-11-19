@@ -1,12 +1,15 @@
 package com.ssafy.vue.model.service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
 import com.ssafy.vue.model.HouseParameterDto;
+import com.ssafy.vue.model.HouseProductBookmarkDto;
 import com.ssafy.vue.model.HouseProductDto;
 import com.ssafy.vue.model.HouseProductParameterDto;
+import com.ssafy.vue.model.HouseProductReviewDto;
 import com.ssafy.vue.model.SidoGugunCodeDto;
 
 public interface HouseMapService {
@@ -26,6 +29,8 @@ public interface HouseMapService {
 	boolean registerHouseProduct(HouseProductDto houseProductDto) throws Exception;
 	// 매물 목록
 	List<HouseProductDto> listHouseProduct(HouseProductParameterDto houseProductParameterDto) throws Exception;
+	// 매물 상세보기 
+	HouseProductDto getHouseProduct(int houseProductid) throws Exception;
 	// 매물 수정 
 	boolean updateHouseProduct(HouseProductDto houseProductDto) throws Exception;
 	// 매물 판매완료로 변경 
@@ -34,5 +39,9 @@ public interface HouseMapService {
 	boolean deleteHouseProduct(int houseProductid) throws Exception;
 	// 매물 신고
 	boolean reportHouseProduct(String userid) throws Exception;
+	// 매물 북마크 등록
+	boolean bookmarkProduct(HouseProductBookmarkDto houseProductBookmarkDto) throws SQLException;
+	// 매물 리뷰 등록
+	boolean reviewProduct(HouseProductReviewDto houseProductReviewDto) throws SQLException;
 	
 }

@@ -1,17 +1,7 @@
 package com.ssafy.vue.controller;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLEncoder;
 import java.util.List;
 
-import org.json.JSONObject;
-import org.json.XML;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,18 +14,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ssafy.vue.model.BoardParameterDto;
 import com.ssafy.vue.model.BoardReportDto;
-import com.ssafy.vue.model.HouseDealDongDto;
-import com.ssafy.vue.model.HouseDealInfoDto;
-import com.ssafy.vue.model.HouseParameterDto;
+import com.ssafy.vue.model.HouseProductBookmarkDto;
 import com.ssafy.vue.model.HouseProductCheckDto;
 import com.ssafy.vue.model.HouseProductDto;
 import com.ssafy.vue.model.HouseProductParameterDto;
-import com.ssafy.vue.model.SidoGugunCodeDto;
+import com.ssafy.vue.model.HouseProductReviewDto;
 import com.ssafy.vue.model.service.HouseMapService;
 
 import io.swagger.annotations.Api;
@@ -82,6 +68,15 @@ public class HouseProductController {
 		}
 		
 		return new ResponseEntity<List<HouseProductDto>>(haHouseMapService.listHouseProduct(houseProductParameterDto), HttpStatus.OK);
+	}
+	
+	// 매물 상세보기 
+	@ApiOperation(value = "매물 상세보기", notes = "매물 번호에 해당하는 매물 정보를 반환한다.", response = BoardReportDto.class)
+	@GetMapping("/{houseProductid}")
+	public ResponseEntity<HouseProductDto> getHouseProduct(@PathVariable("houseProductid") @ApiParam(value = "얻어올 매물 정보의 번호", required = true) int houseProductid) throws Exception {
+		logger.info("#Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : {}", houseProductid);
+		
+		return new ResponseEntity<HouseProductDto>(haHouseMapService.getHouseProduct(houseProductid), HttpStatus.OK);
 	}
 	
 	// 매물 수정 
@@ -145,6 +140,30 @@ public class HouseProductController {
 //		return new ResponseEntity<String>(FAIL, HttpStatus.OK);
 		
 		return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+	}
+	
+	// 매물 북마크 등록 
+	@ApiOperation(value = "매물 북마크 등록", notes = "해당 매물을 북마크 등록한다.", response = List.class)
+	@PostMapping("/bookmark")
+	public ResponseEntity<String> bookmarkProduct(@RequestBody @ApiParam(value = "매물 북마크", required = true) HouseProductBookmarkDto houseProductBookmarkDto) throws Exception {
+		logger.info("#Back# HouseProductController - bookmarkProduct 매물 북마크 등록 호출");
+		
+		if (haHouseMapService.bookmarkProduct(houseProductBookmarkDto)) {
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		}
+		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+	}
+	
+	// 매물 리뷰 등록
+	@ApiOperation(value = "매물 리뷰 등록", notes = "해당 매물의 리뷰를 등록한다.", response = List.class)
+	@PostMapping("/review")
+	public ResponseEntity<String> reviewProduct(@RequestBody @ApiParam(value = "매물 리뷰", required = true) HouseProductReviewDto houseProductReviewDto) throws Exception {
+		logger.info("#Back# HouseProductController - reviewProduct 매물 리뷰 등록 호출");
+		
+		if (haHouseMapService.reviewProduct(houseProductReviewDto)) {
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		}
+		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
 	}
 
 }

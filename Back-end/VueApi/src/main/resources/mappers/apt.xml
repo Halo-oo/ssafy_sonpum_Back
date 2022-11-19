@@ -99,6 +99,11 @@
 	</select>
 	
 	<!-- 매물 상세보기 -->
+	<select id="getHouseProduct" parameterType="int" resultType="houseProductDto">
+		select houseProductId, userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content
+		from house_product
+		where houseProductId = #{houseProductId}
+	</select>
 	
 	<!-- 매물 수정 -->
 	<update id="updateHouseProduct" parameterType="houseProductDto">
@@ -130,9 +135,17 @@
 	</update>
 	
 	<!-- 매물 북마크 등록 -->
-	<!-- insert into house_product_bookmark(userId, houseProduc)
-		values () -->
+	<insert id="bookmarkProduct" parameterType="houseProductBookmarkDto">
+		insert house_product_bookmark(userId, houseProductId)
+		values(#{userId}, #{houseProductId});	
+	</insert>
 		
 	<!-- 매물 리뷰 등록 -->
+	<insert id="reviewProduct" parameterType="houseProductReviewDto">
+		<!-- insert into house_product_review(houseProductId, userId, writerUserId, rating, content, regtime, image)
+		values (#{houseProductId}, #{userId}, #{writerUserId}, #{rating}, #{content}, now(), #{image}); -->
+		insert into house_product_review(houseProductId, userId, writerUserId, rating, content, regtime, image)
+		values (#{houseProductId}, (select userId from house_product where houseProductId = #{houseProductId}), #{writerUserId}, #{rating}, #{content}, now(), #{image});
+	</insert>
 	
 </mapper>

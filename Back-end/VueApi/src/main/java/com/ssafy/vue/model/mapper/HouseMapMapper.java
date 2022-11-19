@@ -8,8 +8,10 @@ import org.apache.ibatis.annotations.Mapper;
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
 import com.ssafy.vue.model.HouseParameterDto;
+import com.ssafy.vue.model.HouseProductBookmarkDto;
 import com.ssafy.vue.model.HouseProductDto;
 import com.ssafy.vue.model.HouseProductParameterDto;
+import com.ssafy.vue.model.HouseProductReviewDto;
 import com.ssafy.vue.model.SidoGugunCodeDto;
 
 @Mapper
@@ -31,6 +33,8 @@ public interface HouseMapMapper {
 	int registerHouseProduct(HouseProductDto houseProductDto) throws SQLException;
 	// 매물 목록
 	List<HouseProductDto> listHouseProduct(HouseProductParameterDto houseProductParameterDto) throws SQLException;
+	// 매물 상세보기 
+	HouseProductDto getHouseProduct(int houseProductid) throws SQLException;
 	// 매물 수정 
 	int updateHouseProduct(HouseProductDto houseProductDto) throws SQLException;
 	// 매물 판매완료로 변경 
@@ -39,5 +43,9 @@ public interface HouseMapMapper {
 	int deleteHouseProduct(int houseProductid) throws SQLException;
 	// 매물 신고
 	int reportHouseProduct(String userid) throws SQLException;
+	// 매물 북마크 등록
+	int bookmarkProduct(HouseProductBookmarkDto houseProductBookmarkDto) throws SQLException;
+	// 매물 리뷰 등록
+	int reviewProduct(HouseProductReviewDto houseProductReviewDto) throws SQLException;
 	
 }
