@@ -37,3 +37,21 @@ values ('corp', 11110000000017, '34', '2022', '1000,000', '90.36', 'YEAR', '전�
 insert into house_product (userId, addressId, floor, buildYear, dealAmount, area, dealType, content)
 values ('realrent', 11110000000017, '25', '2022', '7,000', '100.36', 'SALE', '매매 내놓습니다- :)'); 
 select * from house_product;
+
+-- 매물 북마크 test용 데이터
+insert house_product_bookmark(userId, houseProductId)
+values('realrent', 4);
+insert house_product_bookmark(userId, houseProductId)
+values('corp', 2);
+insert house_product_bookmark(userId, houseProductId)
+values('corp', 3);
+select * from house_product_bookmark;
+
+-- 매물 리뷰 test용 데이터
+insert into house_product_review(houseProductId, userId, writerUserId, rating, content, regtime, image)
+values (4, 'realrent', 'admin', 4, '너무 쪼아요', now(), '');
+insert into house_product_review(houseProductId, userId, writerUserId, rating, content, regtime, image)
+values (2, 'corp', 'ssafy', 2, '추워엉', now(), '');
+insert into house_product_review(houseProductId, userId, writerUserId, rating, content, regtime, image)
+values (1, 'corp', 'ssafy', 5, '만죡', now(), '');
+select * from house_product_review;
