@@ -61,7 +61,27 @@
 		order by deal.dealYear desc
 		limit 0, 100 -->
 		with tee as (select house_deal.addressId, address.apartName, address.dongCode, address.buildYear, house_deal.dealAmount, house_deal.dealYear, house_deal.dealMonth, house_deal.dealDay, house_deal.area, house_deal.floor from address left join house_deal on house_deal.addressId = address.addressId)
-		select * from tee where addressId in (select addressId from address where dongCode = #{dongCode});
+		select * from tee where addressId in (select addressId from address where dongCode = #{dongCode})
+			<if test="word != null and word != ''">
+				<if test="key == 'amount'">
+					and <![CDATA[convert(tee.dealAmount, signed) <= #{word}]]>
+				</if>
+				<if test="key == 'area'">
+					and <![CDATA[convert(tee.area, signed) >= #{word}]]>
+				</if>
+				<if test="key == 'floor'">
+					and <![CDATA[convert(tee.floor, signed) >= #{word}]]>
+				</if>
+				<if test="key == 'buildYear'">
+					and <![CDATA[tee.buildYear >= #{word}]]>
+				</if>
+				<if test="key == 'apartName'">
+					and tee.apartName like concat('%', #{word}, '%')
+				</if>
+				<if test="key == 'dealDate'">
+					and tee.dealYear = #{dealYear} and tee.dealMonth = #{dealMonth}
+				</if>
+			</if>
 	</select>
 	
 	

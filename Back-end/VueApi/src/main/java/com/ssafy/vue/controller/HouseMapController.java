@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -87,9 +88,11 @@ public class HouseMapController {
 		}
 		else if (houseParameterDto.getKey()!=null && houseParameterDto.getKey().equals("dealDate")) {
 			if (houseParameterDto.getWord()!=null && houseParameterDto.getWord()!="") {
-				String date = houseParameterDto.getWord(); 
-				houseParameterDto.setDealYear(date.substring(0, 4));
-				houseParameterDto.setDealMonth(date.substring(4, date.length()));
+				String[] date = houseParameterDto.getWord().split("-");
+				houseParameterDto.setDealYear(date[0]);
+				String day = new BigDecimal(date[1]).toPlainString();
+				houseParameterDto.setDealMonth(day);
+				
 				logger.info("# 거래날짜 검색 사전작업 결과: {}", houseParameterDto);
 			}
 		}
