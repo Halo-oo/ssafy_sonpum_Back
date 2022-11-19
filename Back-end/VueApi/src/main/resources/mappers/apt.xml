@@ -129,4 +129,10 @@
 		where userId = #{userid}
 	</update>
 	
+	<!-- 매물 북마크 등록 -->
+	<!-- insert into house_product_bookmark(userId, houseProduc)
+		values () -->
+		
+	<!-- 매물 리뷰 등록 -->
+	
 </mapper>

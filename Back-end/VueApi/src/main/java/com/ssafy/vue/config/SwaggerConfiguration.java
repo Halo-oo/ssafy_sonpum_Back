@@ -45,6 +45,11 @@ public class SwaggerConfiguration {
 	public Docket userApi() {
 		return getDocket("회원", Predicates.or(PathSelectors.regex("/user.*")));
 	}
+	
+	@Bean
+	public Docket userApi2() {
+		return getDocket("마이페이지", Predicates.or(PathSelectors.regex("/mypage.*")));
+	}
 
 	@Bean
 	public Docket searchApi() {
