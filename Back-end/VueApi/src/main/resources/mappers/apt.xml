@@ -180,6 +180,12 @@
 		where houseProductId = #{houseProductid}
 	</delete>
 	
+	<!-- 특정 매물의 이미지 삭제 -->
+	<delete id="deleteHouseProductImage" parameterType="int">
+		delete from house_image 
+		where houseImageId = #{houseImageId}
+	</delete>
+	
 	<!-- 매물 주변 부가정보 -->
 	
 	<!-- 매물 신고 (매물을 올린 기업회원 신고) -->

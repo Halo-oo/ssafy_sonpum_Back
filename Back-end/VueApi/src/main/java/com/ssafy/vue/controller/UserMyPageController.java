@@ -1,7 +1,9 @@
 package com.ssafy.vue.controller;
 
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +24,7 @@ import com.ssafy.vue.model.BoardReportDto;
 import com.ssafy.vue.model.HouseProductDto;
 import com.ssafy.vue.model.UserDto;
 import com.ssafy.vue.model.service.JwtServiceImpl;
+import com.ssafy.vue.model.service.MailService;
 import com.ssafy.vue.model.service.UserService;
 
 import io.swagger.annotations.Api;
@@ -38,7 +42,12 @@ public class UserMyPageController {
 	
 	// for. 데이터 유효성 검사 
 	private ParameterCheck parameterCheck = new ParameterCheck();
+	
+	// for. 이메일 전송 
+	@Autowired
+	private MailService mailService; 
 
+	// for. token
 	@Autowired
 	private JwtServiceImpl jwtService;
 
@@ -80,6 +89,50 @@ public class UserMyPageController {
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
 		}
 		return new ResponseEntity<String>(FAIL, HttpStatus.OK);
+	}
+	
+	// 이메일 인증코드 전송
+	// 필요 Dto 데이터: userId, email
+	@ApiOperation(value = "이메일 인증코드 전송", notes = "전송한 인증코드를 반환한다.", response = String.class)
+	@PostMapping("/certify")
+	public ResponseEntity<Map<String, Object>> certifyEmail(@RequestBody @ApiParam(value = "인증받을 이메일 주소", required = true) UserDto userDto) throws Exception {
+		logger.info("#Back# UserMyPageController - certifyEmail 이메일 인증코드 전송 호출 - {}, {}", userDto.getUserId(), userDto.getEmail());
+		Map<String, Object> resultMap = new HashMap<String, Object>();
+		HttpStatus status = null; 
+		
+		// ! 이메일 형식 검사 
+		String checkResult = parameterCheck.checkEmail(userDto.getEmail());
+		if (checkResult == "false" ) {
+			logger.info("# 이메일 인증코드 전송 - 이메일 규칙 체크 Fail-");
+			resultMap.put("message", "이메일 형식을 지켜주세요");
+			status = HttpStatus.NO_CONTENT;
+			return new ResponseEntity<Map<String,Object>>(resultMap, status);
+		}
+		// ! 현재 user와 email이 일치하는지 검사  
+		String email = userService.certifyEmail(userDto).getEmail();
+		if (!(email.equals(userDto.getEmail()))) {
+			logger.info("# 이메일 인증코드 전송 - 존재하지 않는 사용자 이메일, Fail-");
+			resultMap.put("message", "이메일을 다시 입력해주세요");
+			status = HttpStatus.NO_CONTENT;
+			return new ResponseEntity<Map<String,Object>>(resultMap, status);
+		}
+		
+		// 메일 전송
+		String code = mailService.sendMail(userDto.getEmail());
+		logger.info("# 이메일 인증코드 : {}", code);
+		if (code.equals("error")) {
+			logger.info("# 이메일 전송 Fail-");
+			resultMap.put("message", FAIL);
+			status = HttpStatus.ACCEPTED;
+		}
+		else {
+			logger.info("# 이메일 전송 Success-");
+			resultMap.put("message", SUCCESS); 
+			resultMap.put("code", code);
+			status = HttpStatus.ACCEPTED;
+		}
+		
+		return new ResponseEntity<Map<String,Object>>(resultMap, status);		
 	}
 	
 	// 비밀번호 변경

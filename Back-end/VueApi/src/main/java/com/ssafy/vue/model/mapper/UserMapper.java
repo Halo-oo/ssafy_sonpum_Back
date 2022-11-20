@@ -36,6 +36,8 @@ public interface UserMapper {
 	UserDto getUserInfo(String userid) throws SQLException; 
 	// 회원 정보 수정 
 	int updateUserInfo(UserDto userDto) throws SQLException; 
+	// 회원 이메일 인증 
+	UserDto certifyEmail(UserDto userDto) throws SQLException;
 	// 비밀번호 변경 
 	int chageUserPwd(UserDto userDto) throws SQLException;
 	// 회원 탈퇴 

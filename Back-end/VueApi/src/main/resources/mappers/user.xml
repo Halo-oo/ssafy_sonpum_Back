@@ -68,6 +68,13 @@
 		where userid = #{userId}
 	</update>
 	
+	<!-- 회원 이메일 유효성 확인 -->
+	<select id="certifyEmail" parameterType="userDto" resultType="userDto">
+		select email
+		from user
+		where userId = #{userId}
+	</select>
+	
 	<!-- 비밀번호 변경 -->
 	<update id="chageUserPwd" parameterType="userDto">
 		update user

@@ -31,6 +31,8 @@ public interface UserService {
 	UserDto getUserInfo(String userid) throws Exception; 
 	// 회원 정보 수정 
 	boolean updateUserInfo(UserDto userDto) throws Exception; 
+	// 회원 이메일 유효성 확인 
+	UserDto certifyEmail(UserDto userDto) throws Exception; 
 	// 비밀번호 변경 
 	boolean chageUserPwd(UserDto userDto) throws Exception;
 	// 회원 탈퇴 
