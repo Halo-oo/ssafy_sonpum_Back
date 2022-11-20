@@ -151,18 +151,26 @@ public class HouseProductController {
 	}
 	
 	// 매물 삭제 
-	// + 매물 삭제 시 해당 매물과 연관된 리뷰, 북마크 모두 삭제
+	// + 해당 매물과 연관된 리뷰, 북마크 모두 삭제
+	// + 해당 매물과 연관된 이미지 삭제 
 	@ApiOperation(value = "매물 삭제", notes = "매물번호에 해당되는 정보를 삭제한다.(연관되어 있는 북마크, 리뷰 또한 삭제) 그리고 DB삭제 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
 	@DeleteMapping("/{houseProductid}")
 	public ResponseEntity<String> deleteHouseProduct(@PathVariable("houseProductid") @ApiParam(value = "삭제할 매물 번호", required = true) int houseProductid) throws Exception {
 		logger.info("#Back# HouseProductController - deleteHouseProduct 매물 삭제 호출");
 		
-		// 해당 매물과 연관된 리뷰, 북마크 모두 삭제
+		// 1) 해당 매물과 연관된 리뷰, 북마크 모두 삭제
 		if (!haHouseMapService.deleteRelationHouseProduct(houseProductid)) {
-			logger.info("# 리뷰, 북마크 삭제 실패-");
+			logger.info("#매물 삭제 - 리뷰, 북마크 삭제 Fail-");
 			return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
 		}
 		
+		// 2) 해당 매물과 연관된 이미지 삭제 
+		if (!haHouseMapService.deleteRelationHouseProductImage(houseProductid)) {
+			logger.info("#매물 삭제 - 이미지 삭제 Fail- ");
+			return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+		}
+		
+		// 매물 삭제
 		if (haHouseMapService.deleteHouseProduct(houseProductid)) {
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
 		}

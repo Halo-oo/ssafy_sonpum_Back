@@ -4,6 +4,10 @@
 
 <mapper namespace="com.ssafy.vue.model.mapper.HouseMapMapper">
 
+	<resultMap type="houseProductDto" id="viewProduct">
+		<collection property="houseImages" column="houseProductId" javaType="list" ofType="houseImageDto" select="houseImageList" />
+	</resultMap>
+
 	<!-- #(시세)아파트 거래내역 -->
 	<!-- 시도정보 전체 호출 -->
 	<select id="getSido" resultType="sidoGugunCodeDto">
@@ -85,12 +89,7 @@
 	</select>
 	
 	
-	<!-- #매물 게시판 -->
-	<!-- extends="houseProductDto" -->
-	<resultMap type="houseProductDto" id="viewProduct">
-		<collection property="houseImages" column="houseProductId" javaType="list" ofType="houseImageDto" select="houseImageList" />
-	</resultMap>
-	
+	<!-- #매물 게시판 -->	
 	<!-- 매물 등록(+ 이미지 업로드) -->
 	<insert id="registerHouseProduct" parameterType="houseProductDto">
 		insert into house_product (userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content)
@@ -174,6 +173,11 @@
 			left join house_product_review review
 			on bookmark.houseProductId = review.houseProductId
 		where review.houseProductId = #{houseProductid};
+	</delete>
+	<!-- ! 매물 삭제 시 해당 매물과 연관된 이미지 삭제 -->
+	<delete id="deleteRelationHouseProductImage" parameterType="int">
+		delete from house_image
+		where houseProductId = #{houseProductid}
 	</delete>
 	
 	<!-- 매물 주변 부가정보 -->
