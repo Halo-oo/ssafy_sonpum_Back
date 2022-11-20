@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
+import com.ssafy.vue.model.HouseImageDto;
 import com.ssafy.vue.model.HouseParameterDto;
 import com.ssafy.vue.model.HouseProductBookmarkDto;
 import com.ssafy.vue.model.HouseProductDto;
@@ -47,10 +48,22 @@ public class HouseMapServiceImpl implements HouseMapService {
 	
 	
 	/* 매물  */
-	// 매물 등록
+	// 매물 등록(+ 이미지 등록) 
 	@Override
 	public boolean registerHouseProduct(HouseProductDto houseProductDto) throws Exception {
-		return sqlSession.getMapper(HouseMapMapper.class).registerHouseProduct(houseProductDto) == 1;
+		// 1) 매물 등록
+		if (sqlSession.getMapper(HouseMapMapper.class).registerHouseProduct(houseProductDto) == 1) {
+			
+			// 2) 이미지 등록
+			List<HouseImageDto> houseImages = houseProductDto.getHouseImages();
+			if (houseImages != null && !houseImages.isEmpty()) {
+				sqlSession.getMapper(HouseMapMapper.class).registerHouseProductImage(houseProductDto);
+			}
+			
+			return true; 
+		}
+		
+		return false;
 	}
 	// 매물 목록(+ 검색)
 	@Override

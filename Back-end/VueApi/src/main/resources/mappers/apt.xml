@@ -86,10 +86,21 @@
 	
 	
 	<!-- #매물 게시판 -->
-	<!-- 매물 등록 -->
+	<!-- 매물 등록(+ 이미지 업로드) -->
 	<insert id="registerHouseProduct" parameterType="houseProductDto">
 		insert into house_product (userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content)
 		values (#{userId}, #{addressId}, #{floor}, #{buildYear}, #{dealAmount}, #{area}, #{dealType}, 0, #{content}); 
+		<selectKey resultType="int" keyProperty="houseProductId" order="AFTER">
+			select last_insert_id()
+		</selectKey>
+	</insert>
+	<!-- 이미지 -->
+	<insert id="registerHouseProductImage" parameterType="houseProductDto">
+		insert into house_image (houseProductId, saveFolder, originalFileName, saveFileName)
+		values
+		<foreach collection="houseImages" item="houseImage" separator=" , ">
+			(#{houseProductId},  #{houseImage.saveFolder}, #{houseImage.originalFileName}, #{houseImage.saveFileName})
+		</foreach>
 	</insert>
 	
 	<!-- 매물 목록(+ 검색) -->

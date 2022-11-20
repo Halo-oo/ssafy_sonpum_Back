@@ -31,6 +31,8 @@ public interface HouseMapMapper {
 	/* 매물  */
 	// 매물 등록
 	int registerHouseProduct(HouseProductDto houseProductDto) throws SQLException;
+	// 매물 등록 시 이미지 등록
+	void registerHouseProductImage(HouseProductDto houseProductDto) throws Exception;
 	// 매물 목록
 	List<HouseProductDto> listHouseProduct(HouseProductParameterDto houseProductParameterDto) throws SQLException;
 	// 매물 상세보기 
