@@ -156,7 +156,7 @@ ENGINE = InnoDB;
 -- Table `sonpum`.`board_report`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sonpum`.`board_report` (
-  `articleNo` INT NOT NULL,
+  `articleNo` INT NOT NULL AUTO_INCREMENT,
   `userId` VARCHAR(45) NOT NULL,
   `subject` VARCHAR(100) NULL,
   `content` TEXT NULL,

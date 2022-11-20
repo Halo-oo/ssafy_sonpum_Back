@@ -2023,3 +2023,150 @@ org.apache.ibatis.executor.ExecutorException: A query was run and no Result Maps
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  java.lang.Thread.run(Thread.java:750)
+[2m2022-11-20 23:16:28.359[0;39m [32m INFO[0;39m [35m16348[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-20 23:16:28.924[0;39m [32m INFO[0;39m [35m16348[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 2028 ms
+[2m2022-11-20 23:16:29.906[0;39m [32m INFO[0;39m [35m16348[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-20 23:19:30.880[0;39m [32m INFO[0;39m [35m16348[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-20 23:19:30.882[0;39m [32m INFO[0;39m [35m16348[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 2 ms
+[2m2022-11-20 23:19:30.990[0;39m [32m INFO[0;39m [35m16348[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportWriteArticle 전세사기 수법 게시글 작성 호출
+[2m2022-11-20 23:19:30.991[0;39m [32mDEBUG[0;39m [35m16348[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m # 사기 게시글 정보 - 이미지 업로드 MultipartFile.isEmpty 확인 : false
+[2m2022-11-20 23:19:30.992[0;39m [32mDEBUG[0;39m [35m16348[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m # 저장 폴더: C:/sonpum/upload/fileUpload/\221120
+[2m2022-11-20 23:19:30.995[0;39m [32mDEBUG[0;39m [35m16348[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m # 원본 파일이름: KakaoTalk_20180528_161218396.jpg, 실제 저장 파일이름: 131989000516600.jpg
+[2m2022-11-20 23:19:30.996[0;39m [32mDEBUG[0;39m [35m16348[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m # 원본 파일이름: KakaoTalk_20201006_205739836.jpg, 실제 저장 파일이름: 131989001679400.jpg
+[2m2022-11-20 23:19:31.766[0;39m [31mERROR[0;39m [35m16348[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'articleNo' doesn't have a default value
+### The error may exist in file [D:\ssafy\Spring\VueApi\target\classes\mappers\board.xml]
+### The error may involve com.ssafy.vue.model.mapper.BoardMapper.reportWriteArticle-Inline
+### The error occurred while setting parameters
+### SQL: insert into board_report (userid, subject, content, hit, regitime)   values (?, ?, ?, 0, now())
+### Cause: java.sql.SQLException: Field 'articleNo' doesn't have a default value
+; Field 'articleNo' doesn't have a default value; nested exception is java.sql.SQLException: Field 'articleNo' doesn't have a default value] with root cause
+
+java.sql.SQLException: Field 'articleNo' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:194)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy74.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at com.sun.proxy.$Proxy103.reportWriteArticle(Unknown Source)
+	at com.ssafy.vue.model.service.BoardServiceImpl.reportWriteArticle(BoardServiceImpl.java:71)
+	at com.ssafy.vue.model.service.BoardServiceImpl$$FastClassBySpringCGLIB$$fc74f1dc.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
+	at com.ssafy.vue.model.service.BoardServiceImpl$$EnhancerBySpringCGLIB$$1f75ba28.reportWriteArticle(<generated>)
+	at com.ssafy.vue.controller.ReportBoardController.reportWriteArticle(ReportBoardController.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+
+[2m2022-11-20 23:30:08.208[0;39m [32m INFO[0;39m [35m16348[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportWriteArticle 전세사기 수법 게시글 작성 호출
+[2m2022-11-20 23:30:08.209[0;39m [32mDEBUG[0;39m [35m16348[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m # 사기 게시글 정보 - 이미지 업로드 MultipartFile.isEmpty 확인 : false
+[2m2022-11-20 23:30:08.209[0;39m [32mDEBUG[0;39m [35m16348[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m # 저장 폴더: C:/sonpum/upload/fileUpload/\221120
+[2m2022-11-20 23:30:08.209[0;39m [32mDEBUG[0;39m [35m16348[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m # 원본 파일이름: KakaoTalk_20180528_161218396.jpg, 실제 저장 파일이름: 132626214592800.jpg
+[2m2022-11-20 23:30:08.215[0;39m [32mDEBUG[0;39m [35m16348[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m # 원본 파일이름: KakaoTalk_20201006_205739836.jpg, 실제 저장 파일이름: 132626219958400.jpg
+[2m2022-11-20 23:32:08.150[0;39m [32m INFO[0;39m [35m16348[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportGetArticle 전세사기 수법 게시글 상세보기 호출 : 8
+[2m2022-11-20 23:32:31.432[0;39m [32m INFO[0;39m [35m16348[0;39m [2m---[0;39m [2m[n(24)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-20 23:32:32.639[0;39m [33m WARN[0;39m [35m16348[0;39m [2m---[0;39m [2m[n(24)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-20 23:33:52.679[0;39m [32m INFO[0;39m [35m27048[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-20 23:33:52.806[0;39m [32m INFO[0;39m [35m27048[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1401 ms
+[2m2022-11-20 23:33:53.835[0;39m [32m INFO[0;39m [35m27048[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-20 23:33:57.313[0;39m [32m INFO[0;39m [35m27048[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-20 23:33:57.316[0;39m [32m INFO[0;39m [35m27048[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 3 ms
+[2m2022-11-20 23:33:57.357[0;39m [32m INFO[0;39m [35m27048[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportGetArticle 전세사기 수법 게시글 상세보기 호출 : 8
+[2m2022-11-20 23:36:10.501[0;39m [32m INFO[0;39m [35m27048[0;39m [2m---[0;39m [2m[n(12)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-20 23:36:11.363[0;39m [33m WARN[0;39m [35m27048[0;39m [2m---[0;39m [2m[n(12)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-20 23:36:22.637[0;39m [32m INFO[0;39m [35m9820[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-20 23:36:22.754[0;39m [32m INFO[0;39m [35m9820[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1413 ms
+[2m2022-11-20 23:36:23.726[0;39m [32m INFO[0;39m [35m9820[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-20 23:36:27.149[0;39m [32m INFO[0;39m [35m9820[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-20 23:36:27.150[0;39m [32m INFO[0;39m [35m9820[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-20 23:36:27.180[0;39m [32m INFO[0;39m [35m9820[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportGetArticle 전세사기 수법 게시글 상세보기 호출 : 8
+[2m2022-11-20 23:36:52.496[0;39m [32m INFO[0;39m [35m9820[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportGetArticle 전세사기 수법 게시글 상세보기 호출 : 2
+[2m2022-11-20 23:37:16.652[0;39m [32m INFO[0;39m [35m9820[0;39m [2m---[0;39m [2m[on(9)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-20 23:37:17.527[0;39m [33m WARN[0;39m [35m9820[0;39m [2m---[0;39m [2m[on(9)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)

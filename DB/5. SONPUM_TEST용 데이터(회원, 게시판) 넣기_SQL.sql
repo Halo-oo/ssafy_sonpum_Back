@@ -57,3 +57,5 @@ values (2, 'corp', 'ssafy', 2, '추워엉', now(), '');
 insert into house_product_review(houseProductId, userId, writerUserId, rating, content, regtime, image)
 values (1, 'corp', 'ssafy', 5, '만죡', now(), '');
 select * from house_product_review;
+
+-- 사기 게시판 test용 데이터 

@@ -63,7 +63,7 @@ public class HouseProductController {
 		logger.info("#Back# HouseProductController - registerHouseProduct 매물 등록 호출");
 		
 		// FileUpload 관련 설정 
-		logger.debug("# 매물 등록 - 이미지 업로드 MultipartFile.isEmpty 확인 : {}", files[0].isEmpty());;
+		logger.debug("# 매물 등록 - 이미지 업로드 MultipartFile.isEmpty 확인 : {}", files[0].isEmpty());
 		if (!files[0].isEmpty()) {
 			String today = new SimpleDateFormat("yyMMdd").format(new Date());
 			String saveFolder = filePath + File.separator + today; 
@@ -92,7 +92,7 @@ public class HouseProductController {
 			houseProductDto.setHouseImages(houseImages);
 		}
 		
-		// 매물 등록 (이미지 컬럼 없음)
+		// 매물 등록 
 		if (haHouseMapService.registerHouseProduct(houseProductDto)) {
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
 		}
