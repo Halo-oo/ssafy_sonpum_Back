@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `sonpum`.`house_image` (
   `houseImageId` INT NOT NULL AUTO_INCREMENT,
   `houseProductId` INT NOT NULL,
   `saveFolder` VARCHAR(1000) NULL,
-  `origianlFileName` VARCHAR(1000) NULL,
+  `originalFileName` VARCHAR(1000) NULL,
   `saveFileName` VARCHAR(1000) NULL,
   PRIMARY KEY (`houseImageId`),
   INDEX `fk_HouseImage_HouseAsset_idx` (`houseProductId` ASC) VISIBLE,
