@@ -39,6 +39,8 @@ public interface HouseMapService {
 	boolean deleteHouseProduct(int houseProductid) throws Exception;
 	// ! 매물 삭제 시 해당 매물과 연관된 리뷰, 북마크 모두 삭제
 	boolean deleteRelationHouseProduct(int houseProductid) throws Exception; 
+	// ! 매물 삭제 시 해당 매물과 연관된 이미지 삭제
+	boolean deleteRelationHouseProductImage(int houseProductid) throws Exception; 
 	// 매물 신고
 	boolean reportHouseProduct(String userid) throws Exception;
 	// 매물 북마크 등록
