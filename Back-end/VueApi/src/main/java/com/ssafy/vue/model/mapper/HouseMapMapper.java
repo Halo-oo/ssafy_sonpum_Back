@@ -47,6 +47,8 @@ public interface HouseMapMapper {
 	int deleteRelationHouseProduct(int houseProductid) throws SQLException; 
 	// ! 매물 삭제 시 해당 매물과 연관된 이미지 삭제
 	int deleteRelationHouseProductImage(int houseProductid) throws SQLException;
+	// 특정 매물의 이미지 삭제
+	int deleteHouseProductImage(int houseImageId) throws SQLException; 
 	// 매물 신고
 	int reportHouseProduct(String userid) throws SQLException;
 	// 매물 북마크 등록

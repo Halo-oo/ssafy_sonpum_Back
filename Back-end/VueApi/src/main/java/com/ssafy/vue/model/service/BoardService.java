@@ -1,5 +1,6 @@
 package com.ssafy.vue.model.service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.ssafy.util.PageNavigation;
@@ -37,4 +38,8 @@ public interface BoardService {
 	public boolean reportModifyArticle(BoardReportDto boardReportDto) throws Exception;
 	// 삭제
 	public boolean reportDeleteArticle(int articleno) throws Exception;
+	// ! 게시글 삭제 시 연관된 이미지 삭제 
+	boolean reportDeleteRealtionImage(int articleno) throws SQLException; 
+	// 특정 게시글의 이미지 삭제
+	boolean reportDeleteImage(int boardReportImageid) throws SQLException; 
 }

@@ -128,14 +128,35 @@ public class ReportBoardController {
 	}
 	
 	/* 전세사기 수법 게시글 삭제 */
+	// + 해당 게시글과 연관된 이미지 삭제 
 	@ApiOperation(value = "전세사기 수법 - 게시판 글 삭제", notes = "글번호에 해당하는 게시글의 정보를 삭제한다. 그리고 DB삭제 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
 	@DeleteMapping("/{articleno}")
 	public ResponseEntity<String> reportDeleteArticle(@PathVariable("articleno") @ApiParam(value = "삭제할 글의 글번호.", required = true) int articleno) throws Exception {
 		logger.info("#Back# ReportBoardController - reportDeleteArticle 전세사기 수법 게시글 삭제 호출");
 		
+		// 1) 연관된 이미지 삭제 
+		if (!boardService.reportDeleteRealtionImage(articleno)) {
+			logger.info("#전세사기 수법 삭제 - 이미지 삭제 Fail-");
+			return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+		}
+		
+		// 2) 게시글 삭제
 		if (boardService.reportDeleteArticle(articleno)) {
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
 		}
 		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
 	}
+	
+	/* 게시글의 특정 이미지 삭제 */
+	@ApiOperation(value = "전세사기 수법 - 게시글의 특정 이미지 삭제", notes = "이미지 번호에 해당하는 이미지를 삭제한다. 그리고 DB삭제 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
+	@DeleteMapping("/delReportImage/{boardReportImageid}")
+	public ResponseEntity<String> reportDeleteImage(@PathVariable("boardReportImageid") @ApiParam(value = "삭제할 이미지 번호", required = true) int boardReportImageid) throws Exception {
+		logger.info("#Back# ReportBoardController - reportDeleteImage 전세사기 수법 게시글의 특정 이미지 삭제 호출");
+		
+		if (boardService.reportDeleteImage(boardReportImageid)) {
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		}
+		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
+	}
+	
 }

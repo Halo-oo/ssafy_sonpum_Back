@@ -40,12 +40,15 @@ public interface BoardMapper {
 	int reportGetTotalCount(BoardParameterDto boardParameterDto) throws SQLException;	
 	// 게시글 상세보기
 	BoardReportDto reportGetArticle(int articleno) throws SQLException;
-	// 조회수
+	// 게시글 조회수 증가
 	void reportUpdateHit(int articleno) throws SQLException;
-	// 수정
+	// 게시글 수정
 	int reportModifyArticle(BoardReportDto boardReportDto) throws SQLException;
-	// 삭제(+ 파일 삭제)
+	// 게시글 삭제
 	int reportDeleteArticle(int articleno) throws SQLException;
-	void reportDeleteFile(int articleno) throws SQLException;
+	// ! 게시글 삭제 시 연관된 이미지 삭제 
+	int reportDeleteRealtionImage(int articleno) throws SQLException; 
+	// 특정 게시글의 이미지 삭제
+	int reportDeleteImage(int boardReportImageid) throws SQLException; 
 	
 }
