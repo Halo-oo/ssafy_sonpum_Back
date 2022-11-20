@@ -177,16 +177,23 @@
 		where articleno = #{articleNo}
 	</update>
 	
-	<!-- 삭제(+ 파일 삭제) -->
+	<!-- 게시글 삭제 -->
 	<delete id="reportDeleteArticle" parameterType="int">
 		delete from board_report
 		where articleno = #{articleNo}
 	</delete>
-	<!-- 파일 삭제 -->
-	<delete id="reportDeleteFile" parameterType="int">
+	<!-- ! 게시글 삭제 시 연관된 이미지 삭제 -->
+	<delete id="reportDeleteRealtionImage" parameterType="int">
 		delete from board_report_image
 		where articleno = #{articleNo}
 	</delete>
+	
+	<!-- 특정 게시글의 이미지 삭제 -->
+	<delete id="reportDeleteImage" parameterType="int">
+		delete from board_report_image
+		where boardReportImageId = #{boardReportImageid};
+	</delete>
+	
 	
 </mapper>
 

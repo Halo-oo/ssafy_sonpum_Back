@@ -176,6 +176,18 @@ public class HouseProductController {
 		}
 		return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
 	}
+	
+	// 매물의 특정 이미지 삭제
+	@ApiOperation(value = "매물의 특정 이미지 삭제", notes = "특정 매물의 이미지를 삭제한다. 그리고 DB수정 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
+	@DeleteMapping("/delProductImage/{houseImageId}")
+	public ResponseEntity<String> deleteHouseProductImage(@PathVariable("houseImageId") @ApiParam(value = "삭제할 이미지 번호", required = true) int houseImageId) throws Exception {
+		logger.info("#Back# HouseProductController - deleteHouseProductImage 매물의 특정 이미지 삭제 호출");
+		
+		if (haHouseMapService.deleteHouseProductImage(houseImageId)) {
+			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+		}
+		return new ResponseEntity<String>(FAIL, HttpStatus.OK);
+	}
 	 
 	// 매물 판매자 신고 
 	@ApiOperation(value = "매물 판매자 신고", notes = "해당 매물을 판매하는 기업회원을 신고한다. 그리고 DB수정 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)

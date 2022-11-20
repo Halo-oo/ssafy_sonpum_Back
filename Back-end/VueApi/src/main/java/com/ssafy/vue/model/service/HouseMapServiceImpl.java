@@ -100,6 +100,11 @@ public class HouseMapServiceImpl implements HouseMapService {
 	public boolean deleteRelationHouseProductImage(int houseProductid) throws Exception {
 		return sqlSession.getMapper(HouseMapMapper.class).deleteRelationHouseProductImage(houseProductid) >= 1;
 	}
+	// 특정 매물의 이미지 삭제
+	@Override
+	public boolean deleteHouseProductImage(int houseImageId) throws Exception {
+		return sqlSession.getMapper(HouseMapMapper.class).deleteHouseProductImage(houseImageId) == 1;
+	}
 	// 매물 신고
 	@Override
 	public boolean reportHouseProduct(String userid) throws Exception {
