@@ -11,6 +11,7 @@ import com.ssafy.util.PageNavigation;
 import com.ssafy.vue.model.BoardNoticeDto;
 import com.ssafy.vue.model.BoardParameterDto;
 import com.ssafy.vue.model.BoardReportDto;
+import com.ssafy.vue.model.BoardReportImageDto;
 import com.ssafy.vue.model.mapper.BoardMapper;
 
 @Service
@@ -32,28 +33,8 @@ public class BoardServiceImpl implements BoardService {
 	// 게시글 목록 
 	@Override
 	public List<BoardNoticeDto> noticeListArticle(BoardParameterDto boardParameterDto) throws Exception {
-		//int start = boardParameterDto.getPg() == 0 ? 0 : (boardParameterDto.getPg() - 1) * boardParameterDto.getSpp();
-		//boardParameterDto.setStart(start);
-		
 		return sqlSession.getMapper(BoardMapper.class).noticeListArticle(boardParameterDto);
 	}
-//	@Override
-//	public PageNavigation makePageNavigation(BoardParameterDto boardParameterDto) throws Exception {
-//		int naviSize = 5;
-//		PageNavigation pageNavigation = new PageNavigation();
-//		pageNavigation.setCurrentPage(boardParameterDto.getPg());
-//		pageNavigation.setNaviSize(naviSize);
-//		int totalCount = sqlSession.getMapper(BoardMapper.class).getTotalCount(boardParameterDto);//총글갯수  269
-//		pageNavigation.setTotalCount(totalCount);  
-//		int totalPageCount = (totalCount - 1) / boardParameterDto.getSpp() + 1;//27
-//		pageNavigation.setTotalPageCount(totalPageCount);
-//		boolean startRange = boardParameterDto.getPg() <= naviSize;
-//		pageNavigation.setStartRange(startRange);
-//		boolean endRange = (totalPageCount - 1) / naviSize * naviSize < boardParameterDto.getPg();
-//		pageNavigation.setEndRange(endRange);
-//		pageNavigation.makeNavigator();
-//		return pageNavigation;
-//	}
 
 	// 게시글 상세보기
 	@Override
@@ -83,42 +64,43 @@ public class BoardServiceImpl implements BoardService {
 
 	
 	/* 전세사기 수법 게시판 */
-	// 게시글 작성 
+	// 게시글 작성(+ 이미지)
 	@Override
 	public boolean reportWriteArticle(BoardReportDto boardReportDto) throws Exception {
-		if(boardReportDto.getSubject() == null || boardReportDto.getContent() == null) {
-			throw new Exception();
+		// 1) 게시글 작성 
+		if (sqlSession.getMapper(BoardMapper.class).reportWriteArticle(boardReportDto) == 1) {
+			
+			// 2) 이미지 등록 
+			List<BoardReportImageDto> boardReportImages = boardReportDto.getBoardReportImages();
+			if (boardReportImages != null && !boardReportImages.isEmpty()) {
+				sqlSession.getMapper(BoardMapper.class).reportWriteArticleImage(boardReportDto);
+			}
+			
+			return true; 
 		}
-		return sqlSession.getMapper(BoardMapper.class).reportWriteArticle(boardReportDto) == 1;
+		
+		return false;
 	}
-
 	// 게시글 목록
 	@Override
 	public List<BoardReportDto> reportListArticle(BoardParameterDto boardParameterDto) throws Exception {
-		//int start = boardParameterDto.getPg() == 0 ? 0 : (boardParameterDto.getPg() - 1) * boardParameterDto.getSpp();
-		//boardParameterDto.setStart(start);
-		
 		return sqlSession.getMapper(BoardMapper.class).reportListArticle(boardParameterDto);
 	}
-
 	// 게시글 상세보기
 	@Override
 	public BoardReportDto reportGetArticle(int articleno) throws Exception {
 		return sqlSession.getMapper(BoardMapper.class).reportGetArticle(articleno);
 	}
-
 	// 조회수
 	@Override
 	public void reportUpdateHit(int articleno) throws Exception {
 		sqlSession.getMapper(BoardMapper.class).reportUpdateHit(articleno);
 	}
-
 	// 수정
 	@Override
 	public boolean reportModifyArticle(BoardReportDto boardReportDto) throws Exception {
 		return sqlSession.getMapper(BoardMapper.class).reportModifyArticle(boardReportDto) == 1;
 	}
-
 	// 삭제 
 	@Override
 	public boolean reportDeleteArticle(int articleno) throws Exception {

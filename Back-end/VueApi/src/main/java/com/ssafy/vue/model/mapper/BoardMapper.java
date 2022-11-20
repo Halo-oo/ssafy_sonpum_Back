@@ -30,9 +30,10 @@ public interface BoardMapper {
 	
 	
 	/* 전세사기 수법 게시판 */
-	// 게시글 작성(+ 파일 첨부)
-	int reportWriteArticle(BoardReportDto boardReportDto) throws Exception; 
-	void reportRegisterFile(BoardReportDto boardReportDto) throws Exception; 
+	// 게시글 작성
+	int reportWriteArticle(BoardReportDto boardReportDto) throws SQLException; 
+	// 게시글 작성 시 이미지 등록
+	void reportWriteArticleImage(BoardReportDto boardReportDto) throws Exception;
 	// 게시글 목록
 	List<BoardReportDto> reportListArticle(BoardParameterDto boardParameterDto) throws SQLException;
 	// 게시글 목록 총 개수

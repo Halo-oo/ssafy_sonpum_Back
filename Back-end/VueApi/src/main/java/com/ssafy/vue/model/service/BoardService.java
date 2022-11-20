@@ -29,7 +29,6 @@ public interface BoardService {
 	public boolean reportWriteArticle(BoardReportDto boardReportDto) throws Exception;
 	// 게시글 목록
 	public List<BoardReportDto> reportListArticle(BoardParameterDto boardParameterDto) throws Exception;
-	//public PageNavigation makePageNavigation(BoardParameterDto boardParameterDto) throws Exception;
 	// 게시글 상세보기
 	public BoardReportDto reportGetArticle(int articleno) throws Exception;
 	// 조회수

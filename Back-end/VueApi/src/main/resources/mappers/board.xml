@@ -89,7 +89,11 @@
 	
 	
 	<!-- # 전세사기 수법 -->
-	<!-- 게시글 작성(+ 파일 첨부) -->
+	<resultMap type="boardReportDto" id="viewReport">
+		<collection property="boardReportImages" column="articleNo" javaType="list" ofType="boardReportImageDto" select="reportImageList" />
+	</resultMap>
+	
+	<!-- 게시글 작성(+ 이미지 업로드) -->
 	<insert id="reportWriteArticle" parameterType="boardReportDto">
 		insert into board_report (userid, subject, content, hit, regitime)
 		values (#{userId}, #{subject}, #{content}, 0, now())
@@ -97,12 +101,12 @@
 			select last_insert_id()
 		</selectKey>
 	</insert>
-	<!-- 파일 첨부 -->
-	<insert id="reportRegisterFile" parameterType="boardReportDto">
+	<!-- 이미지 -->
+	<insert id="reportWriteArticleImage" parameterType="boardReportDto">
 		insert into board_report_image (articleNo, saveFolder, originalFileName, saveFileName)
 		values
-		<foreach collection="fileInfos" item="fileInfo" separator=" , ">
-			(#{articleNo}, #{fileInfo.saveFolder}, #{fileInfo.originalFileName}, #{fileInfo.saveFileName})
+		<foreach collection="boardReportImages" item="boardReportImage" separator=" , ">
+			(#{articleNo}, #{boardReportImage.saveFolder}, #{boardReportImage.originalFileName}, #{boardReportImage.saveFileName})
 		</foreach>
 	</insert>
 
@@ -142,18 +146,28 @@
 		</if>
 	</select>
 	
-	<!-- 게시글 상세보기 -->
-	<select id="reportGetArticle" parameterType="int" resultType="boardReportDto">
+	<!-- 게시글 상세보기(+ 이미지) -->
+	<!-- <select id="reportGetArticle" parameterType="int" resultType="boardReportDto">
 		select articleno, userid, subject, content, hit, regitime
 		from board_report
 		where articleno = #{articleNo}
+	</select> -->
+	<select id="reportGetArticle" parameterType="int" resultMap="viewReport">
+		select articleno, userid, subject, content, hit, regitime
+		from board_report
+		where articleno = #{articleno}
+	</select>
+	<select id="reportImageList" resultType="boardReportImageDto">
+		select boardReportImageId, articleNo, saveFolder, originalFileName, saveFileName
+		from board_report_image
+		where articleNo = #{articleno}
 	</select>
 	
 	<!-- 조회수 -->
 	<update id="reportUpdateHit" parameterType="int">
 		update board_report
 		set hit = hit + 1
-		where articleno = #{articleNo}
+		where articleno = #{articleno}
 	</update>
 	
 	<!-- 수정 -->
