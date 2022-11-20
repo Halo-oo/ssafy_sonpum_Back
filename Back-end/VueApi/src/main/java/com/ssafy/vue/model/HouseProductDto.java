@@ -1,6 +1,7 @@
 package com.ssafy.vue.model;
 
 import java.math.BigInteger;
+import java.util.List;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -28,92 +29,82 @@ public class HouseProductDto {
 	private String stateFlag;
 	@ApiModelProperty(value = "내용(판매자 말)")
 	private String content;
+	@ApiModelProperty(value = "for. 이미지 (!DB 내 해당 컬럼 없음)")
+	private List<HouseImageDto> houseImages;
 	
 	public int getHouseProductId() {
 		return houseProductId;
 	}
-	
 	public void setHouseProductId(int houseProductId) {
 		this.houseProductId = houseProductId;
 	}
-	
 	public String getUserId() {
 		return userId;
 	}
-	
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	
 	public BigInteger getAddressId() {
 		return addressId;
 	}
-	
 	public void setAddressId(BigInteger addressId) {
 		this.addressId = addressId;
 	}
-	
 	public String getFloor() {
 		return floor;
 	}
-	
 	public void setFloor(String floor) {
 		this.floor = floor;
 	}
-	
 	public String getBuildYear() {
 		return buildYear;
 	}
-	
 	public void setBuildYear(String buildYear) {
 		this.buildYear = buildYear;
 	}
-	
 	public String getDealAmount() {
 		return dealAmount;
 	}
-	
 	public void setDealAmount(String dealAmount) {
 		this.dealAmount = dealAmount;
 	}
-	
 	public String getArea() {
 		return area;
 	}
-	
 	public void setArea(String area) {
 		this.area = area;
 	}
-	
 	public String getDealType() {
 		return dealType;
 	}
-	
 	public void setDealType(String dealType) {
 		this.dealType = dealType;
 	}
-	
 	public String getStateFlag() {
 		return stateFlag;
 	}
-	
 	public void setStateFlag(String stateFlag) {
 		this.stateFlag = stateFlag;
 	}
-	
 	public String getContent() {
 		return content;
 	}
-	
 	public void setContent(String content) {
 		this.content = content;
 	}
-
+	public List<HouseImageDto> getHouseImages() {
+		return houseImages;
+	}
+	public void setHouseImages(List<HouseImageDto> houseImages) {
+		this.houseImages = houseImages;
+	}
+	
 	@Override
 	public String toString() {
 		return "HouseProductDto [houseProductId=" + houseProductId + ", userId=" + userId + ", addressId=" + addressId
 				+ ", floor=" + floor + ", buildYear=" + buildYear + ", dealAmount=" + dealAmount + ", area=" + area
-				+ ", dealType=" + dealType + ", stateFlag=" + stateFlag + ", content=" + content + "]";
+				+ ", dealType=" + dealType + ", stateFlag=" + stateFlag + ", content=" + content + ", houseImages="
+				+ houseImages + "]";
 	}
 	
 }

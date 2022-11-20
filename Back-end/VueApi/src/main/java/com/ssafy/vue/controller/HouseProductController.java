@@ -1,10 +1,17 @@
 package com.ssafy.vue.controller;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,9 +21,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.ssafy.vue.model.BoardReportDto;
+import com.ssafy.vue.model.HouseImageDto;
 import com.ssafy.vue.model.HouseProductBookmarkDto;
 import com.ssafy.vue.model.HouseProductCheckDto;
 import com.ssafy.vue.model.HouseProductDto;
@@ -40,12 +50,49 @@ public class HouseProductController {
 	@Autowired
 	private HouseMapService haHouseMapService;
 
-	// 매물 등록
+	// 매물 등록(+ 이미지 업로드, 여러개 가능)
+	// 필요 Dto 데이터: userId, addressId, floor, buildYear, dealAmount, area, dealType, content
+	// !! 이미지 업로드 시 files라는 이름(key)으로 form-data로 보내야 함 
+	//    file.path.upload-files 경로는 application.properties에 정의되어 있음
 	@ApiOperation(value = "매물 등록", notes = "매물을 등록한다.", response = List.class)
 	@PostMapping("/register")
-	public ResponseEntity<String> registerHouseProduct(@RequestBody @ApiParam(value = "매물 정보", required = true) HouseProductDto houseProductDto) throws Exception {
+	public ResponseEntity<String> registerHouseProduct(
+			@Value("${file.path.upload-files}") String filePath,
+			@ApiParam(value = "매물 정보", required = true) HouseProductDto houseProductDto, 
+			@RequestParam("files") MultipartFile[] files) throws Exception {
 		logger.info("#Back# HouseProductController - registerHouseProduct 매물 등록 호출");
 		
+		// FileUpload 관련 설정 
+		logger.debug("# 매물 등록 - 이미지 업로드 MultipartFile.isEmpty 확인 : {}", files[0].isEmpty());;
+		if (!files[0].isEmpty()) {
+			String today = new SimpleDateFormat("yyMMdd").format(new Date());
+			String saveFolder = filePath + File.separator + today; 
+			//String saveFolder = "D:/ssafy/Spring/VueApi/src/main/resources/asset" + File.separator + today; 
+			logger.debug("# 저장 폴더: {}", saveFolder);
+			
+			File folder = new File(saveFolder);
+			if (!folder.exists()) {
+				folder.mkdirs(); 
+			}
+			
+			List<HouseImageDto> houseImages = new ArrayList<HouseImageDto>();
+			for (MultipartFile mfile: files) {
+				HouseImageDto houseImageDto = new HouseImageDto(); 
+				String originalFileName = mfile.getOriginalFilename(); 
+				if (!originalFileName.isEmpty()) {
+					String saveFileName = System.nanoTime() + originalFileName.substring(originalFileName.lastIndexOf('.'));
+					houseImageDto.setSaveFolder(today);
+					houseImageDto.setOriginalFileName(originalFileName);
+					houseImageDto.setSaveFileName(saveFileName);
+					logger.debug("# 원본 파일이름: {}, 실제 저장 파일이름: {}", mfile.getOriginalFilename(), saveFileName);
+					mfile.transferTo(new File(folder, saveFileName));
+				}
+				houseImages.add(houseImageDto);
+			}
+			houseProductDto.setHouseImages(houseImages);
+		}
+		
+		// 매물 등록 (이미지 컬럼 없음)
 		if (haHouseMapService.registerHouseProduct(houseProductDto)) {
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
 		}
