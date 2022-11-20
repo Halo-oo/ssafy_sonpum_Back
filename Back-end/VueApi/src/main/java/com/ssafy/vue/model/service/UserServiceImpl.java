@@ -79,6 +79,11 @@ public class UserServiceImpl implements UserService {
 	public boolean updateUserInfo(UserDto userDto) throws Exception {
 		return sqlSession.getMapper(UserMapper.class).updateUserInfo(userDto) == 1;
 	}
+	// 회원 이메일 유효성 확인
+	@Override
+	public UserDto certifyEmail(UserDto userDto) throws Exception {
+		return sqlSession.getMapper(UserMapper.class).certifyEmail(userDto);
+	}
 	// 비밀번호 변경 
 	@Override
 	public boolean chageUserPwd(UserDto userDto) throws Exception {

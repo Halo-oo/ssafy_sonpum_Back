@@ -10,6 +10,8 @@ insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phon
 values ('realrent', 'realrent', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'realrent@ssafy.com', now(), 'CORP', 0, '01033332222', 1);
 insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phoneNumber, reportCount)
 values ('admin', 'admin', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'admin@ssafy.com', now(), 'ADMIN', 0, '01044442222', 0);
+insert into user(userId, userName, userPwd, email, joindate, role, delFlag, phoneNumber, reportCount)
+values ('hee', 'heejeong', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'hihej@naver.com', now(), 'USER', 0, '01011119999', 0);
 select * from user;
 
 -- 공지사항 게시글 300개 자동넣기
