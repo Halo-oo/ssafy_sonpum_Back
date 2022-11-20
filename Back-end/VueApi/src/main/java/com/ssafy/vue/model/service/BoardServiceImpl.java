@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ssafy.util.PageNavigation;
 import com.ssafy.vue.model.BoardNoticeDto;
 import com.ssafy.vue.model.BoardParameterDto;
 import com.ssafy.vue.model.BoardReportDto;

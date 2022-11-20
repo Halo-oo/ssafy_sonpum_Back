@@ -3,7 +3,6 @@ package com.ssafy.vue.model.service;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.ssafy.util.PageNavigation;
 import com.ssafy.vue.model.BoardNoticeDto;
 import com.ssafy.vue.model.BoardParameterDto;
 import com.ssafy.vue.model.BoardReportDto;
