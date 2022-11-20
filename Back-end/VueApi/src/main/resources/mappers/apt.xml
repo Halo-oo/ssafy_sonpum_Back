@@ -86,6 +86,11 @@
 	
 	
 	<!-- #매물 게시판 -->
+	<!-- extends="houseProductDto" -->
+	<resultMap type="houseProductDto" id="viewProduct">
+		<collection property="houseImages" column="houseProductId" javaType="list" ofType="houseImageDto" select="houseImageList" />
+	</resultMap>
+	
 	<!-- 매물 등록(+ 이미지 업로드) -->
 	<insert id="registerHouseProduct" parameterType="houseProductDto">
 		insert into house_product (userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content)
@@ -131,11 +136,16 @@
 		order by houseProductId desc
 	</select>
 	
-	<!-- 매물 상세보기 -->
-	<select id="getHouseProduct" parameterType="int" resultType="houseProductDto">
+	<!-- 매물 상세보기(+ 이미지) -->
+	<select id="getHouseProduct" parameterType="int" resultMap="viewProduct">
 		select houseProductId, userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content
 		from house_product
 		where houseProductId = #{houseProductId}
+	</select>
+	<select id="houseImageList" resultType="houseImageDto">
+		select houseImageId, houseProductId, saveFolder, originalFileName, saveFileName
+		from house_image
+		where houseProductId = #{houseProductId};
 	</select>
 	
 	<!-- 매물 수정 -->

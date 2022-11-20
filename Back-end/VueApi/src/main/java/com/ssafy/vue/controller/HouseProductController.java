@@ -117,13 +117,13 @@ public class HouseProductController {
 		return new ResponseEntity<List<HouseProductDto>>(haHouseMapService.listHouseProduct(houseProductParameterDto), HttpStatus.OK);
 	}
 	
-	// 매물 상세보기 
+	// 매물 상세보기(+ 이미지)
 	@ApiOperation(value = "매물 상세보기", notes = "매물 번호에 해당하는 매물 정보를 반환한다.", response = BoardReportDto.class)
-	@GetMapping("/{houseProductid}")
-	public ResponseEntity<HouseProductDto> getHouseProduct(@PathVariable("houseProductid") @ApiParam(value = "얻어올 매물 정보의 번호", required = true) int houseProductid) throws Exception {
-		logger.info("#Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : {}", houseProductid);
+	@GetMapping("/{houseProductId}")
+	public ResponseEntity<HouseProductDto> getHouseProduct(@PathVariable("houseProductId") @ApiParam(value = "얻어올 매물 정보의 번호", required = true) int houseProductId) throws Exception {
+		logger.info("#Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : {}", houseProductId);
 		
-		return new ResponseEntity<HouseProductDto>(haHouseMapService.getHouseProduct(houseProductid), HttpStatus.OK);
+		return new ResponseEntity<HouseProductDto>(haHouseMapService.getHouseProduct(houseProductId), HttpStatus.OK);
 	}
 	
 	// 매물 수정 
