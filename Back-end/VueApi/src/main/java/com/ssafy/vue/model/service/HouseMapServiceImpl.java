@@ -72,8 +72,8 @@ public class HouseMapServiceImpl implements HouseMapService {
 	}
 	// 매물 상세보기 
 	@Override
-	public HouseProductDto getHouseProduct(int houseProductid) throws Exception {
-		return sqlSession.getMapper(HouseMapMapper.class).getHouseProduct(houseProductid);
+	public HouseProductDto getHouseProduct(int houseProductId) throws Exception {
+		return sqlSession.getMapper(HouseMapMapper.class).getHouseProduct(houseProductId);
 	}
 	// 매물 수정
 	@Override

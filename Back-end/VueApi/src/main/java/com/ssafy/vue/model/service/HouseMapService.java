@@ -30,7 +30,7 @@ public interface HouseMapService {
 	// 매물 목록
 	List<HouseProductDto> listHouseProduct(HouseProductParameterDto houseProductParameterDto) throws Exception;
 	// 매물 상세보기 
-	HouseProductDto getHouseProduct(int houseProductid) throws Exception;
+	HouseProductDto getHouseProduct(int houseProductId) throws Exception;
 	// 매물 수정 
 	boolean updateHouseProduct(HouseProductDto houseProductDto) throws Exception;
 	// 매물 판매완료로 변경 
