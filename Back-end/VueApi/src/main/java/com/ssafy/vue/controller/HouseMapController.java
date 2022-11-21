@@ -20,6 +20,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -55,8 +57,9 @@ public class HouseMapController {
 
 	// 선택한 시도에 포함된 구군 정보 호출
 	@ApiOperation(value = "구군 정보", notes = "선택한 시도에 포함된 구군을 반환한다.", response = List.class)
-	@GetMapping("/gugun")
-	public ResponseEntity<List<SidoGugunCodeDto>> gugun(@RequestParam("sido") @ApiParam(value = "시도코드.", required = true) String sido) throws Exception {
+	@GetMapping("/gugun/{sido}")
+	//public ResponseEntity<List<SidoGugunCodeDto>> gugun(@RequestParam("sido") @ApiParam(value = "시도코드.", required = true) String sido) throws Exception {
+	public ResponseEntity<List<SidoGugunCodeDto>> gugun(@PathVariable("sido") @ApiParam(value = "시도코드", required = true) String sido) throws Exception {
 		logger.info("#Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: {}", sido);
 		
 		return new ResponseEntity<List<SidoGugunCodeDto>>(haHouseMapService.getGugunInSido(sido), HttpStatus.OK);
@@ -64,18 +67,19 @@ public class HouseMapController {
 
 	// 선택한 구군에 포함된 동 정보 호출
 	@ApiOperation(value = "동 정보", notes = "선택한 시도에 포함된 동을 반환한다.", response = List.class)
-	@GetMapping("/dong")
-	public ResponseEntity<List<HouseDealDongDto>> dong(@RequestParam("gugun") String gugun) throws Exception {
+	@GetMapping("/dong/{gugun}")
+	public ResponseEntity<List<HouseDealDongDto>> dong(@PathVariable("gugun") @ApiParam(value = "구군코드", required = true) String gugun) throws Exception {
 		logger.info("#Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: {}", gugun);
 		
 		return new ResponseEntity<List<HouseDealDongDto>>(haHouseMapService.getDongInGugun(gugun), HttpStatus.OK);
 	}
 	
 	// 선택한 동에 포함된 아파트 정보 호출(+ 검색)
+	// 필수 data: dongCode
 	// 검색조건: amount(매매금액) 이하, area(면적) 이상, floor(층) 이상, buildYear(건설년도) 이상, apartName(아파트 이름), dealDate(거래날짜, ex. 2022315)
 	@ApiOperation(value = "아파트 거래내역 목록(검색 포함)", notes = "선택한 동에 포함된 아파트 정보를 반환한다.", response = List.class)
-	@GetMapping("/apt")
-	public ResponseEntity<List<HouseDealInfoDto>> apt(@ApiParam(value = "아파트 목록 검색을 위한 부가정보", required = true) HouseParameterDto houseParameterDto) throws Exception {
+	@PostMapping("/apt")
+	public ResponseEntity<List<HouseDealInfoDto>> apt(@RequestBody @ApiParam(value = "아파트 목록 검색을 위한 부가정보", required = true) HouseParameterDto houseParameterDto) throws Exception {
 		logger.info("#Back# HouseMapController - apt 선택한 동에 포함된 아파트 정보 호출, 선택한 동 및 검색조건: {}", houseParameterDto);
 		
 		// 매매금액 or 거래날짜를 검색할 경우 사전 처리 필요
