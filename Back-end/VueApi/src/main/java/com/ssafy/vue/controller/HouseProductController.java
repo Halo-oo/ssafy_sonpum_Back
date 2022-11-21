@@ -100,9 +100,10 @@ public class HouseProductController {
 	}
 
 	// 매물 목록(+ 검색)
-	@ApiOperation(value = "매물 목록(+ 검색)", notes = "아파트 코드(addressId)에 해당하는 매물 목록 반환", response = List.class)
+	// - 필수 data: dongCode
+	@ApiOperation(value = "매물 목록(+ 검색)", notes = "동 코드(dongCode)에 해당하는 매물 목록 반환", response = List.class)
 	@PostMapping("/list")
-	public ResponseEntity<List<HouseProductDto>> listHouseProduct(@ApiParam(value = "매물 목록을 검색하기 위한 부가 정보", required = true) HouseProductParameterDto houseProductParameterDto) throws Exception {
+	public ResponseEntity<List<HouseProductDto>> listHouseProduct(@RequestBody @ApiParam(value = "매물 목록을 검색하기 위한 부가 정보", required = true) HouseProductParameterDto houseProductParameterDto) throws Exception {
 		logger.info("#Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: {}", houseProductParameterDto);
 		
 		// 매매금액을 검색할 경우 사전 처리 필요
