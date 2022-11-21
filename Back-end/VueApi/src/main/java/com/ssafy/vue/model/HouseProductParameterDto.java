@@ -8,6 +8,8 @@ public class HouseProductParameterDto {
 
 	@ApiModelProperty(value = "아파트 코드(addressId)")
 	private String addressId;
+	@ApiModelProperty(value = "동 코드")
+	private String dongCode;
 	@ApiModelProperty(value = "검색 조건")
 	private String key;
 	@ApiModelProperty(value = "검색어")
@@ -16,30 +18,32 @@ public class HouseProductParameterDto {
 	public String getAddressId() {
 		return addressId;
 	}
-	
 	public void setAddressId(String addressId) {
 		this.addressId = addressId;
 	}
-	
+	public String getDongCode() {
+		return dongCode;
+	}
+	public void setDongCode(String dongCode) {
+		this.dongCode = dongCode;
+	}
 	public String getKey() {
 		return key;
 	}
-	
 	public void setKey(String key) {
 		this.key = key;
 	}
-	
 	public String getWord() {
 		return word;
 	}
-	
 	public void setWord(String word) {
 		this.word = word;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "HouseProductParameterDto [addressId=" + addressId + ", key=" + key + ", word=" + word + "]";
+		return "HouseProductParameterDto [addressId=" + addressId + ", dongCode=" + dongCode + ", key=" + key
+				+ ", word=" + word + "]";
 	}
 	
 }

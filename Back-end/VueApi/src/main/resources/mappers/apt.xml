@@ -108,7 +108,7 @@
 	</insert>
 	
 	<!-- 매물 목록(+ 검색) -->
-	<select id="listHouseProduct" parameterType="houseProductParameterDto" resultType="houseProductDto">
+	<!-- <select id="listHouseProduct" parameterType="houseProductParameterDto" resultType="houseProductDto">
 		select houseProductId, userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content
 		from house_product
 		where addressId = #{addressId}
@@ -130,6 +130,32 @@
 			</if>
 			<if test="key == 'dealType'">
 				and dealType = #{dealType}
+			</if>
+		</if>
+		order by houseProductId desc
+	</select> -->
+	<select id="listHouseProduct" parameterType="houseProductParameterDto" resultType="houseProductDto">
+		select houseProductId, userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content 
+		from house_product 
+		where addressId in (select addressId from address where dongCode = #{dongCode})
+			<if test="word != null and word != ''">
+			<if test="key == 'amount'">
+				and <![CDATA[convert(dealAmount, signed) <= #{word}]]>
+			</if>
+			<if test="key == 'area'">
+				and <![CDATA[convert(area, signed) >= #{word}]]>
+			</if>
+			<if test="key == 'floor'">
+				and <![CDATA[convert(floor, signed) >= #{word}]]>
+			</if>
+			<if test="key == 'buildYear'">
+				and <![CDATA[buildYear >= #{word}]]>
+			</if>
+			<if test="key == 'userId'">
+				and userId = #{word}
+			</if>
+			<if test="key == 'dealType'">
+				and dealType = #{word}
 			</if>
 		</if>
 		order by houseProductId desc
