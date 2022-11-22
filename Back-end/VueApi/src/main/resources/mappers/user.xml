@@ -19,14 +19,14 @@
 
 	<!-- 로그인 -->
 	<select id="login" parameterType="userDto" resultType="userDto">
-		select userid, username, email, phonenumber
+		select userid, username, email, phonenumber, joindate, reportCount, role
 		from user
 		where userid = #{userId} and userpwd = #{userPwd}
 	</select>
 	
 	<!-- 사용자 인증, 사용자 정보 상세조회 -->
 	<select id="userInfo" parameterType="string" resultType="userDto">
-		select userid, userName, email, phonenumber, reportCount, profileimage
+		select userid, userName, email, phonenumber, profileimage
 		from user
 		where userid = #{userid}
 	</select>

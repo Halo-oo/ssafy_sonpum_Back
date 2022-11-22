@@ -29,16 +29,6 @@ public class HouseProductDto {
 	private String stateFlag;
 	@ApiModelProperty(value = "내용(판매자 말)")
 	private String content;
-	@ApiModelProperty(value = "도로명")
-	private String roadName;
-	@ApiModelProperty(value = "건물 본 번호")
-	private String roadNameBonbun;
-	@ApiModelProperty(value = "건물 부 번호")
-	private String roadNameBubun;
-	@ApiModelProperty(value = "아파트 이름")
-	private String apartName;
-	@ApiModelProperty(value = "동 코드")
-	private String dongCode;
 	@ApiModelProperty(value = "for. 이미지 (!DB 내 해당 컬럼 없음)")
 	private List<HouseImageDto> houseImages;
 	
@@ -102,36 +92,6 @@ public class HouseProductDto {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getRoadName() {
-		return roadName;
-	}
-	public void setRoadName(String roadName) {
-		this.roadName = roadName;
-	}
-	public String getRoadNameBonbun() {
-		return roadNameBonbun;
-	}
-	public void setRoadNameBonbun(String roadNameBonbun) {
-		this.roadNameBonbun = roadNameBonbun;
-	}
-	public String getRoadNameBubun() {
-		return roadNameBubun;
-	}
-	public void setRoadNameBubun(String roadNameBubun) {
-		this.roadNameBubun = roadNameBubun;
-	}
-	public String getApartName() {
-		return apartName;
-	}
-	public void setApartName(String apartName) {
-		this.apartName = apartName;
-	}
-	public String getDongCode() {
-		return dongCode;
-	}
-	public void setDongCode(String dongCode) {
-		this.dongCode = dongCode;
-	}
 	public List<HouseImageDto> getHouseImages() {
 		return houseImages;
 	}
@@ -143,9 +103,8 @@ public class HouseProductDto {
 	public String toString() {
 		return "HouseProductDto [houseProductId=" + houseProductId + ", userId=" + userId + ", addressId=" + addressId
 				+ ", floor=" + floor + ", buildYear=" + buildYear + ", dealAmount=" + dealAmount + ", area=" + area
-				+ ", dealType=" + dealType + ", stateFlag=" + stateFlag + ", content=" + content + ", roadName="
-				+ roadName + ", roadNameBonbun=" + roadNameBonbun + ", roadNameBubun=" + roadNameBubun + ", apartName="
-				+ apartName + ", dongCode=" + dongCode + ", houseImages=" + houseImages + "]";
+				+ ", dealType=" + dealType + ", stateFlag=" + stateFlag + ", content=" + content + ", houseImages="
+				+ houseImages + "]";
 	}
 	
 }
