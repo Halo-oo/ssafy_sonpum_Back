@@ -256,7 +256,7 @@ public class UserController {
 			UserTokenDto userTokenDto = new UserTokenDto(); 
 			userTokenDto.setUserId(userid);
 			userService.deleRefreshToken(userTokenDto);
-			resultMap.put("# message", SUCCESS);
+			resultMap.put("message", SUCCESS);
 			status = HttpStatus.ACCEPTED;
 			
 		} catch (Exception e) {
