@@ -53,4 +53,8 @@ dist
 npm-debug.log
 yarn-error.log
 
+## Custom ## 
+.log
+.class
+
 # End of httpswww.toptal.comdevelopersgitignoreapivue,vuejs,macos
