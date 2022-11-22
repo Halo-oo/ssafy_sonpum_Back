@@ -9,3 +9,82 @@
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  java.lang.Thread.run(Thread.java:750)
+[2m2022-11-22 08:42:44.246[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-22 08:42:44.320[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 743 ms
+[2m2022-11-22 08:42:44.820[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-22 08:46:11.731[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-22 08:46:11.733[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-22 08:47:24.658[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:47:27.382[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 08:47:28.365[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 08:47:41.463[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, key=null, word=null]
+[2m2022-11-22 08:47:43.926[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, key=null, word=null]
+[2m2022-11-22 08:50:00.313[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:50:01.365[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 08:50:02.334[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 08:50:06.958[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, key=null, word=null]
+[2m2022-11-22 08:51:27.265[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[n(19)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-22 08:51:27.340[0;39m [33m WARN[0;39m [35m6320[0;39m [2m---[0;39m [2m[n(19)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+[2m2022-11-22 08:51:37.207[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-22 08:51:37.286[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 704 ms
+[2m2022-11-22 08:51:37.770[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-22 08:51:43.087[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-22 08:51:43.088[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-22 08:51:43.104[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:51:44.954[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 08:51:46.006[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 08:51:51.137[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1111011500, key=null, word=null]
+[2m2022-11-22 08:52:05.255[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1111011500, key=floor, word=11]
+[2m2022-11-22 08:52:11.517[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1111011500, key=userId, word=corp]
+[2m2022-11-22 08:53:12.281[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:53:14.647[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 08:53:15.767[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 08:54:05.000[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:54:10.128[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:54:58.487[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 09:02:13.194[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[n(21)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-22 09:02:13.252[0;39m [33m WARN[0;39m [35m11288[0;39m [2m---[0;39m [2m[n(21)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+[2m2022-11-22 09:02:23.903[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-22 09:02:23.983[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 728 ms
+[2m2022-11-22 09:02:24.482[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-22 09:02:27.459[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-22 09:02:27.460[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-22 09:02:27.477[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 09:02:28.962[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 09:02:29.894[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 09:02:36.386[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - apt 선택한 동에 포함된 아파트 정보 호출, 선택한 동 및 검색조건: HouseParameterDto [dongCode=1111010100, key=null, word=null, dealYear=null, dealMonth=null]
+[2m2022-11-22 09:04:54.709[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 09:04:59.851[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 09:05:01.561[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 09:05:02.478[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 09:05:09.695[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - apt 선택한 동에 포함된 아파트 정보 호출, 선택한 동 및 검색조건: HouseParameterDto [dongCode=1111010100, key=null, word=null, dealYear=null, dealMonth=null]
+[2m2022-11-22 09:05:35.788[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 09:05:39.800[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[n(12)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-22 09:05:39.875[0;39m [33m WARN[0;39m [35m4624[0;39m [2m---[0;39m [2m[n(12)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
