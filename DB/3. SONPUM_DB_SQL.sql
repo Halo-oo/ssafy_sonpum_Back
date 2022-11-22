@@ -56,6 +56,8 @@ CREATE TABLE IF NOT EXISTS `sonpum`.`address` (
   `roadNameBubun` VARCHAR(45) NULL,
   `apartName` VARCHAR(50) NULL DEFAULT NULL,
   `buildYear` INT NULL,
+  `lat` VARCHAR(30) NULL,
+  `lng` VARCHAR(30) NULL,
   PRIMARY KEY (`addressId`),
   INDEX `fk_address_dongcode1_idx` (`dongCode` ASC) VISIBLE,
   CONSTRAINT `fk_address_dongcode1`

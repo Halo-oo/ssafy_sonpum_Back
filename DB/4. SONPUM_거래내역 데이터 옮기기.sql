@@ -22,8 +22,8 @@ select *
 from temp.dongcode;
 
 -- 2) temp.houseinfo 를 address로 옮기기
-insert into sonpum.address (addressId, dongCode, roadName, roadNameBonbun, roadNameBubun, apartName, buildYear)
-select houseinfo.aptCode, houseinfo.dongCode, houseinfo.roadName, houseinfo.roadNameBonbun, houseinfo.roadNameBubun, houseinfo.apartmentName, houseinfo.buildYear
+insert into sonpum.address (addressId, dongCode, roadName, roadNameBonbun, roadNameBubun, apartName, buildYear, lat, lng)
+select houseinfo.aptCode, houseinfo.dongCode, houseinfo.roadName, houseinfo.roadNameBonbun, houseinfo.roadNameBubun, houseinfo.apartmentName, houseinfo.buildYear, houseinfo.lat , houseinfo.lng
 from temp.houseinfo;
 
 -- 3) housedeal 테이블의 컬럼 값을 > house_deal 테이블로 옮기기
