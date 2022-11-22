@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,6 +30,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/user")
 @Api("사용자 컨트롤러  API V1")
@@ -122,7 +124,7 @@ public class UserController {
 	@ApiOperation(value = "로그인", notes = "Access-token과 로그인 결과 메세지를 반환한다.", response = Map.class)
 	@PostMapping("/login")
 	public Map<String, Object> login(@RequestBody @ApiParam(value = "로그인 시 필요한 회원정보(아이디, 비밀번호).", required = true) UserDto userDto) {
-		logger.info("#Back# UserController - login 로그인");
+		logger.info("#Back# UserController - login 로그인 {}", userDto);
 		
 		Map<String, Object> resultMap = new HashMap<>();
 		HttpStatus status = null;
@@ -176,7 +178,7 @@ public class UserController {
 		Map<String, Object> resultMap = new HashMap<>();
 		HttpStatus status = HttpStatus.UNAUTHORIZED;
 		
-		logger.info("# access-token 확인: {}", request.getHeader("access-token"));		// !! 애초에 Header에서 못가지고 옴
+		logger.info("# access-token 확인: {}", request.getHeader("access-token"));		
 		if (jwtService.checkToken(request.getHeader("access-token"))) {
 			logger.info("# 사용 가능한 토큰!");
 			try {

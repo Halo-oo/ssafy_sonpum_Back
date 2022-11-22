@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,6 +39,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/houseProduct")
 @Api("Map 컨트롤러  API V1")
@@ -124,7 +126,15 @@ public class HouseProductController {
 	public ResponseEntity<HouseProductDto> getHouseProduct(@PathVariable("houseProductId") @ApiParam(value = "얻어올 매물 정보의 번호", required = true) int houseProductId) throws Exception {
 		logger.info("#Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : {}", houseProductId);
 		
-		return new ResponseEntity<HouseProductDto>(haHouseMapService.getHouseProduct(houseProductId), HttpStatus.OK);
+		// ! houseProductId가 제대로 안들어가서 추가로 set함
+		HouseProductDto product = new HouseProductDto();
+		product = haHouseMapService.getHouseProduct(houseProductId);
+		product.setHouseProductId(houseProductId);
+		
+		// 이미지 경로 전체로 set
+		
+		
+		return new ResponseEntity<HouseProductDto>(product, HttpStatus.OK);
 	}
 	
 	// 매물 수정 
