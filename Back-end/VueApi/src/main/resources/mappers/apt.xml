@@ -34,36 +34,6 @@
 	
 	<!-- 선택한 동에 포함된 아파트 정보 호출 (+ 검색) -->
 	<select id="getAptInDong" parameterType="houseParameterDto" resultType="houseDealInfoDto">
-		<!-- select deal.addressId, address.apartName, address.dongCode, address.buildYear, deal.dealAmount, deal.dealYear, deal.dealMonth, deal.dealDay, deal.area, deal.floor
-		from house_deal deal, address
-		left join sidocode si 
-		on left(address.dongcode, 2) = left(si.sidocode, 2)
-		left join guguncode gu
-		on left(address.dongcode, 5) = left(gu.guguncode, 5)
-		where dongCode = #{dongCode}
-			<if test="word != null and word != ''">
-				<if test="key == 'amount'">
-					and <![CDATA[convert(deal.dealAmount, signed) <= #{word}]]>
-				</if>
-				<if test="key == 'area'">
-					and <![CDATA[convert(deal.area, signed) >= #{word}]]>
-				</if>
-				<if test="key == 'floor'">
-					and <![CDATA[convert(deal.floor, signed) >= #{word}]]>
-				</if>
-				<if test="key == 'buildYear'">
-					and <![CDATA[address.buildYear >= #{word}]]>
-				</if>
-				<if test="key == 'apartName'">
-					and address.apartName like concat('%', #{word}, '%')
-				</if>
-				<if test="key == 'dealDate'">
-					and concat(deal.dealYear, deal.dealMonth, deal.dealDay) = #{word}
-					and deal.dealYear = #{dealYear} and deal.dealMonth = #{dealMonth}
-				</if>
-			</if>
-		order by deal.dealYear desc
-		limit 0, 100 -->
 		with tee as (select house_deal.addressId, address.apartName, address.dongCode, address.buildYear, house_deal.dealAmount, house_deal.dealYear, house_deal.dealMonth, house_deal.dealDay, house_deal.area, house_deal.floor from address left join house_deal on house_deal.addressId = address.addressId)
 		select * from tee where addressId in (select addressId from address where dongCode = #{dongCode})
 			<if test="word != null and word != ''">
@@ -108,32 +78,6 @@
 	</insert>
 	
 	<!-- 매물 목록(+ 검색) -->
-	<!-- <select id="listHouseProduct" parameterType="houseProductParameterDto" resultType="houseProductDto">
-		select houseProductId, userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content
-		from house_product
-		where addressId = #{addressId}
-			<if test="word != null and word != ''">
-			<if test="key == 'amount'">
-				and <![CDATA[convert(dealAmount, signed) <= #{word}]]>
-			</if>
-			<if test="key == 'area'">
-				and <![CDATA[convert(area, signed) >= #{word}]]>
-			</if>
-			<if test="key == 'floor'">
-				and <![CDATA[convert(floor, signed) >= #{word}]]>
-			</if>
-			<if test="key == 'buildYear'">
-				and <![CDATA[buildYear >= #{word}]]>
-			</if>
-			<if test="key == 'userId'">
-				and userId = #{userId}
-			</if>
-			<if test="key == 'dealType'">
-				and dealType = #{dealType}
-			</if>
-		</if>
-		order by houseProductId desc
-	</select> -->
 	<select id="listHouseProduct" parameterType="houseProductParameterDto" resultType="houseProductDto">
 		select houseProductId, userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content 
 		from house_product 

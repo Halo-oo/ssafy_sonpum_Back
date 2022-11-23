@@ -170,14 +170,22 @@ public class UserMyPageController {
 	// 회원 탈퇴
 	@ApiOperation(value = "회원 탈퇴", notes = "탈퇴할 회원 ID를 입력한다. 그리고 DB수정 성공여부에 따라 'success' 또는 'fail' 문자열을 반환한다.", response = String.class)
 	@GetMapping("/out/{userid}")
-	public ResponseEntity<String> withdrawal(@PathVariable("userid") @ApiParam(value = "탈퇴할 회원 ID", required = true) String userid) throws Exception {
+	public ResponseEntity<Map<String, Object>> withdrawal(@PathVariable("userid") @ApiParam(value = "탈퇴할 회원 ID", required = true) String userid) throws Exception {
 		logger.info("#Back# UserMyPageController - withdrawal 회원탈퇴 호출 : {}", userid);
 		
+		Map<String, Object> resultMap = new HashMap<String, Object>();
+		HttpStatus status = HttpStatus.UNAUTHORIZED;
+		
 		if (userService.withdrawal(userid)) {
-			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
+			resultMap.put("message", SUCCESS);
+			status = HttpStatus.ACCEPTED;
+		}
+		else {
+			resultMap.put("message", FAIL);
+			status = HttpStatus.INTERNAL_SERVER_ERROR;
 		}
 		
-		return new ResponseEntity<String>(FAIL, HttpStatus.OK);
+		return new ResponseEntity<Map<String, Object>>(resultMap, status);
 	}
 	
 	// 북마크(관심) 매물 목록 조회 

@@ -8,7 +8,7 @@
 	<select id="idCheck" parameterType="String" resultType="int">
 		select count(userid)
 		from user
-		where userid = #{userid};
+		where userid = #{userid}
 	</select>
 
 	<!-- 회원가입 -->
@@ -21,12 +21,12 @@
 	<select id="login" parameterType="userDto" resultType="userDto">
 		select userid, username, email, phonenumber, joindate, reportCount, role
 		from user
-		where userid = #{userId} and userpwd = #{userPwd}
+		where userid = #{userId} and userpwd = #{userPwd} and delFlag = 0
 	</select>
 	
 	<!-- 사용자 인증, 사용자 정보 상세조회 -->
 	<select id="userInfo" parameterType="string" resultType="userDto">
-		select userid, userName, email, phonenumber, profileimage
+		select userid, userName, email, phonenumber, profileimage, role
 		from user
 		where userid = #{userid}
 	</select>
