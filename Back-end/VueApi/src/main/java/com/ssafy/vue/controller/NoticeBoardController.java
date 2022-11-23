@@ -52,7 +52,7 @@ public class NoticeBoardController {
 	
 	/* 공지사항 - 게시판 글 목록 */
 	@ApiOperation(value = "공지사항 - 게시판 글 목록", notes = "모든 게시글의 정보를 반환한다.", response = List.class)
-	@GetMapping
+	@PostMapping("/list")
 	public ResponseEntity<List<BoardNoticeDto>> noticeListArticle(@ApiParam(value = "게시글을 얻기위한 부가정보.", required = true) BoardParameterDto boardParameterDto) throws Exception {
 		logger.info("#Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: {}", boardParameterDto.toString());
 		

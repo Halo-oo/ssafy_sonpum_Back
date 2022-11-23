@@ -96,7 +96,7 @@ public class ReportBoardController {
 	
 	/* 전세사기 게시글 목록 */
 	@ApiOperation(value = "전세사기 수법 - 게시판 글 목록", notes = "모든 게시글의 정보를 반환한다.", response = List.class)
-	@GetMapping
+	@PostMapping("/list")
 	public ResponseEntity<List<BoardReportDto>> reportListArticle(@ApiParam(value = "게시글을 얻기위한 부가정보.", required = true) BoardParameterDto boardParameterDto) throws Exception {
 		logger.info("#Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: {}", boardParameterDto.toString());
 		
