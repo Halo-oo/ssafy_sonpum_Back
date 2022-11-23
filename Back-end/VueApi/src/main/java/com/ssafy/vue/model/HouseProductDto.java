@@ -39,6 +39,10 @@ public class HouseProductDto {
 	private String apartName;
 	@ApiModelProperty(value = "동 코드")
 	private String dongCode;
+	@ApiModelProperty(value = "Lat")
+	private String lat;
+	@ApiModelProperty(value = "Lng")
+	private String lng;
 	@ApiModelProperty(value = "for. 이미지 (!DB 내 해당 컬럼 없음)")
 	private List<HouseImageDto> houseImages;
 	
@@ -132,6 +136,18 @@ public class HouseProductDto {
 	public void setDongCode(String dongCode) {
 		this.dongCode = dongCode;
 	}
+	public String getLat() {
+		return lat;
+	}
+	public void setLat(String lat) {
+		this.lat = lat;
+	}
+	public String getLng() {
+		return lng;
+	}
+	public void setLng(String lng) {
+		this.lng = lng;
+	}
 	public List<HouseImageDto> getHouseImages() {
 		return houseImages;
 	}
@@ -145,7 +161,8 @@ public class HouseProductDto {
 				+ ", floor=" + floor + ", buildYear=" + buildYear + ", dealAmount=" + dealAmount + ", area=" + area
 				+ ", dealType=" + dealType + ", stateFlag=" + stateFlag + ", content=" + content + ", roadName="
 				+ roadName + ", roadNameBonbun=" + roadNameBonbun + ", roadNameBubun=" + roadNameBubun + ", apartName="
-				+ apartName + ", dongCode=" + dongCode + ", houseImages=" + houseImages + "]";
+				+ apartName + ", dongCode=" + dongCode + ", lat=" + lat + ", lng=" + lng + ", houseImages="
+				+ houseImages + "]";
 	}
 	
 }
