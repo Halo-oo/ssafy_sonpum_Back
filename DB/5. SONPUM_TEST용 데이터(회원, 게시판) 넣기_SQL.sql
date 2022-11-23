@@ -58,4 +58,17 @@ insert into house_product_review(houseProductId, userId, writerUserId, rating, c
 values (1, 'corp', 'ssafy', 5, '만죡', now(), '');
 select * from house_product_review;
 
--- 사기 게시판 test용 데이터 
+-- 사기 게시판 test용 데이터 300개 
+delimiter $$
+create procedure insertData2()
+BEGIN
+    DECLARE i INT default 1;
+    WHILE (i<=300) do
+    insert into board_report(userid, subject, content, hit, regitime)
+    values('ssafy', concat('사기꾼이다- ',i), '반갑습니다', 0, now());
+    set i=i+1;
+    end while;
+    end $$
+delimiter ;
+call insertData2();
+select * from board_report;
