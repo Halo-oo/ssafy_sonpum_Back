@@ -79,7 +79,7 @@
 	
 	<!-- 매물 목록(+ 검색) -->
 	<select id="listHouseProduct" parameterType="houseProductParameterDto" resultType="houseProductDto">
-		with temp as (select house_product.houseProductId, house_product.userId, house_product.addressId, house_product.floor, house_product.buildYear, house_product.dealAmount, house_product.area, house_product.dealType, house_product.stateFlag, house_product.content, address.roadName, address.roadNameBonbun, address.roadNameBubun, address.apartName, address.dongCode from address left join house_product on house_product.addressId = address.addressId)
+		with temp as (select house_product.houseProductId, house_product.userId, house_product.addressId, house_product.floor, house_product.buildYear, house_product.dealAmount, house_product.area, house_product.dealType, house_product.stateFlag, house_product.content, address.roadName, address.roadNameBonbun, address.roadNameBubun, address.apartName, address.dongCode, address.lat, address.lng from address left join house_product on house_product.addressId = address.addressId)
 		select * from temp where addressId in (select addressId from address where dongCode = #{dongCode})
 			<if test="word != null and word != ''">
 			<if test="key == 'amount'">
