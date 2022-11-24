@@ -28,91 +28,89 @@ public class HouseDealInfoDto {
 	private String area;
 	@ApiModelProperty(value = "층")
 	private String floor;
+	@ApiModelProperty(value = "Lat")
+	private String lat;
+	@ApiModelProperty(value = "Lng")
+	private String lng;
 	
 	public BigInteger getAddressId() {
 		return addressId;
 	}
-	
 	public void setAddressId(BigInteger addressId) {
 		this.addressId = addressId;
 	}
-	
 	public String getApartName() {
 		return apartName;
 	}
-	
 	public void setApartName(String apartName) {
 		this.apartName = apartName;
 	}
-	
 	public String getDongCode() {
 		return dongCode;
 	}
-	
 	public void setDongCode(String dongCode) {
 		this.dongCode = dongCode;
 	}
-	
 	public String getBuildYear() {
 		return buildYear;
 	}
-	
 	public void setBuildYear(String buildYear) {
 		this.buildYear = buildYear;
 	}
-	
 	public String getDealAmount() {
 		return dealAmount;
 	}
-	
 	public void setDealAmount(String dealAmount) {
 		this.dealAmount = dealAmount;
 	}
-	
 	public String getDealYear() {
 		return dealYear;
 	}
-	
 	public void setDealYear(String dealYear) {
 		this.dealYear = dealYear;
 	}
-	
 	public int getDealMonth() {
 		return dealMonth;
 	}
-	
 	public void setDealMonth(int dealMonth) {
 		this.dealMonth = dealMonth;
 	}
-	
 	public String getDealDay() {
 		return dealDay;
 	}
-	
 	public void setDealDay(String dealDay) {
 		this.dealDay = dealDay;
 	}
-	
 	public String getArea() {
 		return area;
 	}
-	
 	public void setArea(String area) {
 		this.area = area;
 	}
-	
 	public String getFloor() {
 		return floor;
 	}
-	
 	public void setFloor(String floor) {
 		this.floor = floor;
+	}
+	public String getLat() {
+		return lat;
+	}
+	public void setLat(String lat) {
+		this.lat = lat;
+	}
+	public String getLng() {
+		return lng;
+	}
+	public void setLng(String lng) {
+		this.lng = lng;
 	}
 	
 	@Override
 	public String toString() {
 		return "HouseDealInfoDto [addressId=" + addressId + ", apartName=" + apartName + ", dongCode=" + dongCode
 				+ ", buildYear=" + buildYear + ", dealAmount=" + dealAmount + ", dealYear=" + dealYear + ", dealMonth="
-				+ dealMonth + ", dealDay=" + dealDay + ", area=" + area + ", floor=" + floor + "]";
+				+ dealMonth + ", dealDay=" + dealDay + ", area=" + area + ", floor=" + floor + ", lat=" + lat + ", lng="
+				+ lng + "]";
 	}
 }
