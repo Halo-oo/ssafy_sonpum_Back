@@ -109,9 +109,14 @@
 	
 	<!-- 매물 목록 조회 : 해당 기업회원이 올린 매물 목록 -->
 	<select id="userProductList" parameterType="String" resultType="houseProductDto">
-		select houseProductId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content
+		<!-- select houseProductId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content
 		from house_product
-		where userId = #{userid}
+		where userId = #{userid} -->
+		select houseProductId, house_product.addressId, floor, house_product.buildYear, dealAmount, area, dealType, stateFlag, content, address.apartName, address.lat, address.lng
+		from house_product 
+		left join address
+			on house_product.addressId = address.addressId
+		where userId = #{userid};
 	</select>
 	
 </mapper>

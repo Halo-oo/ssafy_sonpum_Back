@@ -54,11 +54,13 @@ public class HouseProductController {
 	// 필요 Dto 데이터: userId, addressId, floor, buildYear, dealAmount, area, dealType, content
 	// !! 이미지 업로드 시 files라는 이름(key)으로 form-data로 보내야 함 
 	//    file.path.upload-files 경로는 application.properties에 정의되어 있음
+	//@RequestParam(required = false)
 	@ApiOperation(value = "매물 등록", notes = "매물을 등록한다.", response = List.class)
 	@PostMapping("/register")
 	public ResponseEntity<String> registerHouseProduct(
 			@Value("${file.path.upload-files}") String filePath,
 			@ApiParam(value = "매물 정보", required = true) HouseProductDto houseProductDto, 
+			//@RequestParam("files") MultipartFile[] files) throws Exception {
 			@RequestParam("files") MultipartFile[] files) throws Exception {
 		logger.info("#Back# HouseProductController - registerHouseProduct 매물 등록 호출");
 		
