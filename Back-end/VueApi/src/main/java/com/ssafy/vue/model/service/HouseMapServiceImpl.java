@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ssafy.vue.model.AddressDto;
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
 import com.ssafy.vue.model.HouseImageDto;
@@ -24,6 +25,11 @@ public class HouseMapServiceImpl implements HouseMapService {
 	@Autowired
 	private SqlSession sqlSession;
 
+	@Override
+	public List<AddressDto> getAddress(String dongCode) throws Exception {
+		return sqlSession.getMapper(HouseMapMapper.class).getAddress(dongCode);
+	}
+	
 	/* 아파트 거래정보(시세) */
 	// 시도정보 호출
 	@Override
@@ -140,5 +146,6 @@ public class HouseMapServiceImpl implements HouseMapService {
 	public boolean deleteReviewProduct(int houseProductReviewid) throws Exception {
 		return sqlSession.getMapper(HouseMapMapper.class).deleteReviewProduct(houseProductReviewid) == 1;
 	}
+	
 
 }

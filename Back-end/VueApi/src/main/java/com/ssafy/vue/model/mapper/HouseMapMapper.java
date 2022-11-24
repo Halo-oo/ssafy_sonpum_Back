@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.ssafy.vue.model.AddressDto;
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
 import com.ssafy.vue.model.HouseParameterDto;
@@ -62,6 +63,7 @@ public interface HouseMapMapper {
 	// 매물 리뷰 수정
 	int editReviewProduct(HouseProductReviewDto houseProductReviewDto) throws SQLException;
 	// 매물 리뷰 삭제
-	int deleteReviewProduct(int houseProductReviewid) throws SQLException; 
+	int deleteReviewProduct(int houseProductReviewid) throws SQLException;
+	List<AddressDto> getAddress(String dongCode); 
 	
 }

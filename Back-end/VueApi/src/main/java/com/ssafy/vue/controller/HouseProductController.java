@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.ssafy.vue.model.AddressDto;
 import com.ssafy.vue.model.BoardReportDto;
 import com.ssafy.vue.model.HouseImageDto;
 import com.ssafy.vue.model.HouseProductBookmarkDto;
@@ -32,6 +33,7 @@ import com.ssafy.vue.model.HouseProductCheckDto;
 import com.ssafy.vue.model.HouseProductDto;
 import com.ssafy.vue.model.HouseProductParameterDto;
 import com.ssafy.vue.model.HouseProductReviewDto;
+import com.ssafy.vue.model.SidoGugunCodeDto;
 import com.ssafy.vue.model.service.HouseMapService;
 
 import io.swagger.annotations.Api;
@@ -50,6 +52,15 @@ public class HouseProductController {
 	@Autowired
 	private HouseMapService haHouseMapService;
 
+	// 선택한 시도에 포함된 구군 정보 호출
+	@ApiOperation(value = "Address 정보", notes = "선택한 동코의 주소를 반환한다.", response = List.class)
+	@GetMapping("/address/{dong}")
+	public ResponseEntity<List<AddressDto>> gugun(@PathVariable("dong") @ApiParam(value = "동코드", required = true) String dong) throws Exception {
+		logger.info("#Back# HouseProductController - dong 선택한 동에 포함된 Address 정보 호출, 선택한 동: {}", dong);
+		
+		return new ResponseEntity<List<AddressDto>>(haHouseMapService.getAddress(dong), HttpStatus.OK);
+	}
+	
 	// 매물 등록(+ 이미지 업로드, 여러개 가능)
 	// 필요 Dto 데이터: userId, addressId, floor, buildYear, dealAmount, area, dealType, content
 	// !! 이미지 업로드 시 files라는 이름(key)으로 form-data로 보내야 함 

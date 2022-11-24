@@ -3,6 +3,7 @@ package com.ssafy.vue.model.service;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.ssafy.vue.model.AddressDto;
 import com.ssafy.vue.model.HouseDealDongDto;
 import com.ssafy.vue.model.HouseDealInfoDto;
 import com.ssafy.vue.model.HouseParameterDto;
@@ -14,6 +15,9 @@ import com.ssafy.vue.model.SidoGugunCodeDto;
 
 public interface HouseMapService {
 
+	/* Address */
+	List<AddressDto> getAddress(String dongCode) throws Exception;
+	
 	/* 아파트 거래정보(시세) */
 	// 시도정보 호출
 	List<SidoGugunCodeDto> getSido() throws Exception;
