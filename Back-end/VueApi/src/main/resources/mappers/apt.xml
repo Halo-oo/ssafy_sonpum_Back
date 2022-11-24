@@ -41,8 +41,8 @@
 	
 	<!-- 선택한 동에 포함된 아파트 정보 호출 (+ 검색) -->
 	<select id="getAptInDong" parameterType="houseParameterDto" resultType="houseDealInfoDto">
-		with tee as (select house_deal.addressId, address.apartName, address.dongCode, address.buildYear, house_deal.dealAmount, house_deal.dealYear, house_deal.dealMonth, house_deal.dealDay, house_deal.area, house_deal.floor from address left join house_deal on house_deal.addressId = address.addressId)
-		select * from tee where addressId in (select addressId from address where dongCode = #{dongCode})
+		with tee as (select house_deal.addressId, address.apartName, address.dongCode, address.buildYear, house_deal.dealAmount, house_deal.dealYear, house_deal.dealMonth, house_deal.dealDay, house_deal.area, house_deal.floor, address.lat, address.lng from address left join house_deal on house_deal.addressId = address.addressId)
+		select * from tee where addressId in (select addressId from address where dongCode = #{dongCode});
 			<if test="word != null and word != ''">
 				<if test="key == 'amount'">
 					and <![CDATA[convert(tee.dealAmount, signed) <= #{word}]]>
