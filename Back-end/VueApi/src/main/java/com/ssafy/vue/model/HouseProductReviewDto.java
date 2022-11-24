@@ -10,10 +10,8 @@ public class HouseProductReviewDto {
 	private int houseProductReviewId;
 	@ApiModelProperty(value = "매물 번호")
 	private int houseProductId;
-	@ApiModelProperty(value = "회원 ID (매물을 등록한 회원)")
+	@ApiModelProperty(value = "회원 ID (리뷰를 작성한 회원)")
 	private String userId;
-	@ApiModelProperty(value = "작성자 ID (리뷰를 작성한 회원)")
-	private String writerUserId;
 	@ApiModelProperty(value = "별점")
 	private int rating;
 	@ApiModelProperty(value = "내용")
@@ -47,14 +45,6 @@ public class HouseProductReviewDto {
 		this.userId = userId;
 	}
 	
-	public String getWriterUserId() {
-		return writerUserId;
-	}
-	
-	public void setWriterUserId(String writerUserId) {
-		this.writerUserId = writerUserId;
-	}
-	
 	public int getRating() {
 		return rating;
 	}
@@ -86,12 +76,12 @@ public class HouseProductReviewDto {
 	public void setRegtime(String regtime) {
 		this.regtime = regtime;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "HouseProductReviewDto [houseProductReviewId=" + houseProductReviewId + ", houseProductId="
-				+ houseProductId + ", userId=" + userId + ", writerUserId=" + writerUserId + ", rating=" + rating + ", content="
-				+ content + ", image=" + image + ", regtime=" + regtime + "]";
+				+ houseProductId + ", userId=" + userId + ", rating=" + rating + ", content=" + content + ", image="
+				+ image + ", regtime=" + regtime + "]";
 	}
 
 }

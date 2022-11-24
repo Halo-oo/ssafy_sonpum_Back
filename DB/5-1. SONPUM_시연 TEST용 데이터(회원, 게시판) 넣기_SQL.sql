@@ -276,3 +276,13 @@ values('ssafy', '[강서구]
 다들 깡통 전세 조심하시고, 등기부등본도 수시로 확인해보세요. ', 0, now());
 
 select * from board_report;
+
+
+
+-- reivew test용 데이터 
+select * from house_product_review;
+select * from house_product;
+insert into house_product_review(houseProductId, userId, rating, content, regtime, image)
+values (6, 'ssafy', 2, '방문 했을때 실내가 깔끔하지 않았습니다ㅠ', now(), "");
+insert into house_product_review(houseProductId, userId, rating, content, regtime, image)
+values (6, 'corp', 5, '집주인 분이 친절하셔서 좋았습니다 ㅎㅎ', now(), "");

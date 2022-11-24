@@ -1,0 +1,957 @@
+[2m2022-11-22 00:51:33.062[0;39m [32m INFO[0;39m [35m16772[0;39m [2m---[0;39m [2m[(127)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-22 00:51:34.326[0;39m [33m WARN[0;39m [35m16772[0;39m [2m---[0;39m [2m[(127)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-22 08:42:44.246[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-22 08:42:44.320[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 743 ms
+[2m2022-11-22 08:42:44.820[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-22 08:46:11.731[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-22 08:46:11.733[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-22 08:47:24.658[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:47:27.382[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 08:47:28.365[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 08:47:41.463[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, key=null, word=null]
+[2m2022-11-22 08:47:43.926[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, key=null, word=null]
+[2m2022-11-22 08:50:00.313[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:50:01.365[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 08:50:02.334[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 08:50:06.958[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, key=null, word=null]
+[2m2022-11-22 08:51:27.265[0;39m [32m INFO[0;39m [35m6320[0;39m [2m---[0;39m [2m[n(19)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-22 08:51:27.340[0;39m [33m WARN[0;39m [35m6320[0;39m [2m---[0;39m [2m[n(19)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+[2m2022-11-22 08:51:37.207[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-22 08:51:37.286[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 704 ms
+[2m2022-11-22 08:51:37.770[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-22 08:51:43.087[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-22 08:51:43.088[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-22 08:51:43.104[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:51:44.954[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 08:51:46.006[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 08:51:51.137[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1111011500, key=null, word=null]
+[2m2022-11-22 08:52:05.255[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1111011500, key=floor, word=11]
+[2m2022-11-22 08:52:11.517[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1111011500, key=userId, word=corp]
+[2m2022-11-22 08:53:12.281[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:53:14.647[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 08:53:15.767[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 08:54:05.000[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:54:10.128[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 08:54:58.487[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 09:02:13.194[0;39m [32m INFO[0;39m [35m11288[0;39m [2m---[0;39m [2m[n(21)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-22 09:02:13.252[0;39m [33m WARN[0;39m [35m11288[0;39m [2m---[0;39m [2m[n(21)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+[2m2022-11-22 09:02:23.903[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-22 09:02:23.983[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 728 ms
+[2m2022-11-22 09:02:24.482[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-22 09:02:27.459[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-22 09:02:27.460[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-22 09:02:27.477[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 09:02:28.962[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 09:02:29.894[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 09:02:36.386[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - apt 선택한 동에 포함된 아파트 정보 호출, 선택한 동 및 검색조건: HouseParameterDto [dongCode=1111010100, key=null, word=null, dealYear=null, dealMonth=null]
+[2m2022-11-22 09:04:54.709[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 09:04:59.851[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 09:05:01.561[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-22 09:05:02.478[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-22 09:05:09.695[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - apt 선택한 동에 포함된 아파트 정보 호출, 선택한 동 및 검색조건: HouseParameterDto [dongCode=1111010100, key=null, word=null, dealYear=null, dealMonth=null]
+[2m2022-11-22 09:05:35.788[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-22 09:05:39.800[0;39m [32m INFO[0;39m [35m4624[0;39m [2m---[0;39m [2m[n(12)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-22 09:05:39.875[0;39m [33m WARN[0;39m [35m4624[0;39m [2m---[0;39m [2m[n(12)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+[2m2022-11-24 09:07:10.875[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-24 09:07:10.943[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 733 ms
+[2m2022-11-24 09:07:11.508[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-24 09:09:18.872[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-24 09:09:18.873[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-24 09:09:18.913[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 09:09:22.900[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 09:09:23.991[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 09:12:11.620[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 09:12:13.772[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 09:12:20.685[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 09:12:22.492[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 09:12:26.385[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 09:12:32.787[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 09:12:45.648[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-24 09:12:45.676[0;39m [32mDEBUG[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjQ4NzY1NjU2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyNDkwNjUsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.DmMcj6DDetIoIf_053iMIlxOPpr7DUO66TMq8WOplkE
+[2m2022-11-24 09:12:45.676[0;39m [32mDEBUG[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjQ4NzY1NjY4LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyNDk2NjUsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.kda4ctRTzCBePHNWtL2hk2BmmSTyg_tvqJ0e9N7Fbxs
+[2m2022-11-24 09:12:45.689[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-24 09:12:45.689[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjQ4NzY1NjU2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyNDkwNjUsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.DmMcj6DDetIoIf_053iMIlxOPpr7DUO66TMq8WOplkE
+[2m2022-11-24 09:12:45.699[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 가능한 토큰!
+[2m2022-11-24 09:12:49.788[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - reviewHouseProductList 아파트(매물) 리뷰 목록 조회 호출
+[2m2022-11-24 09:12:54.258[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 09:17:21.720[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 09:17:22.653[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 09:17:27.998[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 09:17:36.759[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-24 09:17:36.766[0;39m [32mDEBUG[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjQ5MDU2NzYxLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyNDkzNTYsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.DDRd6hBIlAV_0l69FbyUgVdGgLqw-3YiRhsItUu28e0
+[2m2022-11-24 09:17:36.766[0;39m [32mDEBUG[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjQ5MDU2NzYyLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyNDk5NTYsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.C4a--NWhwSO4EIxUVWuLnkvoNY1u2eH5q9mDGCTb69g
+[2m2022-11-24 09:17:36.773[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-24 09:17:36.773[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjQ5MDU2NzYxLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyNDkzNTYsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.DDRd6hBIlAV_0l69FbyUgVdGgLqw-3YiRhsItUu28e0
+[2m2022-11-24 09:17:36.773[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 가능한 토큰!
+[2m2022-11-24 09:17:43.852[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 09:17:45.963[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 09:17:46.345[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - reviewHouseProductList 아파트(매물) 리뷰 목록 조회 호출
+[2m2022-11-24 09:17:46.914[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 09:32:48.869[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - removeToken 로그아웃(token 삭제)
+[2m2022-11-24 09:33:00.224[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-24 09:33:00.230[0;39m [32mDEBUG[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjQ5OTgwMjI2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyNTAyODAsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.3peGtS_SB7pZHb0ECkNN8egzibFkDwTDScIbBF0UzCo
+[2m2022-11-24 09:33:00.230[0;39m [32mDEBUG[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjQ5OTgwMjI2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyNTA4ODAsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.aWPgaEPTxk4vUDrq6mzEtzdNLEcoRude5iCwLt4taFc
+[2m2022-11-24 09:33:00.237[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-24 09:33:00.238[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjQ5OTgwMjI2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyNTAyODAsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.3peGtS_SB7pZHb0ECkNN8egzibFkDwTDScIbBF0UzCo
+[2m2022-11-24 09:33:00.238[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 가능한 토큰!
+[2m2022-11-24 09:33:02.593[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 10:12:17.875[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:12:19.528[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: undefined
+[2m2022-11-24 10:13:06.551[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: undefined
+[2m2022-11-24 10:14:09.361[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:14:10.696[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: undefined
+[2m2022-11-24 10:14:57.401[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:15:28.895[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:15:34.428[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:15:35.552[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: undefined
+[2m2022-11-24 10:16:50.295[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:16:56.060[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:16:57.583[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: undefined
+[2m2022-11-24 10:17:24.937[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:17:28.524[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:17:29.551[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: undefined
+[2m2022-11-24 10:17:40.298[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:17:44.051[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:17:45.174[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: undefined
+[2m2022-11-24 10:27:33.805[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:27:36.913[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 26
+[2m2022-11-24 10:27:57.443[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:28:00.847[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 27
+[2m2022-11-24 10:28:08.063[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:28:13.444[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:28:14.790[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 26
+[2m2022-11-24 10:28:31.454[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:28:34.567[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 27
+[2m2022-11-24 10:28:35.590[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 27170
+[2m2022-11-24 10:28:48.026[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 10:28:48.450[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - reviewHouseProductList 아파트(매물) 리뷰 목록 조회 호출
+[2m2022-11-24 10:28:50.241[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:28:51.978[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 10:29:03.118[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 10:29:49.789[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 10:29:54.163[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 10:29:55.883[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:30:05.386[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:30:06.784[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 10:30:14.611[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 10:30:17.409[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:30:28.394[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 10:30:50.709[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 27
+[2m2022-11-24 10:30:51.485[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 27170
+[2m2022-11-24 10:49:13.068[0;39m [32m INFO[0;39m [35m11812[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-24 10:49:13.141[0;39m [33m WARN[0;39m [35m11812[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+[2m2022-11-24 20:29:29.741[0;39m [32m INFO[0;39m [35m27452[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-24 20:29:29.856[0;39m [32m INFO[0;39m [35m27452[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1350 ms
+[2m2022-11-24 20:29:30.135[0;39m [33m WARN[0;39m [35m27452[0;39m [2m---[0;39m [2m[           main][0;39m [36mConfigServletWebServerApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'houseMapController': Unsatisfied dependency expressed through field 'haHouseMapService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'houseMapServiceImpl': Unsatisfied dependency expressed through field 'sqlSession'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'AddressDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+[2m2022-11-24 20:29:30.159[0;39m [32m INFO[0;39m [35m27452[0;39m [2m---[0;39m [2m[           main][0;39m [36mConditionEvaluationReportLoggingListener[0;39m [2m:[0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2m2022-11-24 20:29:30.197[0;39m [31mERROR[0;39m [35m27452[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'houseMapController': Unsatisfied dependency expressed through field 'haHouseMapService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'houseMapServiceImpl': Unsatisfied dependency expressed through field 'sqlSession'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'AddressDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.ssafy.vue.VueApiApplication.main(VueApiApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'houseMapServiceImpl': Unsatisfied dependency expressed through field 'sqlSession'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'AddressDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'AddressDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'AddressDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'AddressDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'AddressDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bbc352b3.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bbc352b3$$FastClassBySpringCGLIB$$7f18660c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bbc352b3.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'AddressDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611)
+	... 75 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'AddressDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:102)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 77 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'AddressDto'.  Cause: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 81 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: AddressDto
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:196)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 83 common frames omitted
+
+[2m2022-11-24 20:31:09.361[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-24 20:31:09.472[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1380 ms
+[2m2022-11-24 20:31:10.429[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-24 20:35:02.803[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-24 20:35:02.805[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-24 20:35:02.891[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 20:35:12.476[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 20:35:15.951[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 20:38:20.680[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 20:38:23.367[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 20:38:28.102[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:38:29.761[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:38:31.298[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 20:38:32.128[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-24 20:38:35.305[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 20:38:38.423[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 20:38:39.991[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 1
+[2m2022-11-24 20:39:26.614[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:41:21.409[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 6
+[2m2022-11-24 20:41:42.549[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:41:43.722[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 5
+[2m2022-11-24 20:41:45.530[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:41:48.137[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 3
+[2m2022-11-24 20:41:51.986[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:42:35.905[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 2
+[2m2022-11-24 20:44:53.311[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:44:54.818[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 6
+[2m2022-11-24 20:45:22.675[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:45:23.473[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 6
+[2m2022-11-24 20:45:24.768[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:45:25.498[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 5
+[2m2022-11-24 20:45:26.817[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:45:27.678[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 4
+[2m2022-11-24 20:45:29.584[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:45:30.642[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 3
+[2m2022-11-24 20:45:32.330[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:45:33.885[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 2
+[2m2022-11-24 20:45:58.634[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:46:01.064[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 2
+[2m2022-11-24 20:46:02.913[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:46:05.046[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 1
+[2m2022-11-24 20:46:10.689[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:46:12.522[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 2
+[2m2022-11-24 20:47:07.631[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:47:08.878[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 3
+[2m2022-11-24 20:47:10.542[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:47:41.107[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:47:42.970[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 6
+[2m2022-11-24 20:56:38.675[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:56:46.310[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 6
+[2m2022-11-24 20:57:48.136[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:58:15.159[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 20:58:25.513[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-24 20:58:25.664[0;39m [32mDEBUG[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjkxMTA1NTkwLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTE0MDUsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.wxQtnPhsQIdEQDn11U04gKenRAyLlRlRLXrQkfQF9Gk
+[2m2022-11-24 20:58:25.664[0;39m [32mDEBUG[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjkxMTA1NjU3LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTIwMDUsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.q9VnyjYjBINfZzU71q0-Andy2aVkYkO5Vjl8LUCyA6U
+[2m2022-11-24 20:58:25.689[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-24 20:58:25.689[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjkxMTA1NTkwLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTE0MDUsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.wxQtnPhsQIdEQDn11U04gKenRAyLlRlRLXrQkfQF9Gk
+[2m2022-11-24 20:58:25.710[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 가능한 토큰!
+[2m2022-11-24 20:58:33.308[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - reviewHouseProductList 아파트(매물) 리뷰 목록 조회 호출
+[2m2022-11-24 20:58:35.818[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - reviewHouseProductList 아파트(매물) 리뷰 목록 조회 호출
+[2m2022-11-24 20:58:49.569[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 20:58:50.906[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:58:54.807[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 6
+[2m2022-11-24 20:58:58.167[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 20:59:15.987[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 21:31:53.177[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 21:35:14.959[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 21:35:17.268[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 6
+[2m2022-11-24 21:35:18.752[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 21:35:28.806[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - removeToken 로그아웃(token 삭제)
+[2m2022-11-24 21:35:30.288[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 21:35:38.096[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-24 21:35:38.114[0;39m [32mDEBUG[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjkzMzM4MTAwLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTM2MzgsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6ImNvcnAifQ.PJ6DbphFiOFRlJpaFbeQ_7cEVPKroGW6RjPlyFma6NM
+[2m2022-11-24 21:35:38.114[0;39m [32mDEBUG[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjkzMzM4MTAxLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTQyMzgsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJjb3JwIn0.Gkkh_fwYMYpJrrQqHbleh6mZYXg_VdX_RmYHke2D3Pg
+[2m2022-11-24 21:35:38.129[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: corp
+[2m2022-11-24 21:35:38.129[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5MjkzMzM4MTAwLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTM2MzgsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6ImNvcnAifQ.PJ6DbphFiOFRlJpaFbeQ_7cEVPKroGW6RjPlyFma6NM
+[2m2022-11-24 21:35:38.133[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 가능한 토큰!
+[2m2022-11-24 21:35:49.225[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 21:35:51.045[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 21:35:52.920[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 21:35:55.829[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 21:35:58.102[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - dong 선택한 동에 포함된 Address 정보 호출, 선택한 동: 1168010600
+[2m2022-11-24 21:36:20.071[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - registerHouseProduct 매물 등록 호출 HouseProductDto [houseProductId=0, userId=corp, addressId=11680000000100, floor=100, buildYear=100, dealAmount=100, area=100, dealType=SALE, stateFlag=null, content=삭제 test용, roadName=null, roadNameBonbun=null, roadNameBubun=null, apartName=null, dongCode=null, lat=null, lng=null, houseImages=null]
+[2m2022-11-24 21:36:20.072[0;39m [32mDEBUG[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m # 매물 등록 - 이미지 업로드 MultipartFile.isEmpty 확인 : false
+[2m2022-11-24 21:36:20.074[0;39m [32mDEBUG[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m # 저장 폴더: C:/sonpum/upload/fileUpload/\221124
+[2m2022-11-24 21:36:20.076[0;39m [32mDEBUG[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m # 원본 파일이름: KakaoTalk_20190528_173527884_01.jpg, 실제 저장 파일이름: 471441991025000.jpg
+[2m2022-11-24 21:36:20.115[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 21:36:32.286[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 7
+[2m2022-11-24 21:36:37.293[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 21:36:38.722[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 21:36:41.881[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 21:36:42.710[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-24 21:36:45.433[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 21:36:48.139[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 21:36:53.114[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 7
+[2m2022-11-24 21:44:04.274[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 2
+[2m2022-11-24 21:46:30.784[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 21:46:31.635[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 21:46:34.063[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 21:46:38.359[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 21:46:39.437[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-24 21:46:41.603[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 21:46:44.278[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 21:46:45.422[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 7
+[2m2022-11-24 22:01:29.328[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 22:01:33.082[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 22:01:35.488[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:01:37.022[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 22:02:51.706[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 22:02:54.845[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 22:02:55.972[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:02:59.306[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 7
+[2m2022-11-24 22:03:03.628[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:03:18.383[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:03:22.063[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 22:03:24.800[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 22:03:27.820[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 22:04:51.057[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - deleteHouseProduct 매물 삭제 호출
+[2m2022-11-24 22:04:51.096[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #매물 삭제 - 리뷰, 북마크 삭제 Fail-
+[2m2022-11-24 22:08:40.313[0;39m [32m INFO[0;39m [35m27972[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-24 22:08:41.369[0;39m [33m WARN[0;39m [35m27972[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-24 22:08:54.362[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-24 22:08:54.583[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1744 ms
+[2m2022-11-24 22:08:55.864[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-24 22:09:02.284[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-24 22:09:02.287[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 2 ms
+[2m2022-11-24 22:09:02.344[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:09:10.502[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 22:09:13.386[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 22:09:16.423[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 22:09:17.410[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 7
+[2m2022-11-24 22:09:21.442[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:09:25.960[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:13:30.353[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:13:32.208[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 22:13:33.617[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:13:39.778[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:14:05.212[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:14:08.117[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 22:14:10.527[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 22:14:12.743[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 22:14:30.904[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:15:00.253[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:15:23.703[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 7
+[2m2022-11-24 22:15:28.175[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:16:14.665[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - deleteHouseProduct 매물 삭제 호출
+[2m2022-11-24 22:16:14.669[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #매물 삭제 - 리뷰, 북마크 삭제 진행
+[2m2022-11-24 22:16:14.682[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #매물 삭제 - 이미지 삭제 진행
+[2m2022-11-24 22:16:37.990[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:16:43.525[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 7
+[2m2022-11-24 22:17:02.557[0;39m [32m INFO[0;39m [35m2372[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-24 22:17:03.561[0;39m [33m WARN[0;39m [35m2372[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-24 22:17:17.470[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-24 22:17:17.656[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 2082 ms
+[2m2022-11-24 22:17:19.168[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-24 22:17:39.212[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-24 22:17:39.214[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-24 22:17:39.330[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-24 22:17:40.028[0;39m [32mDEBUG[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5Mjk1ODU5OTU2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTYxNTksInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6ImNvcnAifQ._3jfy2tzU-oILhEmNMk-GoygdbCykXpLQd8Vp2KtIoA
+[2m2022-11-24 22:17:40.031[0;39m [32mDEBUG[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5Mjk1ODYwMDE4LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTY3NjAsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJjb3JwIn0.-dB8eG6aXMgyMuv9v2ZW6CsLKxsEe5RTTj356zz2trg
+[2m2022-11-24 22:17:40.089[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: corp
+[2m2022-11-24 22:17:40.090[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5Mjk1ODU5OTU2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTYxNTksInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6ImNvcnAifQ._3jfy2tzU-oILhEmNMk-GoygdbCykXpLQd8Vp2KtIoA
+[2m2022-11-24 22:17:40.144[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 가능한 토큰!
+[2m2022-11-24 22:17:43.222[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 22:17:44.041[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:17:45.471[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 22:17:47.528[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 22:17:49.076[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - dong 선택한 동에 포함된 Address 정보 호출, 선택한 동: 1168010600
+[2m2022-11-24 22:18:01.143[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - registerHouseProduct 매물 등록 호출 HouseProductDto [houseProductId=0, userId=corp, addressId=11680000000100, floor=22, buildYear=22, dealAmount=22, area=22, dealType=SALE, stateFlag=null, content=22, roadName=null, roadNameBonbun=null, roadNameBubun=null, apartName=null, dongCode=null, lat=null, lng=null, houseImages=null]
+[2m2022-11-24 22:18:01.144[0;39m [32mDEBUG[0;39m [35m14776[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m # 매물 등록 - 이미지 업로드 MultipartFile.isEmpty 확인 : false
+[2m2022-11-24 22:18:01.145[0;39m [32mDEBUG[0;39m [35m14776[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m # 저장 폴더: C:/sonpum/upload/fileUpload/\221124
+[2m2022-11-24 22:18:01.146[0;39m [32mDEBUG[0;39m [35m14776[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m # 원본 파일이름: 147950-free-download-aesthetic-background-tumblr-1920x1080-for-retina.jpg, 실제 저장 파일이름: 473943062468500.jpg
+[2m2022-11-24 22:18:01.209[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - userProductList 아파트(매물) 매물 목록 조회 호출
+[2m2022-11-24 22:18:13.949[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:18:16.954[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 22:18:17.996[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-24 22:18:20.508[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 22:18:23.000[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 22:18:28.491[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 8
+[2m2022-11-24 22:18:30.163[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:19:25.044[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:19:26.905[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:19:27.785[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:19:31.058[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 22:19:32.019[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11110
+[2m2022-11-24 22:19:34.986[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 22:19:37.637[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 22:19:39.588[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 8
+[2m2022-11-24 22:20:42.618[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:20:43.672[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 8
+[2m2022-11-24 22:20:48.145[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:22:12.195[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:22:14.111[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 22:22:17.300[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 22:22:19.648[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 22:22:22.078[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 8
+[2m2022-11-24 22:22:24.912[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:24:04.010[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:24:06.048[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 22:24:08.334[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 22:24:11.078[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 22:24:12.159[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 8
+[2m2022-11-24 22:24:14.738[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - deleteHouseProduct 매물 삭제 호출
+[2m2022-11-24 22:24:14.738[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:24:14.745[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #매물 삭제 - 리뷰, 북마크 삭제 진행
+[2m2022-11-24 22:24:14.753[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #매물 삭제 - 이미지 삭제 진행
+[2m2022-11-24 22:25:16.074[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:25:21.111[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:25:48.930[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:25:50.996[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - gugun 선택한 시도에 포함된 구군 정보 호출, 선택한 시: 11
+[2m2022-11-24 22:25:53.976[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - dong 선택한 구군에 포함된 동 정보 호출, 선택한 구군: 11680
+[2m2022-11-24 22:25:57.553[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - listHouseProduct 매물 목록 호출, 검색조건: HouseProductParameterDto [addressId=null, dongCode=1168010600, key=null, word=null]
+[2m2022-11-24 22:26:00.614[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 6
+[2m2022-11-24 22:26:03.134[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - deleteHouseProduct 매물 삭제 호출
+[2m2022-11-24 22:26:03.137[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:26:03.142[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #매물 삭제 - 리뷰, 북마크 삭제 진행
+[2m2022-11-24 22:26:03.146[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #매물 삭제 - 이미지 삭제 진행
+[2m2022-11-24 22:26:08.705[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:27:29.677[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.ReportBoardController  [0;39m [2m:[0;39m #Back# ReportBoardController - reportListArticle 전세사기 수법 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 22:27:30.672[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:27:31.263[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:27:32.502[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 22:36:06.915[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - removeToken 로그아웃(token 삭제)
+[2m2022-11-24 22:36:08.184[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-8][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 22:36:10.312[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-9][0;39m [36mc.s.v.controller.NoticeBoardController  [0;39m [2m:[0;39m #Back# BoardController - noticeListArticle 공지사항 게시판 글 목록 호출, 검색조건: BoardParameterDto [ key=null, word=null]
+[2m2022-11-24 22:36:41.453[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 22:36:42.961[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 6
+[2m2022-11-24 22:44:15.471[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - login 로그인
+[2m2022-11-24 22:44:15.483[0;39m [32mDEBUG[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 accessToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5Mjk3NDU1NDc2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTc3NTUsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.HhmvBeLTNT21YmTVgKwvQVjebzh1_jb8887mkwJf1DU
+[2m2022-11-24 22:44:15.484[0;39m [32mDEBUG[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 로그인 refreshToken 정보 : eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5Mjk3NDU1NDc2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTgzNTUsInN1YiI6InJlZnJlc2gtdG9rZW4iLCJ1c2VySWQiOiJzc2FmeSJ9.JUo7JAgvalTxtSHk5KVKZiOHqhzL0XHf6zpk9hCL2Ds
+[2m2022-11-24 22:44:15.498[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m #Back# UserController - getInfo 회원 인증(회원 token 받아오기), 인증할 회원 아이디: ssafy
+[2m2022-11-24 22:44:15.498[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # access-token 확인: eyJ0eXAiOiJKV1QiLCJyZWdEYXRlIjoxNjY5Mjk3NDU1NDc2LCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjkyOTc3NTUsInN1YiI6ImFjY2Vzcy10b2tlbiIsInVzZXJJZCI6InNzYWZ5In0.HhmvBeLTNT21YmTVgKwvQVjebzh1_jb8887mkwJf1DU
+[2m2022-11-24 22:44:15.499[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[nio-9999-exec-5][0;39m [36mcom.ssafy.vue.controller.UserController [0;39m [2m:[0;39m # 사용 가능한 토큰!
+[2m2022-11-24 22:57:16.178[0;39m [32m INFO[0;39m [35m14776[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-24 22:57:17.176[0;39m [33m WARN[0;39m [35m14776[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-24 23:05:47.071[0;39m [32m INFO[0;39m [35m28500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-24 23:05:47.219[0;39m [32m INFO[0;39m [35m28500[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1751 ms
+[2m2022-11-24 23:05:48.376[0;39m [32m INFO[0;39m [35m28500[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-24 23:32:04.526[0;39m [32m INFO[0;39m [35m28500[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-24 23:32:04.528[0;39m [32m INFO[0;39m [35m28500[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 2 ms
+[2m2022-11-24 23:32:04.605[0;39m [33m WARN[0;39m [35m28500[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> com.ssafy.vue.controller.HouseProductController.reviewProduct(com.ssafy.vue.model.HouseProductReviewDto) throws java.lang.Exception]
+[2m2022-11-24 23:34:07.138[0;39m [33m WARN[0;39m [35m28500[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> com.ssafy.vue.controller.HouseProductController.reviewProduct(com.ssafy.vue.model.HouseProductReviewDto) throws java.lang.Exception]
+[2m2022-11-24 23:34:52.094[0;39m [32m INFO[0;39m [35m28500[0;39m [2m---[0;39m [2m[nio-9999-exec-4][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - reviewProduct 매물 리뷰 등록 호출
+[2m2022-11-24 23:37:43.337[0;39m [32m INFO[0;39m [35m28500[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-24 23:37:44.452[0;39m [33m WARN[0;39m [35m28500[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-24 23:37:54.132[0;39m [32m INFO[0;39m [35m22916[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-24 23:37:54.288[0;39m [32m INFO[0;39m [35m22916[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1639 ms
+[2m2022-11-24 23:37:55.411[0;39m [32m INFO[0;39m [35m22916[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-24 23:38:15.323[0;39m [32m INFO[0;39m [35m22916[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-24 23:38:15.324[0;39m [32m INFO[0;39m [35m22916[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2022-11-24 23:38:15.386[0;39m [33m WARN[0;39m [35m22916[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> com.ssafy.vue.controller.HouseProductController.reviewProduct(com.ssafy.vue.model.HouseProductReviewDto) throws java.lang.Exception]
+[2m2022-11-24 23:39:48.460[0;39m [33m WARN[0;39m [35m22916[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------745881817757914482473586;charset=UTF-8' not supported]
+[2m2022-11-24 23:40:06.857[0;39m [32m INFO[0;39m [35m22916[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-24 23:40:17.670[0;39m [32m INFO[0;39m [35m14980[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-24 23:40:17.816[0;39m [32m INFO[0;39m [35m14980[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1650 ms
+[2m2022-11-24 23:40:18.992[0;39m [32m INFO[0;39m [35m14980[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-24 23:40:38.231[0;39m [32m INFO[0;39m [35m14980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-24 23:40:38.235[0;39m [32m INFO[0;39m [35m14980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 3 ms
+[2m2022-11-24 23:40:38.300[0;39m [32m INFO[0;39m [35m14980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - reviewProduct 매물 리뷰 등록 호출
+[2m2022-11-24 23:40:38.976[0;39m [31mERROR[0;39m [35m14980[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'userId' cannot be null
+### The error may exist in file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]
+### The error may involve com.ssafy.vue.model.mapper.HouseMapMapper.reviewProduct-Inline
+### The error occurred while setting parameters
+### SQL: insert into house_product_review(houseProductId, userId, rating, content, regtime, image)   values (?, ?, ?, ?, now(), "")
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'userId' cannot be null
+; Column 'userId' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'userId' cannot be null] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Column 'userId' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:194)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy75.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at com.sun.proxy.$Proxy103.reviewProduct(Unknown Source)
+	at com.ssafy.vue.model.service.HouseMapServiceImpl.reviewProduct(HouseMapServiceImpl.java:132)
+	at com.ssafy.vue.controller.HouseProductController.reviewProduct(HouseProductController.java:260)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+
+[2m2022-11-24 23:40:53.148[0;39m [32m INFO[0;39m [35m14980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - reviewProduct 매물 리뷰 등록 호출
+[2m2022-11-24 23:40:53.153[0;39m [31mERROR[0;39m [35m14980[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'userId' cannot be null
+### The error may exist in file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\apt.xml]
+### The error may involve com.ssafy.vue.model.mapper.HouseMapMapper.reviewProduct-Inline
+### The error occurred while setting parameters
+### SQL: insert into house_product_review(houseProductId, userId, rating, content, regtime, image)   values (?, ?, ?, ?, now(), "")
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'userId' cannot be null
+; Column 'userId' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'userId' cannot be null] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Column 'userId' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:194)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy75.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at com.sun.proxy.$Proxy103.reviewProduct(Unknown Source)
+	at com.ssafy.vue.model.service.HouseMapServiceImpl.reviewProduct(HouseMapServiceImpl.java:132)
+	at com.ssafy.vue.controller.HouseProductController.reviewProduct(HouseProductController.java:260)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+
+[2m2022-11-24 23:41:09.497[0;39m [32m INFO[0;39m [35m14980[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-24 23:41:10.558[0;39m [33m WARN[0;39m [35m14980[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36mo.a.c.loader.WebappClassLoaderBase      [0;39m [2m:[0;39m The web application [vue] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2083)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+[2m2022-11-24 23:41:20.260[0;39m [32m INFO[0;39m [35m15456[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-24 23:41:20.462[0;39m [32m INFO[0;39m [35m15456[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1891 ms
+[2m2022-11-24 23:41:21.700[0;39m [32m INFO[0;39m [35m15456[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-24 23:41:58.213[0;39m [32m INFO[0;39m [35m15456[0;39m [2m---[0;39m [2m[on(2)-127.0.0.1][0;39m [36minMXBeanRegistrar$SpringApplicationAdmin[0;39m [2m:[0;39m Application shutdown requested.
+[2m2022-11-24 23:42:08.370[0;39m [32m INFO[0;39m [35m29316[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 9999 (http)
+[2m2022-11-24 23:42:08.533[0;39m [32m INFO[0;39m [35m29316[0;39m [2m---[0;39m [2m[           main][0;39m [36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 1688 ms
+[2m2022-11-24 23:42:09.867[0;39m [32m INFO[0;39m [35m29316[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 9999 (http) with context path '/vue'
+[2m2022-11-24 23:42:19.508[0;39m [32m INFO[0;39m [35m29316[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2022-11-24 23:42:19.511[0;39m [32m INFO[0;39m [35m29316[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 2 ms
+[2m2022-11-24 23:42:19.555[0;39m [33m WARN[0;39m [35m29316[0;39m [2m---[0;39m [2m[nio-9999-exec-1][0;39m [36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> com.ssafy.vue.controller.HouseProductController.reviewProduct(com.ssafy.vue.model.HouseProductReviewDto) throws java.lang.Exception]
+[2m2022-11-24 23:47:46.615[0;39m [32m INFO[0;39m [35m29316[0;39m [2m---[0;39m [2m[nio-9999-exec-3][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# HouseProductController - reviewProduct 매물 리뷰 등록 호출 HouseProductReviewDto [houseProductReviewId=0, houseProductId=6, userId=ssafy, rating=5, content=dddd, image=, regtime=null]
+[2m2022-11-24 23:55:06.208[0;39m [32m INFO[0;39m [35m29316[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - reviewHouseProductList 아파트(매물) 리뷰 목록 조회 호출
+[2m2022-11-24 23:55:06.329[0;39m [31mERROR[0;39m [35m29316[0;39m [2m---[0;39m [2m[nio-9999-exec-2][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'writerUserId' in 'where clause'
+### The error may exist in file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\user.xml]
+### The error may involve com.ssafy.vue.model.mapper.UserMapper.reviewHouseProductList-Inline
+### The error occurred while setting parameters
+### SQL: select houseProductReviewId, houseProductId, userId, rating, content, image, regtime   from house_product_review   where writerUserId = ?   order by regtime desc
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'writerUserId' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'writerUserId' in 'where clause'] with root cause
+
+java.sql.SQLSyntaxErrorException: Unknown column 'writerUserId' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy75.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at com.sun.proxy.$Proxy105.reviewHouseProductList(Unknown Source)
+	at com.ssafy.vue.model.service.UserServiceImpl.reviewHouseProductList(UserServiceImpl.java:105)
+	at com.ssafy.vue.controller.UserMyPageController.reviewHouseProductList(UserMyPageController.java:206)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+
+[2m2022-11-24 23:56:15.440[0;39m [32m INFO[0;39m [35m29316[0;39m [2m---[0;39m [2m[nio-9999-exec-6][0;39m [36mc.s.vue.controller.HouseMapController   [0;39m [2m:[0;39m #Back# HouseMapController - sido 시도 정보 반환 호출
+[2m2022-11-24 23:56:18.746[0;39m [32m INFO[0;39m [35m29316[0;39m [2m---[0;39m [2m[nio-9999-exec-7][0;39m [36mc.s.v.controller.HouseProductController [0;39m [2m:[0;39m #Back# ReportBoardController - getHouseProduct 매물 상세보기 호출 : 6
+[2m2022-11-24 23:59:09.037[0;39m [32m INFO[0;39m [35m29316[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mc.s.vue.controller.UserMyPageController [0;39m [2m:[0;39m #Back# ReportBoardController - reviewHouseProductList 아파트(매물) 리뷰 목록 조회 호출
+[2m2022-11-24 23:59:09.043[0;39m [31mERROR[0;39m [35m29316[0;39m [2m---[0;39m [2m[io-9999-exec-10][0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet]     [0;39m [2m:[0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [/vue] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'writerUserId' in 'where clause'
+### The error may exist in file [D:\ssafy\ssafy_sonpum_Back\Back-end\VueApi\target\classes\mappers\user.xml]
+### The error may involve com.ssafy.vue.model.mapper.UserMapper.reviewHouseProductList-Inline
+### The error occurred while setting parameters
+### SQL: select houseProductReviewId, houseProductId, userId, rating, content, image, regtime   from house_product_review   where writerUserId = ?   order by regtime desc
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'writerUserId' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'writerUserId' in 'where clause'] with root cause
+
+java.sql.SQLSyntaxErrorException: Unknown column 'writerUserId' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy75.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at com.sun.proxy.$Proxy105.reviewHouseProductList(Unknown Source)
+	at com.ssafy.vue.model.service.UserServiceImpl.reviewHouseProductList(UserServiceImpl.java:105)
+	at com.ssafy.vue.controller.UserMyPageController.reviewHouseProductList(UserMyPageController.java:206)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+

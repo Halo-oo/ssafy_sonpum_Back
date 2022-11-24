@@ -199,11 +199,11 @@ public class UserMyPageController {
 	
 	// 아파트(매물) 리뷰 목록
 	@ApiOperation(value = "아파트(매물) 리뷰 목록", notes = "회원이 등록한 매물 리뷰 정보를 반환한다.", response = List.class)
-	@GetMapping("/review/{writerUserid}")
-	public ResponseEntity<List<HouseProductDto>> reviewHouseProductList(@PathVariable("writerUserid") @ApiParam(value = "작성한 리뷰를 조회할 회원 ID", required = true) String writerUserid) throws Exception {
+	@GetMapping("/review/{userid}")
+	public ResponseEntity<List<HouseProductDto>> reviewHouseProductList(@PathVariable("userid") @ApiParam(value = "작성한 리뷰를 조회할 회원 ID", required = true) String userid) throws Exception {
 		logger.info("#Back# ReportBoardController - reviewHouseProductList 아파트(매물) 리뷰 목록 조회 호출");
 		
-		return new ResponseEntity<List<HouseProductDto>>(userService.reviewHouseProductList(writerUserid), HttpStatus.OK);
+		return new ResponseEntity<List<HouseProductDto>>(userService.reviewHouseProductList(userid), HttpStatus.OK);
 	}
 	
 	// 매물 목록 조회 : 해당 기업회원이 올린 매물 목록 

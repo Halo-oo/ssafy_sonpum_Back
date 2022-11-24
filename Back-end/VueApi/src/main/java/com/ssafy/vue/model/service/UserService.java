@@ -40,7 +40,7 @@ public interface UserService {
 	// 북마크(관심) 매물 목록 조회
 	List<HouseProductDto> bookmarkHouseProductList(String userid) throws Exception; 
 	// 아파트(매물) 리뷰 목록
-	List<HouseProductDto> reviewHouseProductList(String writerUserid) throws Exception;
+	List<HouseProductDto> reviewHouseProductList(String userid) throws Exception;
 	// 매물 목록 조회 : 해당 기업회원이 올린 매물 목록
 	List<HouseProductDto> userProductList(String userid) throws Exception; 
 	

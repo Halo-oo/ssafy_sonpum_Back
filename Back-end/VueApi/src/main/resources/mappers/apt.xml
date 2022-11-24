@@ -188,8 +188,10 @@
 	<insert id="reviewProduct" parameterType="houseProductReviewDto">
 		<!-- insert into house_product_review(houseProductId, userId, writerUserId, rating, content, regtime, image)
 		values (#{houseProductId}, #{userId}, #{writerUserId}, #{rating}, #{content}, now(), #{image}); -->
-		insert into house_product_review(houseProductId, userId, writerUserId, rating, content, regtime, image)
-		values (#{houseProductId}, (select userId from house_product where houseProductId = #{houseProductId}), #{writerUserId}, #{rating}, #{content}, now(), #{image});
+		<!-- insert into house_product_review(houseProductId, userId, writerUserId, rating, content, regtime, image)
+		values (#{houseProductId}, (select userId from house_product where houseProductId = #{houseProductId}), #{writerUserId}, #{rating}, #{content}, now(), #{image}) -->
+		insert into house_product_review(houseProductId, userId, rating, content, regtime, image)
+		values (#{houseProductId}, #{userId}, #{rating}, #{content}, now(), "")
 	</insert>
 	
 	<!-- 매물 리뷰 목록 -->

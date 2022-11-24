@@ -101,8 +101,8 @@ public class UserServiceImpl implements UserService {
 	}
 	// 아파트(매물) 리뷰 목록
 	@Override
-	public List<HouseProductDto> reviewHouseProductList(String writerUserid) throws Exception {
-		return sqlSession.getMapper(UserMapper.class).reviewHouseProductList(writerUserid);
+	public List<HouseProductDto> reviewHouseProductList(String userid) throws Exception {
+		return sqlSession.getMapper(UserMapper.class).reviewHouseProductList(userid);
 	}
 	// 매물 목록 조회 : 해당 기업회원이 올린 매물 목록
 	@Override

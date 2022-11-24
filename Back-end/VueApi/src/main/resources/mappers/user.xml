@@ -102,7 +102,7 @@
 	<select id="reviewHouseProductList" parameterType="String" resultType="houseProductReviewDto">
 		select houseProductReviewId, houseProductId, userId, rating, content, image, regtime
 		from house_product_review
-		where writerUserId = #{writerUserid}
+		where userId = #{userid}
 		order by regtime desc
 	</select>
 	

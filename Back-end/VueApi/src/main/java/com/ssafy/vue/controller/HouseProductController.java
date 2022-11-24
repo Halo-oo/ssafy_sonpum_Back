@@ -250,11 +250,12 @@ public class HouseProductController {
 	}
 	
 	// 매물 리뷰 등록
-	// 필요 Dto 데이터: houseProductId, writerUserId, rating, buildYear, content, image
+	// 필요 Dto 데이터: houseProductId, userId, rating, buildYear, content, image
+	//          수정 > houseProductId, userId, rating, content
 	@ApiOperation(value = "매물 리뷰 등록", notes = "해당 매물의 리뷰를 등록한다.", response = List.class)
 	@PostMapping("/review")
 	public ResponseEntity<String> reviewProduct(@RequestBody @ApiParam(value = "매물 리뷰 등록", required = true) HouseProductReviewDto houseProductReviewDto) throws Exception {
-		logger.info("#Back# HouseProductController - reviewProduct 매물 리뷰 등록 호출");
+		logger.info("#Back# HouseProductController - reviewProduct 매물 리뷰 등록 호출 {}", houseProductReviewDto);
 		
 		if (haHouseMapService.reviewProduct(houseProductReviewDto)) {
 			return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
