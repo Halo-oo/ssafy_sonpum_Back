@@ -113,9 +113,6 @@
 	
 	<!-- 매물 상세보기(+ 이미지) -->
 	<select id="getHouseProduct" parameterType="int" resultMap="viewProduct">
-		<!-- select houseProductId, userId, addressId, floor, buildYear, dealAmount, area, dealType, stateFlag, content
-		from house_product
-		where houseProductId = #{houseProductId} -->
 		select house_product.houseProductId, house_product.userId, house_product.addressId, house_product.floor, house_product.buildYear, house_product.dealAmount, house_product.area, house_product.dealType, house_product.stateFlag, house_product.content, address.dongCode, address.roadName, address.roadNameBonbun, address.roadNameBubun, address.apartName, address.lat, address.lng
 		from address
 		left join house_product on house_product.addressId = address.addressId

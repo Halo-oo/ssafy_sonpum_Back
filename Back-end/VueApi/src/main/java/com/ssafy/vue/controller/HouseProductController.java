@@ -172,16 +172,12 @@ public class HouseProductController {
 		logger.info("#Back# HouseProductController - deleteHouseProduct 매물 삭제 호출");
 		
 		// 1) 해당 매물과 연관된 리뷰, 북마크 모두 삭제
-		if (!haHouseMapService.deleteRelationHouseProduct(houseProductid)) {
-			logger.info("#매물 삭제 - 리뷰, 북마크 삭제 Fail-");
-			return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
-		}
+		haHouseMapService.deleteRelationHouseProduct(houseProductid);
+		logger.info("#매물 삭제 - 리뷰, 북마크 삭제 진행");
 		
 		// 2) 해당 매물과 연관된 이미지 삭제 
-		if (!haHouseMapService.deleteRelationHouseProductImage(houseProductid)) {
-			logger.info("#매물 삭제 - 이미지 삭제 Fail- ");
-			return new ResponseEntity<String>(FAIL, HttpStatus.NO_CONTENT);
-		}
+		haHouseMapService.deleteRelationHouseProductImage(houseProductid);
+		logger.info("#매물 삭제 - 이미지 삭제 진행");
 		
 		// 매물 삭제
 		if (haHouseMapService.deleteHouseProduct(houseProductid)) {
