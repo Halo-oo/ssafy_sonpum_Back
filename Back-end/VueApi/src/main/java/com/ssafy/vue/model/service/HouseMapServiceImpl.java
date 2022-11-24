@@ -98,13 +98,13 @@ public class HouseMapServiceImpl implements HouseMapService {
 	}
 	// ! 해당 매물과 연관된 리뷰, 북마크 모두 삭제
 	@Override
-	public boolean deleteRelationHouseProduct(int houseProductid) throws Exception {
-		return sqlSession.getMapper(HouseMapMapper.class).deleteRelationHouseProduct(houseProductid) >= 1;
+	public void deleteRelationHouseProduct(int houseProductid) throws Exception {
+		sqlSession.getMapper(HouseMapMapper.class).deleteRelationHouseProduct(houseProductid);
 	}
 	// ! 해당 매물과 연관된 이미지 삭제
 	@Override
-	public boolean deleteRelationHouseProductImage(int houseProductid) throws Exception {
-		return sqlSession.getMapper(HouseMapMapper.class).deleteRelationHouseProductImage(houseProductid) >= 1;
+	public void deleteRelationHouseProductImage(int houseProductid) throws Exception {
+		sqlSession.getMapper(HouseMapMapper.class).deleteRelationHouseProductImage(houseProductid);
 	}
 	// 특정 매물의 이미지 삭제
 	@Override
