@@ -70,10 +70,9 @@ public class HouseProductController {
 	@PostMapping("/register")
 	public ResponseEntity<String> registerHouseProduct(
 			@Value("${file.path.upload-files}") String filePath,
-			@ApiParam(value = "매물 정보", required = true) HouseProductDto houseProductDto, 
-			//@RequestParam("files") MultipartFile[] files) throws Exception {
+			@ApiParam(value = "매물 정보", required = true) HouseProductDto houseProductDto,
 			@RequestParam("files") MultipartFile[] files) throws Exception {
-		logger.info("#Back# HouseProductController - registerHouseProduct 매물 등록 호출");
+		logger.info("#Back# HouseProductController - registerHouseProduct 매물 등록 호출 {}", houseProductDto);
 		
 		// FileUpload 관련 설정 
 		logger.debug("# 매물 등록 - 이미지 업로드 MultipartFile.isEmpty 확인 : {}", files[0].isEmpty());
